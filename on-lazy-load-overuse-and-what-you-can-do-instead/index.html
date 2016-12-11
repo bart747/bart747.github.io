@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Hugo 0.17" />
+
+  <base href="bart747.github.io/bart747.github.io">
+ 
+  <title> On Lazy Load Overuse and What You can Do Instead </title>
+  
+  <link rel="canonical" href="bart747.github.io/bart747.github.io/on-lazy-load-overuse-and-what-you-can-do-instead/">
+  
+  
+  
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="bart747.github.io/css/dist.css">
+
+</head>
+<body>
+
+
+<nav>
+<ul class="center">
+  <li>
+    <a href="bart747.github.io/bart747.github.io">home</a>
+  </li>
+  <li>
+    <a href="bart747.github.io/bart747.github.io/blog">blog</a>
+  </li>
+</ul>
+</nav>
+
+<section class="article wrapper-small">
+
+  <div class="date secondary"> Oct 19, 2016 </div>
+  <h1>On Lazy Load Overuse and What You can Do Instead</h1>
+  
+  <p>Lazy Load is a great idea, so it&rsquo;s overused frequently.
+Do you remember that situation when you scrolled down
+quickly to get to the middle part and the picture wasn&rsquo;t there yet.</p>
+
+<p></p>
+
+<p>When using a plugin, you can use a threshold/offset option to fire the thing earlier.
+But people can scroll fast.
+If someone visits a site for, lets say,
+the third time and knows that the part she wants is somewhere close to the bottom,
+she will scroll down really, really fast.</p>
+
+<p>In that kind of situations it might be better to forget about typical Lazy Load.</p>
+
+<p>The simple trick that I like is to set up a couple of top images first,
+wait for them,
+than load the rest.
+No waiting for a user to scroll-down.
+The selected top images will get loaded faster than usual because they won&rsquo;t share the bandwidth with others.</p>
+
+<p>Here&rsquo;s a very general example of the main mechanism:</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span></span><span class="kd">function</span> <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="nx">count</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span> <span class="nx">_</span><span class="o">=&gt;</span> <span class="p">{</span>
+
+      <span class="c1">// when last image from the TOP group is ready, load the rest</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">lastTopImg</span><span class="p">.</span><span class="nx">complete</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">bottomImgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span> <span class="nx">el</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="nx">el</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;data-imgload&quot;</span><span class="p">);</span>
+        <span class="p">});</span>
+      
+      <span class="c1">// otherwise, run the function again</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="nx">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span> 
+      <span class="p">}</span> 
+
+    <span class="p">},</span> <span class="mi">200</span><span class="p">);</span> <span class="c1">// each iteration gives top images some time</span>
+
+    <span class="c1">// if the last top image is not complete after all iterations,</span>
+    <span class="c1">// load the rest of images anyway</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>        
+    <span class="nx">bottomImgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span> <span class="nx">el</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">el</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;data-imgload&quot;</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p>There are 10 available iterations.
+Each one waits 200ms.
+Than the script checks the image completion.</p>
+
+<p>If the last top image is ready, the script loads the bottom images and we&rsquo;re done.</p>
+
+<p>If not, we have another iteration.</p>
+
+<p>If after all iterations the last top image is still not complete,
+the script will load the bottom group without waiting for anything.</p>
+
+<p>The iteration limit is useful when a connection is slow and a user starts to scroll down the page almost immediately.
+In that kind of situation speed of above the fold content is no longer a priority.</p>
+
+<p>It&rsquo;s not a universal method.
+You will need to tune the <em>count</em> and the <em>setTimeout()</em>.
+Anyhow, it&rsquo;s good to have it in a toolbox.</p>
+
+<p>(I hope it&rsquo;s clear enough despite my limited English skills.)</p>
+
+</section>
+
+<section class="subnav wrapper-small">
+  <div>
+    
+      prev: <a class="previous" href="bart747.github.io/bart747.github.io/structuring-html-form-validation-indicators/"> Structuring HTML Form Validation Indicators</a>
+      <br>
+    
+    
+    
+      next: <a class="next" href="bart747.github.io/bart747.github.io/looking-at-craftsmen/"> Looking at Craftsmen</a>
+    
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrapper center">
+    &copy; 2016-2017 Bartosz Wieczorek.
+    <a href="https://creativecommons.org/licenses/by/3.0/">Some rights reserved</a>&mdash;please attribute and link back. 
+  </div>
+</footer>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Hugo 0.17" />
+
+  <base href="bart747.github.io/bart747.github.io">
+ 
+  <title> A Hint on How to Speed Up Jekyll Regeneration </title>
+  
+  <link rel="canonical" href="bart747.github.io/bart747.github.io/a-hint-on-how-to-speed-up-jekyll-regeneration/">
+  
+  
+  
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="bart747.github.io/css/dist.css">
+
+</head>
+<body>
+
+
+<nav>
+<ul class="center">
+  <li>
+    <a href="bart747.github.io/bart747.github.io">home</a>
+  </li>
+  <li>
+    <a href="bart747.github.io/bart747.github.io/blog">blog</a>
+  </li>
+</ul>
+</nav>
+
+<section class="article wrapper-small">
+
+  <div class="date secondary"> Dec 27, 2015 </div>
+  <h1>A Hint on How to Speed Up Jekyll Regeneration</h1>
+  
+  <p>My Jekyll site was way too slow recently.
+It took around 1 minute per regeneration and much more for starting a server.</p>
+
+<p></p>
+
+<p>I made some improvement by excluding a few files from the conversion.</p>
+
+<p>_config.yml:
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="ss">exclude</span><span class="p">:</span> <span class="o">[</span><span class="n">file</span><span class="o">.</span><span class="n">js</span><span class="p">,</span> <span class="n">somefolder</span><span class="p">,</span> <span class="n">otherfolder</span><span class="p">,</span> <span class="o">...]</span>
+</code></pre></div>
+</p>
+
+<p>It wasn&rsquo;t a big improvement so I kept digging.
+I re-installed gems.
+Didn&rsquo;t help.</p>
+
+<p>Then I found a solution that shortened the regeneration time to less than 0.2 second.
+It was excluding even more stuff.</p>
+
+<p>Beside the blog,
+I have also projects that use different node modules and other JS.
+One &lsquo;node_modules&rsquo; folder turned to be the pain point. I didn&rsquo;t exclude it because
+it was hidden somewhere deeper in the directory.</p>
+
+<p>I reorganized my files so now it&rsquo;s easy to locate that kind of stuff.
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="ss">exclude</span><span class="p">:</span> <span class="o">[</span><span class="n">file</span><span class="o">.</span><span class="n">js</span><span class="p">,</span> <span class="n">somefolder</span><span class="p">,</span> <span class="n">projects</span><span class="o">/*/</span><span class="n">node_modules</span><span class="p">,</span> <span class="o">...]</span>
+</code></pre></div>
+</p>
+
+</section>
+
+<section class="subnav wrapper-small">
+  <div>
+    
+      prev: <a class="previous" href="bart747.github.io/bart747.github.io/how-not-to-be-afraid-of-the-future-web-development-and-lindy-effect/"> How Not to Be Afraid of the Future: Web Development and Lindy Effect</a>
+      <br>
+    
+    
+    
+      next: <a class="next" href="bart747.github.io/bart747.github.io/vim-typography-better-readability-and-look/"> Vim Typography: Better Readability and Look</a>
+    
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrapper center">
+    &copy; 2016-2017 Bartosz Wieczorek.
+    <a href="https://creativecommons.org/licenses/by/3.0/">Some rights reserved</a>&mdash;please attribute and link back. 
+  </div>
+</footer>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

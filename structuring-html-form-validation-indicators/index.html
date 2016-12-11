@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Hugo 0.17" />
+
+  <base href="bart747.github.io/bart747.github.io">
+ 
+  <title> Structuring HTML Form Validation Indicators </title>
+  
+  <link rel="canonical" href="bart747.github.io/bart747.github.io/structuring-html-form-validation-indicators/">
+  
+  
+  
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="bart747.github.io/css/dist.css">
+
+</head>
+<body>
+
+
+<nav>
+<ul class="center">
+  <li>
+    <a href="bart747.github.io/bart747.github.io">home</a>
+  </li>
+  <li>
+    <a href="bart747.github.io/bart747.github.io/blog">blog</a>
+  </li>
+</ul>
+</nav>
+
+<section class="article wrapper-small">
+
+  <div class="date secondary"> Oct 24, 2016 </div>
+  <h1>Structuring HTML Form Validation Indicators</h1>
+  
+  <p>Should I add a &lsquo;success&rsquo; class to an input element or some other part of my form?
+How to show an error indicator during live validation? How to manage a few different ways of validation?</p>
+
+<p></p>
+
+<p>Here&rsquo;s a code example that makes these problems simpler.
+It makes adding CSS classes cleaner.
+It allows you to make flexible JavaScript loops that can go through many different inputs easily and check them.
+It support&rsquo;s many different ways of indicating errors.</p>
+
+<p>I&rsquo;m showing code snippets first, than explaining them.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container-input validate&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;admin-email&quot;</span><span class="p">&gt;</span>
+    Your Email
+  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icon-error&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icon-success&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span>
+         <span class="na">id</span><span class="o">=</span><span class="s">&quot;admin-email&quot;</span>
+         <span class="na">autocomplete</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">required</span>
+  <span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>Here&rsquo;s an example of JS loop that can check input values and much more:
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span></span>  <span class="nx">inputContainers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">elt</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">elt</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="p">...</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">input</span> <span class="p">...)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+    <span class="p">...</span>
+  <span class="p">});</span>
+</code></pre></div>
+</p>
+
+<p>Because it goes through containers (DIVs), not inputs themselves,
+we have easy access to everything inside them.
+It can be, for instance, a label, an icon or a text below a field.</p>
+
+<p>In each iteration it can check what kind of input it&rsquo;s dealing with, and
+than attache a proper method of validation.</p>
+
+<h2 id="input-with-an-error-indicator">Input with an error indicator</h2>
+
+<p>The only difference is the last class name in the div element:
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container-input validate input-error&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;admin-email&quot;</span><span class="p">&gt;</span>
+    Your Email
+  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icon-error&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icon-success&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span>
+         <span class="na">id</span><span class="o">=</span><span class="s">&quot;admin-email&quot;</span>
+         <span class="na">autocomplete</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">required</span>
+  <span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+</p>
+
+<p>Now, try to find which classes will be used:
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span></span><span class="c">/* icons */</span>
+<span class="nc">.validate</span> <span class="nc">.icon-error</span><span class="o">,</span>
+<span class="nc">.validate</span> <span class="nc">.icon-success</span> <span class="p">{</span>
+  <span class="nb">display</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.input-error</span> <span class="nc">.icon-error</span> <span class="p">{</span>
+  <span class="nb">color</span><span class="o">:</span> <span class="err">$</span><span class="nb">red</span><span class="p">;</span>
+  <span class="nb">display</span><span class="o">:</span> <span class="nb">inline</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.input-success</span> <span class="nc">.icon-success</span> <span class="p">{</span>
+  <span class="nb">color</span><span class="o">:</span> <span class="err">$</span><span class="nb">green</span><span class="p">;</span>
+  <span class="nb">display</span><span class="o">:</span> <span class="nb">inline</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* text messages */</span>
+<span class="nc">.validate</span> <span class="nc">.text-error</span><span class="o">,</span>
+<span class="nc">.validate</span> <span class="nc">.text-success</span> <span class="p">{</span>
+  <span class="nb">display</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.input-error</span> <span class="nc">.text-error</span> <span class="p">{</span>
+  <span class="nb">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.input-success</span> <span class="nc">.text-success</span> <span class="p">{</span>
+  <span class="nb">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</p>
+
+<p>As you can see, I can show the right icon in the right color by adding just one CSS class.
+Text messages work the same way.</p>
+
+<p>Indicators are not displayed by default.
+Only when the container has an <em>error</em> or a <em>success</em> class a browser will show some of them.</p>
+
+<p>Manipulating CSS class names in only one DIV makes input validation easier.
+The script has to tweak only one element to mark an error.</p>
+
+<h2 id="short-conclusion">Short Conclusion</h2>
+
+<p>Good data structures make your work simpler.
+When a structure is right, a procedure that uses it can be more straight forward.</p>
+
+</section>
+
+<section class="subnav wrapper-small">
+  <div>
+    
+    
+    
+      next: <a class="next" href="bart747.github.io/bart747.github.io/on-lazy-load-overuse-and-what-you-can-do-instead/"> On Lazy Load Overuse and What You can Do Instead</a>
+    
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrapper center">
+    &copy; 2016-2017 Bartosz Wieczorek.
+    <a href="https://creativecommons.org/licenses/by/3.0/">Some rights reserved</a>&mdash;please attribute and link back. 
+  </div>
+</footer>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>
