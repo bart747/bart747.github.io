@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog-rss on UI design and development</title>
-    <link>bart747.github.io/blog/index.xml</link>
+    <link>http://bart747.github.io/blog/index.xml</link>
     <description>Recent content in Blog-rss on UI design and development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Oct 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="bart747.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://bart747.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Structuring HTML Form Validation Indicators</title>
-      <link>/bart747.github.io/structuring-html-form-validation-indicators/</link>
+      <link>http://bart747.github.io/structuring-html-form-validation-indicators/</link>
       <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/structuring-html-form-validation-indicators/</guid>
+      <guid>http://bart747.github.io/structuring-html-form-validation-indicators/</guid>
       <description>&lt;p&gt;Should I add a &amp;lsquo;success&amp;rsquo; class to an input element or some other part of my form?
 How to show an error indicator during live validation? How to manage a few different ways of validation?&lt;/p&gt;
 
@@ -125,10 +125,10 @@ When a structure is right, a procedure that uses it can be more straight forward
     
     <item>
       <title>On Lazy Load Overuse and What You can Do Instead</title>
-      <link>/bart747.github.io/on-lazy-load-overuse-and-what-you-can-do-instead/</link>
+      <link>http://bart747.github.io/on-lazy-load-overuse-and-what-you-can-do-instead/</link>
       <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/on-lazy-load-overuse-and-what-you-can-do-instead/</guid>
+      <guid>http://bart747.github.io/on-lazy-load-overuse-and-what-you-can-do-instead/</guid>
       <description>&lt;p&gt;Lazy Load is a great idea, so it&amp;rsquo;s overused frequently.
 Do you remember that situation when you scrolled down
 quickly to get to the middle part and the picture wasn&amp;rsquo;t there yet.&lt;/p&gt;
@@ -203,10 +203,10 @@ Anyhow, it&amp;rsquo;s good to have it in a toolbox.&lt;/p&gt;
     
     <item>
       <title>Looking at Craftsmen</title>
-      <link>/bart747.github.io/looking-at-craftsmen/</link>
+      <link>http://bart747.github.io/looking-at-craftsmen/</link>
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/looking-at-craftsmen/</guid>
+      <guid>http://bart747.github.io/looking-at-craftsmen/</guid>
       <description>&lt;div class=&#34;video video-overflow fit-vid&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/5tusreUDXUM&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
   &lt;span class=&#34;video-description&#34;&gt; video by
@@ -223,10 +223,10 @@ You can learn from it by seeing the process, tricks of the trade, work on detail
     
     <item>
       <title>Max Planck on New Ideas and Creative Work</title>
-      <link>/bart747.github.io/max-planck-on-new-ideas-and-creative-work/</link>
+      <link>http://bart747.github.io/max-planck-on-new-ideas-and-creative-work/</link>
       <pubDate>Fri, 09 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/max-planck-on-new-ideas-and-creative-work/</guid>
+      <guid>http://bart747.github.io/max-planck-on-new-ideas-and-creative-work/</guid>
       <description>&lt;p&gt;Here are few famous quotes related to creative work, by Max Planck:&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
@@ -274,10 +274,10 @@ his whole world for the moment.&lt;/p&gt;
     
     <item>
       <title>Learning UI Design from Coins (on Contrast)</title>
-      <link>/bart747.github.io/learning-ui-design-from-coins-on-contrast/</link>
+      <link>http://bart747.github.io/learning-ui-design-from-coins-on-contrast/</link>
       <pubDate>Fri, 19 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/learning-ui-design-from-coins-on-contrast/</guid>
+      <guid>http://bart747.github.io/learning-ui-design-from-coins-on-contrast/</guid>
       <description>&lt;p&gt;Contrasts are one of key elements when it comes to usability. Lets take coins as an example.&lt;/p&gt;
 
 &lt;p&gt;When it comes to look: at first glance you see differences in size, color (types of metals) and visual patterns.&lt;/p&gt;
@@ -306,10 +306,10 @@ Way better than just &lt;em&gt;Password&lt;/em&gt;.&lt;/p&gt;
     
     <item>
       <title>Payment UIs Can be Used to Reduce Friction</title>
-      <link>/bart747.github.io/payment-uis-can-be-used-to-reduce-friction/</link>
+      <link>http://bart747.github.io/payment-uis-can-be-used-to-reduce-friction/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/payment-uis-can-be-used-to-reduce-friction/</guid>
+      <guid>http://bart747.github.io/payment-uis-can-be-used-to-reduce-friction/</guid>
       <description>&lt;p&gt;A page with a final &amp;ldquo;buy&amp;rdquo; button or a credit card data form
 is a huge friction trigger.
 It&amp;rsquo;s the moment when you, as a buyer, think again about spendings
@@ -332,10 +332,10 @@ two back to just in case check data again.&lt;/p&gt;
     
     <item>
       <title>How Not to Be Afraid of the Future: Web Development and Lindy Effect</title>
-      <link>/bart747.github.io/how-not-to-be-afraid-of-the-future-web-development-and-lindy-effect/</link>
+      <link>http://bart747.github.io/how-not-to-be-afraid-of-the-future-web-development-and-lindy-effect/</link>
       <pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/how-not-to-be-afraid-of-the-future-web-development-and-lindy-effect/</guid>
+      <guid>http://bart747.github.io/how-not-to-be-afraid-of-the-future-web-development-and-lindy-effect/</guid>
       <description>&lt;p&gt;No one really knows the future,
 but there are some pretty clear patterns worth exploring.
 One of them is human nature and Lindy Effect.
@@ -379,10 +379,10 @@ better? When patterns are familiar, you know what&amp;rsquo;s going on.&lt;/p&gt
     
     <item>
       <title>A Hint on How to Speed Up Jekyll Regeneration</title>
-      <link>/bart747.github.io/a-hint-on-how-to-speed-up-jekyll-regeneration/</link>
+      <link>http://bart747.github.io/a-hint-on-how-to-speed-up-jekyll-regeneration/</link>
       <pubDate>Sun, 27 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/a-hint-on-how-to-speed-up-jekyll-regeneration/</guid>
+      <guid>http://bart747.github.io/a-hint-on-how-to-speed-up-jekyll-regeneration/</guid>
       <description>&lt;p&gt;My Jekyll site was way too slow recently.
 It took around 1 minute per regeneration and much more for starting a server.&lt;/p&gt;
 
@@ -415,10 +415,10 @@ it was hidden somewhere deeper in the directory.&lt;/p&gt;
     
     <item>
       <title>Vim Typography: Better Readability and Look</title>
-      <link>/bart747.github.io/vim-typography-better-readability-and-look/</link>
+      <link>http://bart747.github.io/vim-typography-better-readability-and-look/</link>
       <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/vim-typography-better-readability-and-look/</guid>
+      <guid>http://bart747.github.io/vim-typography-better-readability-and-look/</guid>
       <description>&lt;p&gt;A few tricks to improve your Vim editor&amp;rsquo;s readability and theming.
 All examples are for editing &lt;code&gt;.vimrc&lt;/code&gt; and &lt;code&gt;.gvimrc&lt;/code&gt; files.&lt;/p&gt;
 
@@ -535,10 +535,10 @@ Consider using some of them in &lt;code&gt;.gvimrc&lt;/code&gt; instead of &lt;c
     
     <item>
       <title>Research vs Making Decisions</title>
-      <link>/bart747.github.io/research-vs-making-decisions/</link>
+      <link>http://bart747.github.io/research-vs-making-decisions/</link>
       <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/research-vs-making-decisions/</guid>
+      <guid>http://bart747.github.io/research-vs-making-decisions/</guid>
       <description>&lt;p&gt;More often than not, research is something that prevents you from making a decision.
 You want to be sure, so you seek more.
 But your brain is somehow full of doubts all the time&amp;mdash;no matter what you know.&lt;/p&gt;
@@ -564,10 +564,10 @@ You make a decision about the next move and stop looking for crystal balls.&lt;/
     
     <item>
       <title>Henry Ford for Makers: Quotes on Design</title>
-      <link>/bart747.github.io/henry-ford-for-makers-quotes-on-design/</link>
+      <link>http://bart747.github.io/henry-ford-for-makers-quotes-on-design/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/henry-ford-for-makers-quotes-on-design/</guid>
+      <guid>http://bart747.github.io/henry-ford-for-makers-quotes-on-design/</guid>
       <description>&lt;p&gt;These are short excerpts from Henry Ford&amp;rsquo;s “My Life and Work”. I picked
 the ones that will be helpful especially to makers&amp;mdash;designers, developers, etc.&lt;/p&gt;
 
@@ -676,10 +676,10 @@ earth definitely to say what is and what is not possible.&lt;/p&gt;
     
     <item>
       <title>Maintainable UI: How to Improve Code Editing with SASS</title>
-      <link>/bart747.github.io/maintainable-ui-how-to-improve-code-editing-with-sass/</link>
+      <link>http://bart747.github.io/maintainable-ui-how-to-improve-code-editing-with-sass/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>/bart747.github.io/maintainable-ui-how-to-improve-code-editing-with-sass/</guid>
+      <guid>http://bart747.github.io/maintainable-ui-how-to-improve-code-editing-with-sass/</guid>
       <description>&lt;p&gt;Changes are unavoidable. And you can’t predict the future.
 You also can’t solve problems in theory only, without prototyping.
 So make your life easier and build things that are easy to edit.&lt;/p&gt;
