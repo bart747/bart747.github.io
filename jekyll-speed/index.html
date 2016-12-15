@@ -9,9 +9,9 @@
 
   <base href="https://bart747.github.io">
  
-  <title> Working on Ambitious Projects: Jonathan Blow on Game Design </title>
+  <title> A Hint on How to Speed Up Jekyll Regeneration </title>
   
-  <link rel="canonical" href="https://bart747.github.io/working-on-ambitious-projects-jonathan-blow-on-game-design/">
+  <link rel="canonical" href="https://bart747.github.io/jekyll-speed/">
   
   
   
@@ -38,31 +38,49 @@
 
 <section class="article wrapper-small">
 
-  <div class="date secondary"> Dec 12, 2016 </div>
-  <h1 class="article-title">Working on Ambitious Projects: Jonathan Blow on Game Design</h1>
+  <div class="date secondary"> Dec 27, 2015 </div>
+  <h1 class="article-title">A Hint on How to Speed Up Jekyll Regeneration</h1>
   
-  <p>It&rsquo;s not a typical <i>this is how I do it</i> speach. It&rsquo;s definitely not one of those <i>top ten ways&#8230;</i> pieces.</p>
+  <p>My Jekyll site was way too slow recently.
+It took around 1 minute per regeneration and much more for starting a server.</p>
 
-<p>It&rsquo;s got strong emphasis on mental and philosophical side of creating complicated things.
-It&rsquo;s about handling negative emtions, picking the right thing to work on, creative process.</p>
+<p></p>
 
-<p><small>67 minutes</small>
-<div class="video">
-<iframe width="" height="" src="https://www.youtube.com/embed/d0m0jIzJfiQ" frameborder="0" allowfullscreen></iframe>
-</div></p>
+<p>I made some improvement by excluding a few files from the conversion.</p>
 
+<p>_config.yml:
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="ss">exclude</span><span class="p">:</span> <span class="o">[</span><span class="n">file</span><span class="o">.</span><span class="n">js</span><span class="p">,</span> <span class="n">somefolder</span><span class="p">,</span> <span class="n">otherfolder</span><span class="p">,</span> <span class="o">...]</span>
+</code></pre></div>
+</p>
+
+<p>It wasn&rsquo;t a big improvement so I kept digging.
+I re-installed gems.
+Didn&rsquo;t help.</p>
+
+<p>Then I found a solution that shortened the regeneration time to less than 0.2 second.
+It was excluding even more stuff.</p>
+
+<p>Beside the blog,
+I have also projects that use different node modules and other JS.
+One &lsquo;node_modules&rsquo; folder turned to be the pain point. I didn&rsquo;t exclude it because
+it was hidden somewhere deeper in the directory.</p>
+
+<p>I reorganized my files so now it&rsquo;s easy to locate that kind of stuff.
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="ss">exclude</span><span class="p">:</span> <span class="o">[</span><span class="n">file</span><span class="o">.</span><span class="n">js</span><span class="p">,</span> <span class="n">somefolder</span><span class="p">,</span> <span class="n">projects</span><span class="o">/*/</span><span class="n">node_modules</span><span class="p">,</span> <span class="o">...]</span>
+</code></pre></div>
+</p>
 
 </section>
 
 <section class="subnav wrapper-small">
   <div>
     
-      prev: <a class="previous" href="https://bart747.github.io/henry-ford-on-what-promoted-his-cars-the-most/"> Henry Ford on What Promoted His Cars The Most</a>
+      prev: <a class="previous" href="https://bart747.github.io/future/"> How Not to Be Afraid of the Future: Web Development and Lindy Effect</a>
       <br>
     
     
     
-      next: <a class="next" href="https://bart747.github.io/projects/process/"> Working on Ambitious Projects: Jonathan Blow on Game Design</a>
+      next: <a class="next" href="https://bart747.github.io/vim-typography/"> Vim Typography: Better Readability and Look</a>
     
   </div>
 </section>
