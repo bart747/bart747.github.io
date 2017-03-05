@@ -64,70 +64,69 @@ The obvious ones are font families, media queries, colors and sizes.</p>
 
 <p>Here&rsquo;s quick example:</p>
 
-<p>{% highlight scss %}</p>
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span></span><span class="c1">// fonts</span>
+<span class="nv">$family</span><span class="o">:</span>           <span class="s2">&quot;Source Sans Pro&quot;</span><span class="o">,</span> <span class="no">sans-serif</span><span class="p">;</span>
 
-<p>// fonts
-$family:           &ldquo;Source Sans Pro&rdquo;, sans-serif;</p>
+<span class="c1">// colors</span>
+<span class="nv">$txt</span><span class="o">:</span>              <span class="mh">#404040</span><span class="p">;</span>
+<span class="nv">$blue</span><span class="o">:</span>             <span class="mh">#2233ff</span><span class="p">;</span>
+<span class="nv">$red</span><span class="o">:</span>              <span class="mh">#ff3322</span><span class="p">;</span>
+<span class="nv">$green</span><span class="o">:</span>            <span class="mh">#22ff33</span><span class="p">;</span>
 
-<p>// colors
-$txt:              #404040;
-$blue:             #2233ff;
-$red:              #ff3322;
-$green:            #22ff33;</p>
+<span class="c1">// sizes</span>
+<span class="nv">$base-font-size</span><span class="o">:</span>   <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$large-font-size</span><span class="o">:</span>  <span class="mi">21</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$small-font-size</span><span class="o">:</span>  <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$base-line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.6</span><span class="p">;</span>
 
-<p>// sizes
-$base-font-size:   18px;
-$large-font-size:  21px;
-$small-font-size:  16px;
-$base-line-height: 1.6;</p>
+<span class="c1">// breakepoints</span>
+<span class="nv">$sm</span><span class="o">:</span>               <span class="mi">568</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$md</span><span class="o">:</span>               <span class="mi">768</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$lg</span><span class="o">:</span>               <span class="mi">1024</span><span class="kt">px</span><span class="p">;</span>
+</code></pre></div>
 
-<p>// breakepoints
-$sm:               568px;
-$md:               768px;
-$lg:               1024px;</p>
-
-<p>{% endhighlight %}</p>
 
 <p>But hey, not all colors are equal. And when it comes to sizes, we can get much more.</p>
 
-<p>{% highlight scss %}</p>
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span></span><span class="c1">// FONTS</span>
 
-<p>// FONTS</p>
+<span class="nv">$base-family</span><span class="o">:</span>           <span class="s2">&quot;Source Sans Pro&quot;</span><span class="o">,</span> <span class="no">sans-serif</span><span class="p">;</span>
+<span class="nv">$mono-family</span><span class="o">:</span>           <span class="s2">&quot;Droid Sans Mono&quot;</span><span class="o">,</span> <span class="no">monospace</span><span class="p">;</span>
 
-<p>$base-family:           &ldquo;Source Sans Pro&rdquo;, sans-serif;
-$mono-family:           &ldquo;Droid Sans Mono&rdquo;, monospace;</p>
 
-<p>// COLORS</p>
+<span class="c1">// COLORS</span>
 
-<p>// base
-$txt:              #404040;
-$blue:             #2233ff;
-$red:              #ff3322;
-$green:            #22ff33;</p>
+<span class="c1">// base</span>
+<span class="nv">$txt</span><span class="o">:</span>              <span class="mh">#404040</span><span class="p">;</span>
+<span class="nv">$blue</span><span class="o">:</span>             <span class="mh">#2233ff</span><span class="p">;</span>
+<span class="nv">$red</span><span class="o">:</span>              <span class="mh">#ff3322</span><span class="p">;</span>
+<span class="nv">$green</span><span class="o">:</span>            <span class="mh">#22ff33</span><span class="p">;</span>
 
-<p>// branding
-$brand-blue:       $blue;
-$brand-gold:       #e5b23b;</p>
+<span class="c1">// branding</span>
+<span class="nv">$brand-blue</span><span class="o">:</span>       <span class="nv">$blue</span><span class="p">;</span>
+<span class="nv">$brand-gold</span><span class="o">:</span>       <span class="mh">#e5b23b</span><span class="p">;</span>
 
-<p>// SIZES</p>
 
-<p>$base-font-size:   18px;
-$large-font-size:  21px;
-$small-font-size:  16px;
-$base-line-height: 1.6;</p>
+<span class="c1">// SIZES</span>
 
-<p>// marketing headlines;
-$extra-fonts-size: 28px;</p>
+<span class="nv">$base-font-size</span><span class="o">:</span>   <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$large-font-size</span><span class="o">:</span>  <span class="mi">21</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$small-font-size</span><span class="o">:</span>  <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$base-line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.6</span><span class="p">;</span>
 
-<p>// rhythm unit (leading)
-$u:                1rem * $base-line-height;</p>
+<span class="c1">// marketing headlines;</span>
+<span class="nv">$extra-fonts-size</span><span class="o">:</span> <span class="mi">28</span><span class="kt">px</span><span class="p">;</span>
 
-<p>// BREAKEPOINTS
-$sm:               568px;
-$md:               768px;
-$lg:               1024px;</p>
+<span class="c1">// rhythm unit (leading)</span>
+<span class="nv">$u</span><span class="o">:</span>                <span class="mi">1</span><span class="kt">rem</span> <span class="o">*</span> <span class="nv">$base-line-height</span><span class="p">;</span>
 
-<p>{% endhighlight %}</p>
+
+<span class="c1">// BREAKEPOINTS</span>
+<span class="nv">$sm</span><span class="o">:</span>               <span class="mi">568</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$md</span><span class="o">:</span>               <span class="mi">768</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$lg</span><span class="o">:</span>               <span class="mi">1024</span><span class="kt">px</span><span class="p">;</span>
+</code></pre></div>
+
 
 <h3 id="what-s-rhythm-unit-u">What&rsquo;s rhythm unit ($u)?</h3>
 
@@ -144,46 +143,42 @@ fit it into a line-hight that equals one $u.</p>
 
 <p>If you use more than one font settings stack:</p>
 
-<p>{% highlight scss %}</p>
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span></span><span class="k">@mixin</span><span class="nf"> font-base</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">text-color</span><span class="o">;</span>
+  <span class="nt">font-family</span><span class="nd">:</span> <span class="err">$</span><span class="nt">base-font-family</span><span class="o">;</span>
+  <span class="nt">font-size</span><span class="nd">:</span>  <span class="err">$</span><span class="nt">base-font-size</span><span class="o">;</span>
+  <span class="nt">line-height</span><span class="nd">:</span> <span class="err">$</span><span class="nt">base-line-height</span><span class="o">;</span>
+<span class="p">}</span>
 
-<p>@mixin font-base {
-  color: $text-color;
-  font-family: $base-font-family;
-  font-size:  $base-font-size;
-  line-height: $base-line-height;
-}</p>
+<span class="k">@mixin</span><span class="nf"> font-mono</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">grey-dark</span><span class="o">;</span>
+  <span class="nt">font-family</span><span class="nd">:</span> <span class="err">$</span><span class="nt">mono-font-family</span><span class="o">;</span>
+  <span class="nt">font-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">small-font-size</span><span class="o">;</span>
+  <span class="nt">line-height</span><span class="nd">:</span> <span class="nt">0</span><span class="nc">.75</span> <span class="o">*</span> <span class="err">$</span><span class="nt">u</span><span class="o">;</span>
+  <span class="o">//</span> <span class="nt">4</span> <span class="nt">lines</span> <span class="nt">of</span> <span class="nt">code</span> <span class="nt">will</span> <span class="nt">give</span> <span class="nt">3x</span> <span class="nt">default</span> <span class="nt">leading</span>
+<span class="p">}</span>
+</code></pre></div>
 
-<p>@mixin font-mono {
-  color: $grey-dark;
-  font-family: $mono-font-family;
-  font-size: $small-font-size;
-  line-height: 0.75 * $u;
-  // 4 lines of code will give 3x default leading
-}</p>
-
-<p>{% endhighlight %}</p>
 
 <p>Assets directory path helpers:</p>
 
-<p>{% highlight Scss %}</p>
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span></span><span class="nv">$assets-dir</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">assets&#39;</span><span class="p">;</span>
 
-<p>$assets-dir: &lsquo;assets&rsquo;;</p>
+<span class="k">@function</span> <span class="nt">image</span><span class="o">(</span><span class="err">$</span><span class="nt">name</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nt">url</span><span class="o">(</span><span class="nc">..</span><span class="o">/</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">assets-dir</span><span class="p">}</span><span class="o">/</span><span class="nt">img</span><span class="o">/</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">name</span><span class="p">}</span><span class="o">);</span>
+<span class="p">}</span>
 
-<p>@function image($name) {
-  @return url(../#{$assets-dir}/img/#{$name});
-}</p>
+<span class="k">@function</span> <span class="nt">font</span><span class="o">(</span><span class="err">$</span><span class="nt">name</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nt">url</span><span class="o">(</span><span class="nc">..</span><span class="o">/</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">assets-dir</span><span class="p">}</span><span class="o">/</span><span class="nt">fonts</span><span class="o">/</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">name</span><span class="p">}</span><span class="o">);</span>
 
-<p>@function font($name) {
-  @return url(../#{$assets-dir}/fonts/#{$name});</p>
+<span class="p">}</span>
 
-<p>}</p>
+<span class="c1">// usage</span>
+<span class="c1">// .masthead {</span>
+<span class="c1">//   background-image: image(&#39;clouds.svg&#39;);</span>
+<span class="c1">// }</span>
+</code></pre></div>
 
-<p>// usage
-// .masthead {
-//   background-image: image(&lsquo;clouds.svg&rsquo;);
-// }</p>
-
-<p>{% endhighlight %}</p>
 
 <h2 id="files">Files</h2>
 
