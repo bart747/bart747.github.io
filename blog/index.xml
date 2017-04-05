@@ -6,8 +6,62 @@
     <description>Recent content in Blog-rss on UI design and development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Apr 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://bart747.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>5 Notes on How to Design a Resilient UI</title>
+      <link>https://bart747.github.io/resilient-ui/</link>
+      <pubDate>Wed, 05 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/resilient-ui/</guid>
+      <description>&lt;h2 id=&#34;modularity&#34;&gt;Modularity&lt;/h2&gt;
+
+&lt;p&gt;The most interesting things happen once your software is in real use.
+That&amp;rsquo;s when you can really see what&amp;rsquo;s working and what to change.
+It brings us to the importance of modularity.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Modular UIs are easier to edit in the long run.
+When your interface is divided into distinct parts, you can also separate chunks of code by following that divisions.
+Than you can adjust to the real world without tedious redesigns:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;You can just swap UI modules in an HTML or template file.&lt;/li&gt;
+&lt;li&gt;You can edit a module in its own file &amp;mdash; no need to dig into complex code that&amp;rsquo;s responsible for many things.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;embrace-foundations&#34;&gt;Embrace Foundations&lt;/h2&gt;
+
+&lt;p&gt;If I need to pick between working on something essential or adding bells and whistles, I pick essentials.
+It&amp;rsquo;s just hard to be really good at all of them, so why even focus on &lt;em&gt;nice to haves&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;Working extra on things like clarity (intuitiveness, readability) and speed
+will give you more than any neophiliac thing.&lt;/p&gt;
+
+&lt;h2 id=&#34;simplicity-is-tricky&#34;&gt;Simplicity is Tricky&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s easy to achieve perceived simplicity and pay for it with real complexity.
+For instance, you can make an intuitive UI while ignoring clarity of its implementation.
+Sooner or later it will cause all kinds of unexpected problems.&lt;/p&gt;
+
+&lt;p&gt;Real simplicity of an interface means neat visuals AND clear implementation.
+To achieve that, you often need to sacrifice some non-crucial features.&lt;/p&gt;
+
+&lt;h2 id=&#34;smooth-interactions&#34;&gt;Smooth Interactions&lt;/h2&gt;
+
+&lt;p&gt;There&amp;rsquo;s an overwhelming variety of internet browsing devices on the market.
+We need to think about what will make the product work smoothly on a sub-average hardware and half-decent wi-fi.
+People will often use your stuff at train stations, airports and in restaurants.&lt;/p&gt;
+
+&lt;h2 id=&#34;words-win&#34;&gt;Words Win&lt;/h2&gt;
+
+&lt;p&gt;People say “a picture is like a thousand words”.
+But a picture will not make a proposition as clear and precise as a well designed sentence.
+That&amp;rsquo;s why I like typography.
+Good typography is a tool to achieve clarity.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Henry Ford on What Promoted His Cars The Most</title>
