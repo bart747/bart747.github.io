@@ -9,6 +9,30 @@
     <atom:link href="https://bart747.github.io/categories/nosummary/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>On Fragility of Plans and Adaptability: How Buildings Learn</title>
+      <link>https://bart747.github.io/adaptability-planning/</link>
+      <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/adaptability-planning/</guid>
+      <description>&lt;p&gt;&lt;small&gt;30 min&lt;/small&gt;&lt;/p&gt;
+
+&lt;div class=&#34;wrapper--nopad&#34;&gt; 
+&lt;div class=&#34;video&#34;&gt;
+&lt;iframe src=&#34;https://www.youtube.com/embed/AvEqfg2sIH0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;time is the main architect&lt;/li&gt;
+&lt;li&gt;design with adaptability in mind&lt;/li&gt;
+&lt;li&gt;people will have to or want to change their buildings in the future&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I noticed many similar problems in software design.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Working on Ambitious Projects: Jonathan Blow on Game Design</title>
       <link>https://bart747.github.io/ambitious-projects/</link>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
@@ -22,7 +46,7 @@ It&amp;rsquo;s about handling negative emtions, picking the right thing to work 
 &lt;p&gt;&lt;small&gt;67 minutes&lt;/small&gt;
 &lt;div class=&#34;wrapper--nopad&#34;&gt;
 &lt;div class=&#34;video&#34;&gt;
-&lt;iframe width=&#34;&#34; height=&#34;&#34; src=&#34;https://www.youtube.com/embed/d0m0jIzJfiQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://www.youtube.com/embed/d0m0jIzJfiQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
 </description>

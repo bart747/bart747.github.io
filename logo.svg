@@ -15,69 +15,48 @@
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="logo.svg">
-  <defs
-     id="defs4" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="814.92061"
-     inkscape:cy="423.61401"
-     inkscape:document-units="px"
-     inkscape:current-layer="g3776"
-     showgrid="false"
-     width="500px"
-     objecttolerance="10000"
-     guidetolerance="10000"
-     gridtolerance="5"
-     inkscape:window-width="1920"
-     inkscape:window-height="1050"
-     inkscape:window-x="0"
-     inkscape:window-y="30"
-     inkscape:window-maximized="1">
-    <inkscape:grid
-       type="xygrid"
-       id="grid2985"
-       empspacing="5"
-       visible="true"
-       enabled="true"
-       snapvisiblegridlinesonly="true" />
-  </sodipodi:namedview>
   <metadata
-     id="metadata7">
+     id="metadata10">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-652.36202)">
-    <g
-       id="g3776">
-      <path
-         sodipodi:nodetypes="cccccccccccc"
-         inkscape:connector-curvature="0"
-         id="path3159"
-         d="m 110,892.36202 90,119.99998 90,-119.99998 0,-180 -10,0 0,175 -65,85 -15,29.99998 -30,-114.99998 0,-175 -60,0 z"
-         style="fill:#000000;fill-opacity:1;stroke:none" />
-      <path
-         transform="translate(0,652.36202)"
-         sodipodi:nodetypes="cccc"
-         inkscape:connector-curvature="0"
-         id="path3167"
-         d="M 235,309.10714 165,310 l 35,45 z"
-         style="fill:#000000;stroke:none" />
-    </g>
-  </g>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1050"
+     id="namedview6"
+     showgrid="true"
+     inkscape:zoom="0.59"
+     inkscape:cx="376.59952"
+     inkscape:cy="88.455726"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2987" />
+  </sodipodi:namedview>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     d="m 110,230.00001 90,119.99998 90,-119.99998 0,-180 -10,0 0,175 -55,75 -35,0 -20,-75 0,-83.27376 0,-32.65874 0,-59.0675 -60,0 z"
+     id="path3159"
+     sodipodi:nodetypes="cccccccccccccc" />
 </svg>

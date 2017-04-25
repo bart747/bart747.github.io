@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects-rss on UI design and development</title>
+    <link>https://bart747.github.io/projects/index.xml</link>
+    <description>Recent content in Projects-rss on UI design and development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://bart747.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>https://bart747.github.io/pat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/pat/</guid>
+      <description>asd
+
+</description>
+    </item>
+    
+  </channel>
+</rss>
