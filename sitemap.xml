@@ -7,6 +7,11 @@
   </url>
   
   <url>
+    <loc>https://bart747.github.io/patterns/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bart747.github.io/adaptability-planning/</loc>
     <lastmod>2017-04-25T00:00:00+00:00</lastmod>
   </url>
@@ -84,10 +89,6 @@
   <url>
     <loc>https://bart747.github.io/maintainable-ui/</loc>
     <lastmod>2015-11-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bart747.github.io/pat/</loc>
   </url>
   
 </urlset>

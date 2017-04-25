@@ -9,10 +9,10 @@
 
   <base href="https://bart747.github.io">
  
-  <title> UI design and development </title>
+  <title>  </title>
   
-  <link rel="canonical" href="https://bart747.github.io/">
-  <link href="https://bart747.github.io/index.xml" rel="alternate" type="application/rss+xml" title="UI design and development" />
+  <link rel="canonical" href="https://bart747.github.io/patterns/">
+  
 
   
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700" rel="stylesheet">
@@ -27,7 +27,11 @@
 <body>
 
 
-<nav>
+<div class="patterns">
+
+<section class="patterns--section">
+  <h2 class="patterns--title">navbar</h2>
+  <nav>
   
 <a class="logo" href="https://bart747.github.io">
 <svg
@@ -69,18 +73,90 @@
   </li>
 </ul>
 </nav>
+  <div class="patterns--note">The logo is a part of the navbar.
+    If it's 'sticky' you'll see it in the top left corner.</div>
+</section>
 
-
+<section class="patterns--section">
+  <h2 class="patterns--title">masthead</h2>
+  
 <section class="masthead block">
   
     <h1 class="masthead--title">Searching for Simple Solutions for UI Problems</h1>
     <h2 class="masthead--subtitle">With Adaptability in Mind</h2>
 
 </section>
+</section>
 
-<div class="home-main">
-  <div class="home-left">
-  <section class="block">
+<section class="patterns--section">
+  <h2 class="patterns--title">article</h2>
+  <section class="article wrapper-small">
+
+  <div class="date secondary"> Apr 25, 2017 </div>
+  <h1 class="article-title"></h1>
+  
+  <h1>Modular Interfaces</h1>
+
+<p>
+Modular UIs are easier to edit in the long run.
+When your interface is divided into distinct parts, you can also separate chunks of code by following that divisions.
+Than you can adjust to the real world without tedious redesigns:
+</p>
+
+<ol>
+  <li>You can just swap UI modules in an HTML or template file.</li>
+  <li>You can edit a module in its own file — no need to dig into complex code that’s responsible for many things.</li>
+</ol>
+
+
+</section>
+
+<section class="subnav">
+  <div class="subnav--line">
+    
+  </div>
+  <div class="subnav--line">
+    
+      <div class="subnav--tag">next: </div>
+      <div><a class="next" href="https://bart747.github.io/adaptability-planning/"> On Fragility of Plans and Adaptability: How Buildings Learn</a></div>
+    
+  </div>
+</section>
+</section>
+
+<section class="patterns--section">
+  <h2 class="patterns--title">blog page list</h2>
+  <div class="block blog--list post-list">
+    <div class="post-list--post">
+      <div class="date secondary"> Apr 5, 2017 </div>
+      <h2 class="post-list--post-title"><a href="https://bart747.github.io/resilient-ui/">5 Notes on How to Design a Resilient UI</a></h2>
+
+      <h2 id="modularity">Modularity</h2>
+
+      <p>The most interesting things happen once your software is in real use.
+      That&rsquo;s when you can really see what&rsquo;s working and what to change.
+      It brings us to the importance of modularity.</p>
+
+      <a href="https://bart747.github.io/resilient-ui/">Continue&#8230;</a>
+    </div>
+
+    <div class="post-list--post">
+      <div class="date secondary"> Aug 19, 2016 </div>
+      <h2 class="post-list--post-title"><a href="https://bart747.github.io/ui-coins/">Learning UI Design from Coins (on Contrast)</a></h2>
+
+      <p>Contrasts are one of key elements when it comes to usability. Lets take coins as an example.</p>
+      <p>When it comes to look: at first glance you see differences in size, color (types of metals) and visual patterns.</p>
+      <p>Feel in hand: some seem heavier, some lighter, some have different surfaces.</p>
+
+      <a href="https://bart747.github.io/ui-coins/">Continue&#8230;</a>
+
+    </div>
+  </div>
+</section>
+
+<section class="patterns--section">
+  <h2 class="patterns--title">home page post list</h2>
+  <div class=""><section class="block">
 <div class="post-list list--home">
   <div class="list-title">Recently on <a  href="https://bart747.github.io/blog">Blog</a>:</div>
 
@@ -100,22 +176,12 @@
 
   <a class="next" href="https://bart747.github.io/blog">All Posts</a>
 </div>
+</section></div>
 </section>
-  </div>
 
-  <div class="home-right">
-    <section  class="block">
-  <ul class="post-list post-list--short">
-    <div class="list-title">Other Publication</div>
-    <li>
-    <a href="https://bart747.github.io/process">On Creative Process</a>
-    </li>
-    <li>
-    <a href="https://bart747.github.io/ui-questions/">Questions to Ask Yourself when Designing UIs</a>
-    </li>
-  </ul>
-</section>
-    <section  class="block">
+<section class="patterns--section">
+  <h2 class="patterns--title">short publication list</h2>
+  <section  class="block">
   <ul class="post-list post-list--short">
     <div class="list-title">Top 3 Posts</div>
     <li>
@@ -129,7 +195,11 @@
     </li>
   </ul>
 </section>
-    <section class="block block-email">
+</section>
+
+<section class="patterns--section">
+  <h2 class="patterns--title">contact block</h2>
+  <section class="block block-email">
   <h3 class="block-email--title">Hi, I'm Bartosz and I make interfaces.</h3>
   <span class="block-email--email">contact me via:
     <script type="text/javascript">
@@ -137,11 +207,11 @@
     </script>
   </span>
 </section>
-    
-  </div>
-</div>
+</section>
 
-
+<section class="patterns--section">
+  <h2 class="patterns--title">footer</h2>
+  
 <footer class="block">
 
     <div>
@@ -177,3 +247,6 @@
 </script>
 </body>
 </html>
+</section>
+    
+</div>

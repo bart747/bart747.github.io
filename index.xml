@@ -10,6 +10,27 @@
     <atom:link href="https://bart747.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title></title>
+      <link>https://bart747.github.io/patterns/</link>
+      <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/patterns/</guid>
+      <description>&lt;h1&gt;Modular Interfaces&lt;/h1&gt;
+
+&lt;p&gt;
+Modular UIs are easier to edit in the long run.
+When your interface is divided into distinct parts, you can also separate chunks of code by following that divisions.
+Than you can adjust to the real world without tedious redesigns:
+&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You can just swap UI modules in an HTML or template file.&lt;/li&gt;
+  &lt;li&gt;You can edit a module in its own file — no need to dig into complex code that’s responsible for many things.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
       <title>On Fragility of Plans and Adaptability: How Buildings Learn</title>
       <link>https://bart747.github.io/adaptability-planning/</link>
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
@@ -30,6 +51,9 @@
 &lt;/ul&gt;
 
 &lt;p&gt;I noticed many similar problems in software design.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s the first part of six-part BBC TV series &lt;em&gt;How Buildings Learn&lt;/em&gt;.
+Written and presented by Stewart Brand.&lt;/p&gt;
 </description>
     </item>
     
@@ -707,117 +731,6 @@ You can see actual performance.&lt;/p&gt;
 You make a decision about the next move and stop looking for crystal balls.&lt;/p&gt;
 
 &lt;p&gt;BTW, have you heard about &lt;a href=&#34;https://www.youtube.com/watch?v=S8sqQ_p6aR8&#34;&gt;The Foolscap Method&lt;/a&gt;?&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Henry Ford for Makers: Quotes on Design</title>
-      <link>https://bart747.github.io/henry-ford-for-makers/</link>
-      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://bart747.github.io/henry-ford-for-makers/</guid>
-      <description>&lt;p&gt;These are short excerpts from Henry Ford&amp;rsquo;s “My Life and Work”. I picked
-the ones that will be helpful especially to makers&amp;mdash;designers, developers, etc.&lt;/p&gt;
-
-&lt;h2 id=&#34;simplicity&#34;&gt;Simplicity&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;My effort is in the direction of simplicity.
-&amp;hellip;
-Because nearly everything that we make is much
-more complex than it needs to be.
-Our clothing, our food, our household furnishings—all could be
-much simpler than they now are and at the same time be better looking.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;
-&lt;/p&gt;
-
-&lt;h2 id=&#34;work-money&#34;&gt;Work/Money&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Thinking first of money instead of work brings on fear of failure
-and this fear blocks every avenue of business—it makes a man afraid
-of competition, of changing his methods, or of doing anything which
-might change his condition.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The way is clear for any one who thinks first of service—of
-doing the work in the best possible way.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Manufacturing is not buying low and selling high.
-It is the process of buying materials fairly and,
-with the smallest possible addition of cost,
-transforming those materials into a consumable product and giving it
-to the consumer.
-Gambling, speculating, and sharp dealing, tend only to clog this progression.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;practicality&#34;&gt;Practicality&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If you travel the roads in the neighbourhood of Dearborn you can
-find all sorts of models of Ford cars.
-They are experimental cars—they are not new models.
-&amp;hellip;
-If an idea seems good or seems even to have possibilities,
-I believe in doing whatever is necessary to test out the idea from every angle.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The &amp;ldquo;Model T&amp;rdquo; had practically no features which were not contained
-in some one or other of the previous models.
-Every detail had been fully tested in practice.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The men often try out little attachments of their own because,
-concentrating on one thing, they can, if they have a mind that way,
-usually devise some improvement.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;None of our machines is ever built haphazardly. &amp;hellip;
-Sometimes wooden models are constructed or again the parts are drawn
-to full size on a blackboard. We are not bound by precedent but we
-leave nothing to luck.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;s-common-knowledge-s&#34;&gt;&lt;s&gt;Common Knowledge&lt;/s&gt;&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If ever I wanted to kill opposition by unfair means I would endow
-the opposition with experts.
-They would have so much good advice that I could be sure
-they would do little work.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Where most manufacturers find themselves quicker to make a change
-in the product than in the method of manufacturing—we follow
-exactly the opposite course.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I cannot discover that any one knows enough about anything on this
-earth definitely to say what is and what is not possible.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
     </item>
     
   </channel>
