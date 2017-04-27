@@ -1,3 +1,3 @@
-require('../sass/main.scss');
+require('../../sass/main.scss');
 
 console.log("rock'n'roll!");
