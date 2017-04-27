@@ -1,0 +1,107 @@
+p {
+  text-align: left;
+  margin: 0 auto 1em;
+}
+
+h1,
+h2,
+h3,
+h4, {
+  color: $black;
+  margin: 0 0 1em;
+}
+
+h1, .h1-like {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+  margin: 1em 0;
+  letter-spacing: -0.01em;
+}
+
+h2, .h2-like {
+  font-weight: bold;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.25;
+  color: $black;
+  margin: 1.33em 0 0.66em;
+}
+
+h3, .h3-like {
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 1.6em 0 0.8em
+}
+
+h4, .h4-like {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 2em 0 1em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  border-left: 1px dotted $grey;
+  margin: 0;
+  padding-left: 1em;
+}
+
+pre {
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+pre,
+code {
+  font-size: $medium-font-size;
+  font-family: $monospace;
+  @media screen and (max-width: $screen-mid) {
+    font-size: $small-font-size;
+  }
+  @media screen and (max-width: $screen-sml) {
+    font-size: 12px;
+  }
+}
+
+p code,
+li code {
+  color: $green;
+  font-size: 0.8em;
+  font-family: $monospace;
+  padding: 0 0.25em;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.article {
+  @include wrapper-mid;
+  margin: 3em auto;
+  padding: 0 1em;
+}
+
+.date {
+  font-size: 0.75em;
+}
+
+.secondary {
+  color: $grey;
+}
+
+.article-title {
+  @media (max-width: $screen-sml) {
+    margin: 0.5em 0 1em;
+  }
+}
+
+.small-txt {
+  font-size: $medium-font-size;
+}

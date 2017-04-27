@@ -1,0 +1,109 @@
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 1em;
+}
+
+ul li,
+ol li {
+  margin-left: 1em;
+}
+
+.list-title {
+  font-weight: bold;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+}
+
+.list--contacts {
+  display: flex;
+  justify-content: space-between; 
+  @media (max-width: $screen-mid) {
+    flex-direction: column;
+  }
+}
+
+.list--contacts li {
+  display: flex;
+  list-style: none;
+  margin: 0 1em 0 0;
+}
+
+.list--contacts li:last-child {
+  margin: 0;
+}
+
+.list-contacts-tag {
+  @media (max-width: $screen-mid) {
+    display: inline-block;
+    min-width: 4em;
+  }
+}
+
+.blog--list {
+  @include wrapper-mid;
+}
+
+.post-list {
+  margin: 0 0 3em;
+}
+
+.post-list > li {
+  font-weight: normal;
+  line-height: 1.25;
+  margin: 0 0 0.5em;
+  list-style: none;
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+.post-list h1 {
+  font-weight: bold;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.25;
+  color: $black;
+  margin: 0.66em 0 0.66em;
+}
+
+.post-list h2 {
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.25;
+  margin: 0.8em 0 0.8em
+}
+
+.post-list h3 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 1em 0 1em;
+}
+
+.post-list--post {  
+  margin: 0 auto 3em;
+}
+
+.post-list--post-title,
+h2.post-list--post-title,
+h3.post-list--post-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.25;
+  color: $black;
+  margin: 0 0 0.66em;
+}
+
+h2.post-list--home-title {
+  margin: 1.25em 0;
+}
+
+.post-list--short .post-list--title {
+  font-size: 1em;
+  line-height: 1.25;
+  margin: 0 0 0.5em;
+}
+
+

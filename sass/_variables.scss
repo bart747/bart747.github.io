@@ -1,0 +1,35 @@
+$base-font-family:      "Fira Sans", sans-serif;
+$monospace:             monospace;
+$large-font-size:       19px;
+$medium-font-size:      16px;
+$small-font-size:       14px;
+$base-line-height:      1.5;
+
+// colors
+$text-color:          #383838;
+$background-color:    #f5f3f1;
+$black:               #222;
+$white:               #fff;
+$red:                 #dd2222;
+$red-dark:            #aa2222;
+$green:               #118822;
+$green-dark:          #004010;
+$blue:                #2233dd;
+$blue-dark:             darken($blue, 10%);
+$blue-light:          #11aaff;
+$purple:              #5500aa;
+$grey:                #777;
+$grey-light:            lighten($grey, 40%);
+$grey-dark:             darken($grey, 20%);
+
+$yellow:             #ffee66;
+$background-yellow:  #ffee99;
+$orange:             #ff6622;
+$orange-light:       #ff9922;
+$orange-deep:        #dd3322;
+$night:              #200044;
+
+// sceen sizes
+$screen-big:            1024px;
+$screen-mid:            768px;
+$screen-sml:            568px;

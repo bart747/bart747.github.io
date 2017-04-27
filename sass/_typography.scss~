@@ -1,0 +1,95 @@
+p {
+  text-align: left;
+  margin: 0 auto 1em;
+}
+
+h1,
+h2,
+h3,
+h4, {
+  color: $red;
+  margin: 0 0 1em;
+}
+
+h1, .h1-like {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.125;
+  margin: 1em 0;
+  @media screen and (max-width: $screen-sml) {
+    margin: 1.5em 0 0.57em;
+  }
+}
+
+h2, .h2-like {
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 1.6em 0 0.8em
+}
+
+h3, .h3-like {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 2em 0 1em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  border-left: 1px dotted $grey;
+  margin: 0;
+  padding-left: 1em;
+}
+
+pre {
+    overflow-x: auto;
+}
+
+pre,
+code {
+  font-size: $medium-font-size;
+  font-family: $monospace;
+  @media screen and (max-width: $screen-mid) {
+    font-size: $small-font-size;
+  }
+  @media screen and (max-width: $screen-sml) {
+    font-size: 12px;
+  }
+}
+
+p code,
+li code {
+  color: $green;
+  font-size: 0.8em;
+  font-family: $monospace;
+  padding: 0 0.25em;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.article {
+  margin: 0 auto 3em;
+}
+
+.list-title {
+  margin: 0 0 1em;
+}
+
+.post-list {
+  margin: 0 0 3em;
+}
+
+.date {
+  font-size: $small-font-size;
+}
+
+.secondary {
+  color: $grey;
+}

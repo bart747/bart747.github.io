@@ -1,0 +1,56 @@
+@mixin columns {
+  .col {
+    flex: 1 1 auto;
+    margin: 0;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .col-100 {
+    flex-basis: 100%;
+  }
+
+  .col-50 {
+    flex-basis: 50%;
+  }
+
+  .col-75 {
+    flex-basis: 75%;
+  }
+
+  .col-25 {
+    flex-basis: 25%;
+  }
+
+  .col-88 {
+    flex-basis: 88%;
+  }
+
+  .col-12 {
+    flex-basis: 12%;
+  }
+
+  .col:first-child {
+    margin-left: 0;
+  }
+
+  .col:last-child {
+    margin-right: 0;
+  }
+}
+
+.grid.grid-fix {
+  display: flex;
+  justify-content: center;
+  @include columns;
+}
+
+@media screen and (min-width: $screen-mid +1px) {
+
+  .grid {
+    display: flex;
+    justify-content: center;
+    @include columns;
+  }
+  
+}

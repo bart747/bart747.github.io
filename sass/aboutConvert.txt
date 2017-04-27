@@ -1,0 +1,5 @@
+“Convert” is a shell script. You can use it to quickly launch following command:
+“sass --watch main.scss:../css/dist.css --style compressed”.
+In your terminal, go to “sass” folder location and type “./convert”.
+
+Requires Ruby and SASS: http://www.sass-lang.com/install.

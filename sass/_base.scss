@@ -1,0 +1,205 @@
+html {
+  box-sizing: border-box;
+  font-size: $large-font-size;
+  line-height: $base-line-height;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $base-font-family;
+  font-size: $large-font-size;
+  margin: 0;
+  padding: 0;
+  @media screen and (max-width: $screen-sml) {
+    font-size: $medium-font-size;
+  }
+}
+
+a {
+  color: $orange-deep;
+  text-decoration: none;
+  transition: color, border 0.1s ease-in;
+
+  &:active, &:hover {
+    border-bottom: 2px solid $blue-light;
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: $text-color;
+    background: $background-yellow;
+}
+
+::selection {
+    color: $text-color;
+    background: $background-yellow;
+}
+
+section {
+  margin: 0;
+}
+
+@mixin wrapper-mid {
+  max-width: 35em; 
+  margin: 0 auto;
+}
+
+@mixin wrapper-big {
+  max-width: 64em; 
+  margin: 0 auto;
+}
+
+.wrapper--nopad {
+  margin: 0 -1em;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+nav {
+  margin: 0;
+  padding: 0.5em 0.5em 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+.subnav {
+  @include wrapper-mid;
+  margin: 0 auto 3em;
+  padding: 0 1em; 
+}
+
+.subnav--line {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+}
+
+.subnav--tag {
+  display: inline-block;
+  min-width: 4em;
+}
+
+.block {
+  margin-bottom: 3em;
+  padding: 0 1em;
+}
+
+.block--extra {
+  margin: 0 0 3em;
+  padding: 0 1em;
+}
+
+object,
+img {
+  width: 100%;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px dotted;
+  padding: 1em 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  @include wrapper-mid;
+  margin: 3em auto;
+  padding: 0 1em;
+}
+
+button,
+.btn {
+  font-size: 1em;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  background: $blue;
+  border: solid $blue;
+  border-width: 3px;
+  border-radius: 4px;
+  outline: none; 
+  padding: 0.4em 1em;
+  text-align: center;
+  margin: 0.25em 0.125em;
+  max-width: 12em;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:active { 
+    background: lighten($blue-dark, 10%);
+  }
+  &:active {
+    background: $blue-dark;
+    
+  }
+  &:focus {
+    outline: none;
+    background: $blue-dark;
+  }
+}
+
+.blue {
+  color: $blue;
+}
+
+.red {
+  color: $red;
+}
+
+.orange {
+  color: $orange;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0 2px 2px 0;
+  z-index: 9999;
+}
+
+a.logo:active, a.logo:hover {
+  border: none;
+}
+
+a.logo:hover #svg-logo--path {
+  fill: $orange-deep !important;
+  transition: fill 0.2s ease-in;
+} 
+
+

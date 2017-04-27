@@ -1,0 +1,60 @@
+.home-main {
+  display: block;
+  @include wrapper-big;
+  @media screen and (min-width: 64em) {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.home-left,
+.home-right {
+  @include wrapper-mid;
+}
+
+.home-left {
+  flex-grow: 2;
+  @media screen and (min-width: 64em) {
+    margin-right: 2em;
+  }
+}
+
+.home-right {
+  flex-grow: 1;
+}
+
+.home-section-title,
+h1.home-section-title,
+h2.home-section-title {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0 0 1em;
+}
+
+.home-highlight {
+  background: $background-yellow;
+  padding: 0.125em 0.25em 0.05em;
+  border-radius: 5px;
+}
+
+.word-highlight {
+  color: $blue;
+}
+
+.block-email {
+  padding: 0 1em;
+}
+
+.block-email--title {
+  font-size: 1em;
+  margin: 0;
+}
+
+.block-email--email  {
+  margin: 0;
+}
+
+.block-email--email a {
+  font-weight: bold;
+}
+

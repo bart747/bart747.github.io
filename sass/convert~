@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sass --watch main.scss:../stati/css/dist.css --style compressed
