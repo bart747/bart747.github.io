@@ -31,9 +31,9 @@
 
 <section class="patterns--section">
   <h2 class="patterns--title">navbar</h2>
-  <nav>
+  <nav id="nav">
   
-<a class="logo" href="https://bart747.github.io">
+<a class="nav--logo" href="https://bart747.github.io">
 <svg
   xmlns="http://www.w3.org/2000/svg"
   version="1.1"
@@ -64,6 +64,7 @@
     <a href="https://bart747.github.io/blog/">blog</a>
   </li>
 </ul>
+
 </nav>
   <div class="patterns--note">The logo is a part of the navbar.
     If it's 'sticky' you'll see it in the top left corner.</div>
@@ -223,12 +224,13 @@
 
 <section class="patterns--section">
   <h2 class="patterns--title">article</h2>
-  <section class="article wrapper-small">
+  <section class="article">
 
-  <div class="date secondary"> Apr 25, 2017 </div>
-  <h1 class="article-title"></h1>
-  
-  <h1>Modular Interfaces</h1>
+      
+  <div class="article--narrow">
+    <h1 class="article-title"></h1>
+    
+    <h1>Modular Interfaces</h1>
 
 <p>
 Modular UIs are easier to edit in the long run.
@@ -241,6 +243,9 @@ Than you can adjust to the real world without tedious redesigns:
   <li>You can edit a module in its own file — no need to dig into complex code that’s responsible for many things.</li>
 </ol>
 
+    
+    <div class="date secondary"> Apr 25, 2017 </div>
+  </div>
 
 </section>
 
@@ -304,7 +309,7 @@ Than you can adjust to the real world without tedious redesigns:
   
 
 </ul>
-<a class="next" href="https://bart747.github.io/blog">All Posts</a>
+<a class="home--post-list--more" href="https://bart747.github.io/blog">All Posts</a>
 </section></div>
 </section>
 
@@ -368,6 +373,10 @@ Than you can adjust to the real world without tedious redesigns:
     <a href="https://creativecommons.org/licenses/by/3.0/">
     Some rights reserved</a> &mdash; please attribute and link back.
     </small>
+
+<div class="footer--top">
+<a href="https://bart747.github.io/patterns/#nav">top</a>
+</div>
 
 </footer>
 

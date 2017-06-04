@@ -27,9 +27,9 @@
 <body>
 
 
-<nav>
+<nav id="nav">
   
-<a class="logo" href="https://bart747.github.io">
+<a class="nav--logo" href="https://bart747.github.io">
 <svg
   xmlns="http://www.w3.org/2000/svg"
   version="1.1"
@@ -60,14 +60,16 @@
     <a href="https://bart747.github.io/blog/">blog</a>
   </li>
 </ul>
+
 </nav>
 
-<section class="article wrapper-small">
+<section class="article">
 
-  <div class="date secondary"> Dec 27, 2015 </div>
-  <h1 class="article-title">A Hint on How to Speed Up Jekyll Regeneration</h1>
-  
-  <p>My Jekyll site was way too slow recently.
+      
+  <div class="article--narrow">
+    <h1 class="article-title">A Hint on How to Speed Up Jekyll Regeneration</h1>
+    
+    <p>My Jekyll site was way too slow recently.
 It took around 1 minute per regeneration and much more for starting a server.</p>
 
 <p>I made some improvement by excluding a few files from the conversion.</p>
@@ -95,6 +97,9 @@ it was hidden somewhere deeper in the directory.</p>
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="ss">exclude</span><span class="p">:</span> <span class="o">[</span><span class="n">file</span><span class="o">.</span><span class="n">js</span><span class="p">,</span> <span class="n">somefolder</span><span class="p">,</span> <span class="n">projects</span><span class="o">/*/</span><span class="n">node_modules</span><span class="p">,</span> <span class="o">...]</span>
 </code></pre></div>
 </p>
+    
+    <div class="date secondary"> Dec 27, 2015 </div>
+  </div>
 
 </section>
 
@@ -141,6 +146,10 @@ it was hidden somewhere deeper in the directory.</p>
     <a href="https://creativecommons.org/licenses/by/3.0/">
     Some rights reserved</a> &mdash; please attribute and link back.
     </small>
+
+<div class="footer--top">
+<a href="https://bart747.github.io/jekyll-speed/#nav">top</a>
+</div>
 
 </footer>
 
