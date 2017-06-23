@@ -7,7 +7,6 @@ self.addEventListener('install', function(event) {
       console.log('[ServiceWorker] Caching app shell');
       return cache.addAll([
         '/',
-        '/404.html',
         '/index.html',
         '/resilient-ui/',
         '/manifest.json',
@@ -15,18 +14,6 @@ self.addEventListener('install', function(event) {
         '/css/bundle.css',
         '/icon152.png',
       ]);
-    })
-  );
-});
-
-self.addEventListener('fetch', function(event) {
-  console.log('[ServiceWorker] Fetch', e.request.url);
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
-    }).catch(function() {
-      // Can't access the network return an offline page from the cache
-      return caches.match('/offline/');
     })
   );
 });
@@ -44,4 +31,16 @@ self.addEventListener('activate', function(event) {
     })
   );
   return self.clients.claim();
+});
+
+self.addEventListener('fetch', function(event) {
+  console.log('[ServiceWorker] Fetch', e.request.url);
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    }).catch(function() {
+      // Can't access the network return an offline page from the cache
+      return caches.match('/resilient-ui');
+    })
+  );
 });
