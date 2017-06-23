@@ -4,7 +4,7 @@ var cacheFiles =  [
         '/index.html',
         '/offline/',
         '/resilient-ui/',
-        '/research-decisions/',
+        '/research-decision/',
         '/henry-ford-for-makers/',
         '/manifest.json',
         '/js/dist/bundle.js',
