@@ -3,13 +3,15 @@ var cacheFiles =  [
         '/',
         '/index.html',
         '/offline/',
-        '/resilient-ui',
+        '/resilient-ui/',
+        '/research-decisions/',
+        '/henry-ford-for-makers/',
         '/manifest.json',
         '/js/dist/bundle.js',
         '/css/bundle.css',
         '/icon152.png',
       ];
-var offlinePage = './offline/'
+var offlinePage = './offline/';
 
 self.addEventListener('install', function(event) {
   console.log('[ServiceWorker] Install');
