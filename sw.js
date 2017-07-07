@@ -7,9 +7,9 @@ var cacheFiles =  [
         '/research-decision/',
         '/henry-ford-for-makers/',
         '/manifest.json',
-        '/js/dist/bundle.js',
-        '/css/bundle.css',
-        '/icon152.png',
+        '/dist/bundle.js',
+        '/dist/bundle.css',
+        '/icon320.png',
       ];
 var offlinePage = './offline/';
 
