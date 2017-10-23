@@ -1,10 +1,10 @@
 {
   "name": "Bartosz Wieczorek, UI Developer",
   "short_name": "UI Dev",
-  "display": "minimal-ui",
-  "start_url": "/",
-  "theme_color": "#7700ff",
-  "background_color": "#f5f3f1",
+  "display": "browser",
+  "start_url": ".",
+  "theme_color": "#000000",
+  "background_color": "#fffefd",
   "icons": [
     {
       "src": "icon512.png",

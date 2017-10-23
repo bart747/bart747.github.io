@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="-23.080164"
-     inkscape:cy="197.71377"
+     inkscape:zoom="0.7"
+     inkscape:cx="82.690783"
+     inkscape:cy="479.02475"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -64,26 +64,34 @@
      id="layer1"
      transform="translate(0,-502.36218)">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       style="fill:#22bbff;fill-opacity:1;stroke:none"
        id="rect2988"
        width="550"
        height="550"
        x="0"
        y="0"
        transform="translate(0,502.36218)" />
-    <rect
-       style="fill:#220033;fill-opacity:1;stroke:none"
-       id="rect3757"
-       width="550"
-       height="110"
-       x="0"
-       y="942.36218" />
-    <rect
-       style="fill:#dd4433;fill-opacity:1;stroke:none"
-       id="rect2990"
-       width="550"
-       height="110"
-       x="0"
-       y="502.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:500px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+       x="320"
+       y="952.36218"
+       id="text3004"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3006"
+         x="320"
+         y="952.36218">{</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:500px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
+       x="-40"
+       y="972.36218"
+       id="text3004-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3006-7"
+         x="-40"
+         y="972.36218" /></text>
   </g>
 </svg>
