@@ -3,8 +3,8 @@
   "short_name": "UI Dev",
   "display": "browser",
   "start_url": ".",
-  "theme_color": "#000000",
-  "background_color": "#fffefd",
+  "theme_color": "#44aaee",
+  "background_color": "#222233",
   "icons": [
     {
       "src": "icon512.png",
