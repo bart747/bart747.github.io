@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>https://bart747.github.io/</loc>
-    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://bart747.github.io/patterns/</loc>
@@ -87,7 +83,23 @@
   </url>
   
   <url>
+    <loc>https://bart747.github.io/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://bart747.github.io/dripmailsales/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bart747.github.io/blog/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bart747.github.io/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -96,6 +108,44 @@
   
   <url>
     <loc>https://bart747.github.io/howiwork/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bart747.github.io/howiworktest/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bart747.github.io/categories/nosummary/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bart747.github.io/pages/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bart747.github.io/projects/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bart747.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bart747.github.io/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bart747.github.io/categories/video/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

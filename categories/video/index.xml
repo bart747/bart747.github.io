@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>UI design and development</title>
-    <link>https://bart747.github.io/categories/video/index.xml</link>
-    <description>Recent content on UI design and development</description>
+    <title>Video on UI design and development</title>
+    <link>https://bart747.github.io/categories/video/</link>
+    <description>Recent content in Video on UI design and development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://bart747.github.io/categories/video/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bart747.github.io/categories/video/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>On Fragility of Plans and Adaptability: How Buildings Learn</title>
@@ -14,19 +17,9 @@
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bart747.github.io/adaptability-planning/</guid>
-      <description>&lt;p&gt;&lt;small&gt;30 min&lt;/small&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;time is the main architect&lt;/li&gt;
-&lt;li&gt;design with adaptability in mind&lt;/li&gt;
-&lt;li&gt;people will have to or want to change their buildings in the future&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I noticed many similar problems in software design.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s the first part of six-part BBC TV series &lt;em&gt;How Buildings Learn&lt;/em&gt;.
-Written and presented by Stewart Brand.&lt;/p&gt;
-</description>
+      <description>30 min
+ time is the main architect design with adaptability in mind people will have to or want to change their buildings in the future  I noticed many similar problems in software design.
+It&amp;rsquo;s the first part of six-part BBC TV series How Buildings Learn. Written and presented by Stewart Brand.</description>
     </item>
     
     <item>
@@ -35,11 +28,8 @@ Written and presented by Stewart Brand.&lt;/p&gt;
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bart747.github.io/ambitious-projects/</guid>
-      <description>&lt;p&gt;&lt;small&gt;67 minutes&lt;/small&gt;&lt;/p&gt;
-
-&lt;p&gt;With emphasis on mental and philosophical side of creating complicated things.
-It&amp;rsquo;s about handling negative emotions, picking the right thing to work on, creative process.&lt;/p&gt;
-</description>
+      <description>67 minutes
+With emphasis on mental and philosophical side of creating complicated things. It&amp;rsquo;s about handling negative emotions, picking the right thing to work on, creative process.</description>
     </item>
     
     <item>
@@ -48,11 +38,8 @@ It&amp;rsquo;s about handling negative emotions, picking the right thing to work
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bart747.github.io/craftsmen-at-work/</guid>
-      <description>&lt;p&gt;I enjoy looking at craftsmen at work.
-You can learn from it by seeing the process, tricks of the trade, work on details that most people won&amp;rsquo;t even notice. It doesn&amp;rsquo;t matter that it&amp;rsquo;s not my field. It&amp;rsquo;s about that detail-oriented thinking.&lt;/p&gt;
-
-&lt;p&gt;Video made by &lt;a href=&#34;https://www.youtube.com/channel/UCMIjEnXruVHtvgSVf6TgfUg&#34;&gt;Wranglerstar&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>I enjoy looking at craftsmen at work. You can learn from it by seeing the process, tricks of the trade, work on details that most people won&amp;rsquo;t even notice. It doesn&amp;rsquo;t matter that it&amp;rsquo;s not my field. It&amp;rsquo;s about that detail-oriented thinking.
+Video made by Wranglerstar.</description>
     </item>
     
   </channel>

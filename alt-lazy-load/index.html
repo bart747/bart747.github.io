@@ -8,7 +8,7 @@
 
   <meta name="theme-color" content="#7700ff">
 
-  <meta name="generator" content="Hugo 0.17" />
+  <meta name="generator" content="Hugo 0.30.2" />
  
   <title> On Lazy Load Overuse and What You Can Do Instead </title>
   
@@ -80,34 +80,32 @@ The selected top images will get loaded faster than usual because they won&rsquo
 
 <p>Here&rsquo;s a very general example of the main mechanism:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span></span><span class="kd">function</span> <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="nx">count</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="nx">count</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">setTimeout</span><span class="p">(</span> <span class="nx">_</span><span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span> <span class="nx">_</span><span class="p">=&gt;</span> <span class="p">{</span>
 
-      <span class="c1">// when last image from the TOP group is ready, load the rest</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">lastTopImg</span><span class="p">.</span><span class="nx">complete</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">bottomImgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span> <span class="nx">el</span> <span class="o">=&gt;</span> <span class="p">{</span>
-          <span class="nx">el</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;data-imgload&quot;</span><span class="p">);</span>
+      <span class="c1">// when last image from the TOP group is ready, load the rest
+</span><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">lastTopImg</span><span class="p">.</span><span class="nx">complete</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">bottomImgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span> <span class="nx">el</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="nx">el</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&#34;data-imgload&#34;</span><span class="p">);</span>
         <span class="p">});</span>
       
-      <span class="c1">// otherwise, run the function again</span>
-      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// otherwise, run the function again
+</span><span class="c1"></span>      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="nx">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span> 
       <span class="p">}</span> 
 
-    <span class="p">},</span> <span class="mi">200</span><span class="p">);</span> <span class="c1">// each iteration gives top images some time</span>
-
-    <span class="c1">// if the last top image is not complete after all iterations,</span>
-    <span class="c1">// load the rest of images anyway</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>        
-    <span class="nx">bottomImgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span> <span class="nx">el</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">el</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;data-imgload&quot;</span><span class="p">);</span>
+    <span class="p">},</span> <span class="mi">200</span><span class="p">);</span> <span class="c1">// each iteration gives top images some time
+</span><span class="c1"></span>
+    <span class="c1">// if the last top image is not complete after all iterations,
+</span><span class="c1"></span>    <span class="c1">// load the rest of images anyway
+</span><span class="c1"></span>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>        
+    <span class="nx">bottomImgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span> <span class="nx">el</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">el</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&#34;data-imgload&#34;</span><span class="p">);</span>
     <span class="p">});</span>
   <span class="p">}</span>
 
-  <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-</code></pre></div>
-
+  <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span></code></pre></div>
 
 <p>There are 10 available iterations.
 Each one waits 200ms.

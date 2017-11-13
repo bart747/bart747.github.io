@@ -8,7 +8,7 @@
 
   <meta name="theme-color" content="#7700ff">
 
-  <meta name="generator" content="Hugo 0.17" />
+  <meta name="generator" content="Hugo 0.30.2" />
  
   <title> Vim Typography: Better Readability and Look </title>
   
@@ -71,41 +71,33 @@ and can&rsquo;t or don&rsquo;t want to use when Vim is running via terminal.</p>
 
 <h3 id="theming-syntax-highlighter">Theming (syntax highlighter)</h3>
 
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span></span><span class="nb">syntax</span> enable
-<span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
-<span class="k">colorscheme</span> themeName 
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">background</span><span class="p">=</span><span class="nb">dark</span><span class="err">
+</span><span class="err"></span><span class="nx">colorscheme</span> <span class="nx">themeName</span> </code></pre></div>
 
 <p>Color schemes are stored in <code>.vim/colors</code> folder.</p>
 
 <h3 id="fonts">Fonts</h3>
 
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span></span><span class="k">set</span> <span class="nb">guifont</span><span class="p">=</span>Droid\ Sans\ Mono\ <span class="m">14</span>
-<span class="c">&quot;&quot; or</span>
-<span class="k">set</span> <span class="nb">guifont</span><span class="p">=</span>DejaVu\ Sans\ Mono:h13
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Droid</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span>\ <span class="m">14</span><span class="c">
+</span><span class="c">&#34;&#34; or</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">DejaVu</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span><span class="p">:</span><span class="nx">h13</span></code></pre></div>
 
 <p>As you can see, when there are spaces in a font name, you have to use
 <code>\ </code>before them. There are also system differences when it comes to picking size.</p>
 
 <p>This is an example of setup for many operating systems:
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span></span><span class="k">if</span> has<span class="p">(</span><span class="s2">&quot;gui_gtk2&quot;</span><span class="p">)</span>
-  <span class="k">set</span> <span class="nb">guifont</span><span class="p">=</span>Droid\ Sans\ Mono\ <span class="m">13</span>
-<span class="k">elseif</span> has<span class="p">(</span><span class="s2">&quot;gui_macvim&quot;</span><span class="p">)</span>
-  <span class="k">set</span> <span class="nb">guifont</span><span class="p">=</span>Menlo\ Regular:h14
-<span class="k">elseif</span> has<span class="p">(</span><span class="s2">&quot;gui_win32&quot;</span><span class="p">)</span>
-  <span class="k">set</span> <span class="nb">guifont</span><span class="p">=</span>Consolas:h11:cANSI
-<span class="k">endif</span>
-</code></pre></div>
-</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="c">&#34;gui_gtk2&#34;)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Droid</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span>\ <span class="m">13</span><span class="err">
+</span><span class="err"></span><span class="k">elseif</span> <span class="nx">has</span><span class="p">(</span><span class="c">&#34;gui_macvim&#34;)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Menlo</span>\ <span class="nx">Regular</span><span class="p">:</span><span class="nx">h14</span><span class="err">
+</span><span class="err"></span><span class="k">elseif</span> <span class="nx">has</span><span class="p">(</span><span class="c">&#34;gui_win32&#34;)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Consolas</span><span class="p">:</span><span class="nx">h11</span><span class="p">:</span><span class="nx">cANSI</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span></code></pre></div></p>
 
 <h3 id="linespace-almost-like-line-height-in-css">Linespace (almost like line-height in CSS)</h3>
 
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span></span><span class="nb">linespace</span><span class="p">=</span><span class="m">4</span>
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">linespace</span><span class="p">=</span><span class="m">4</span></code></pre></div>
 
 <p><code>Linespace</code> property doesn&rsquo;t work exactly like
 <code>line-height</code> in CSS.
@@ -134,40 +126,30 @@ Consider using some of them in <code>.gvimrc</code> instead of <code>.vimrc</cod
 
 <p>Set and show 80 characters limit.</p>
 
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span></span><span class="k">set</span> <span class="nb">textwidth</span><span class="p">=</span><span class="m">80</span>
-<span class="k">set</span> <span class="nb">colorcolumn</span><span class="p">=+</span><span class="m">1</span>  
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">textwidth</span><span class="p">=</span><span class="m">80</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">colorcolumn</span><span class="p">=+</span><span class="m">1</span>  </code></pre></div>
 
 <p>You&rsquo;ll see a line after 80th column.</p>
 
 <h3 id="line-numbers">Line Numbers</h3>
 
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span></span><span class="k">set</span> <span class="k">number</span>          <span class="c">&quot; show line numbers</span>
-<span class="k">set</span> <span class="nb">numberwidth</span><span class="p">=</span><span class="m">4</span>   <span class="c">&quot; width of number bar</span>
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">number</span><span class="c">          &#34; show line numbers</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">numberwidth</span><span class="p">=</span><span class="m">4</span><span class="c">   &#34; width of number bar</span></code></pre></div>
 
 <h3 id="text-highlighting">Text Highlighting</h3>
 
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span></span><span class="k">set</span> <span class="nb">cursorline</span>      <span class="c">&quot; highlight current line</span>
-<span class="k">set</span> <span class="nb">showmatch</span>       <span class="c">&quot; highlight matching &lt;[{()}]&gt;</span>
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">cursorline</span><span class="c">      &#34; highlight current line</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">showmatch</span><span class="c">       &#34; highlight matching &lt;[{()}]&gt;</span></code></pre></div>
 
 <h3 id="autoindenting">Autoindenting</h3>
 
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span></span><span class="k">set</span> <span class="nb">autoindent</span>      <span class="c">&quot; set autoindenting on</span>
-<span class="k">set</span> <span class="nb">copyindent</span>      <span class="c">&quot; copy the indentation from previous line</span>
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">autoindent</span><span class="c">      &#34; set autoindenting on</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">copyindent</span><span class="c">      &#34; copy the indentation from previous line</span></code></pre></div>
 
 <h3 id="spell-check-word-completion">Spell Check + Word Completion</h3>
 
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span></span><span class="k">set</span> <span class="k">spell</span> <span class="nb">spelllang</span><span class="p">=</span>en_us
-<span class="k">set</span> <span class="nb">complete</span><span class="p">+=</span>kspell 
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">spell</span> <span class="nx">spelllang</span><span class="p">=</span><span class="nx">en_us</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">complete</span><span class="p">+=</span><span class="nx">kspell</span> </code></pre></div>
 
 <p>Press CTRL-N or CTRL-P in insert-mode to complete current word.</p>
     

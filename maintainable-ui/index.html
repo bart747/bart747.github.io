@@ -8,7 +8,7 @@
 
   <meta name="theme-color" content="#7700ff">
 
-  <meta name="generator" content="Hugo 0.17" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
  
   <title> Maintainable UI: How to Improve Code Editing with SASS </title>
   
@@ -58,86 +58,90 @@
         
     
     
-    <p>Changes are unavoidable. And you can’t predict the future.
+    
+
+<p>Changes are unavoidable. And you can’t predict the future.
 You also can’t solve problems in theory only, without prototyping.
 So make your life easier and build things that are easy to edit.</p>
 
 <p>Here are some examples of SASS based solutions that you can use to make UI more maintainable and “themable”.</p>
 
-<p></p>
-
-<h2 id="variables">Variables</h2>
+<h2 id="variables:639a9d470b05babc7c386789855af479">Variables</h2>
 
 <p>With SASS variables you can control your basic UI properties from one, organised file.
 The obvious ones are font families, media queries, colors and sizes.</p>
 
 <p>Here&rsquo;s quick example:</p>
 
-<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span></span><span class="c1">// fonts</span>
-<span class="nv">$family</span><span class="o">:</span>           <span class="s2">&quot;Source Sans Pro&quot;</span><span class="o">,</span> <span class="no">sans-serif</span><span class="p">;</span>
 
-<span class="c1">// colors</span>
-<span class="nv">$txt</span><span class="o">:</span>              <span class="mh">#404040</span><span class="p">;</span>
-<span class="nv">$blue</span><span class="o">:</span>             <span class="mh">#2233ff</span><span class="p">;</span>
-<span class="nv">$red</span><span class="o">:</span>              <span class="mh">#ff3322</span><span class="p">;</span>
-<span class="nv">$green</span><span class="o">:</span>            <span class="mh">#22ff33</span><span class="p">;</span>
 
-<span class="c1">// sizes</span>
-<span class="nv">$base-font-size</span><span class="o">:</span>   <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
-<span class="nv">$large-font-size</span><span class="o">:</span>  <span class="mi">21</span><span class="kt">px</span><span class="p">;</span>
-<span class="nv">$small-font-size</span><span class="o">:</span>  <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
-<span class="nv">$base-line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.6</span><span class="p">;</span>
+// fonts
+$family:           "Source Sans Pro", sans-serif;
 
-<span class="c1">// breakepoints</span>
-<span class="nv">$sm</span><span class="o">:</span>               <span class="mi">568</span><span class="kt">px</span><span class="p">;</span>
-<span class="nv">$md</span><span class="o">:</span>               <span class="mi">768</span><span class="kt">px</span><span class="p">;</span>
-<span class="nv">$lg</span><span class="o">:</span>               <span class="mi">1024</span><span class="kt">px</span><span class="p">;</span>
-</code></pre></div>
+// colors
+$txt:              #404040;
+$blue:             #2233ff;
+$red:              #ff3322;
+$green:            #22ff33;
+
+// sizes
+$base-font-size:   18px;
+$large-font-size:  21px;
+$small-font-size:  16px;
+$base-line-height: 1.6;
+
+// breakepoints
+$sm:               568px;
+$md:               768px;
+$lg:               1024px;
+
 
 
 <p>But hey, not all colors are equal. And when it comes to sizes, we can get much more.</p>
 
-<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span></span><span class="c1">// FONTS</span>
-
-<span class="nv">$base-family</span><span class="o">:</span>           <span class="s2">&quot;Source Sans Pro&quot;</span><span class="o">,</span> <span class="no">sans-serif</span><span class="p">;</span>
-<span class="nv">$mono-family</span><span class="o">:</span>           <span class="s2">&quot;Droid Sans Mono&quot;</span><span class="o">,</span> <span class="no">monospace</span><span class="p">;</span>
 
 
-<span class="c1">// COLORS</span>
+// FONTS
 
-<span class="c1">// base</span>
-<span class="nv">$txt</span><span class="o">:</span>              <span class="mh">#404040</span><span class="p">;</span>
-<span class="nv">$blue</span><span class="o">:</span>             <span class="mh">#2233ff</span><span class="p">;</span>
-<span class="nv">$red</span><span class="o">:</span>              <span class="mh">#ff3322</span><span class="p">;</span>
-<span class="nv">$green</span><span class="o">:</span>            <span class="mh">#22ff33</span><span class="p">;</span>
-
-<span class="c1">// branding</span>
-<span class="nv">$brand-blue</span><span class="o">:</span>       <span class="nv">$blue</span><span class="p">;</span>
-<span class="nv">$brand-gold</span><span class="o">:</span>       <span class="mh">#e5b23b</span><span class="p">;</span>
+$base-family:           "Source Sans Pro", sans-serif;
+$mono-family:           "Droid Sans Mono", monospace;
 
 
-<span class="c1">// SIZES</span>
+// COLORS
 
-<span class="nv">$base-font-size</span><span class="o">:</span>   <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
-<span class="nv">$large-font-size</span><span class="o">:</span>  <span class="mi">21</span><span class="kt">px</span><span class="p">;</span>
-<span class="nv">$small-font-size</span><span class="o">:</span>  <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
-<span class="nv">$base-line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.6</span><span class="p">;</span>
+// base
+$txt:              #404040;
+$blue:             #2233ff;
+$red:              #ff3322;
+$green:            #22ff33;
 
-<span class="c1">// marketing headlines;</span>
-<span class="nv">$extra-fonts-size</span><span class="o">:</span> <span class="mi">28</span><span class="kt">px</span><span class="p">;</span>
-
-<span class="c1">// rhythm unit (leading)</span>
-<span class="nv">$u</span><span class="o">:</span>                <span class="mi">1</span><span class="kt">rem</span> <span class="o">*</span> <span class="nv">$base-line-height</span><span class="p">;</span>
-
-
-<span class="c1">// BREAKEPOINTS</span>
-<span class="nv">$sm</span><span class="o">:</span>               <span class="mi">568</span><span class="kt">px</span><span class="p">;</span>
-<span class="nv">$md</span><span class="o">:</span>               <span class="mi">768</span><span class="kt">px</span><span class="p">;</span>
-<span class="nv">$lg</span><span class="o">:</span>               <span class="mi">1024</span><span class="kt">px</span><span class="p">;</span>
-</code></pre></div>
+// branding
+$brand-blue:       $blue;
+$brand-gold:       #e5b23b;
 
 
-<h3 id="what-s-rhythm-unit-u">What&rsquo;s rhythm unit ($u)?</h3>
+// SIZES
+
+$base-font-size:   18px;
+$large-font-size:  21px;
+$small-font-size:  16px;
+$base-line-height: 1.6;
+
+// marketing headlines;
+$extra-fonts-size: 28px;
+
+// rhythm unit (leading)
+$u:                1rem * $base-line-height;
+
+
+// BREAKEPOINTS
+$sm:               568px;
+$md:               768px;
+$lg:               1024px;
+
+
+
+<h3 id="what-s-rhythm-unit-u:639a9d470b05babc7c386789855af479">What&rsquo;s rhythm unit ($u)?</h3>
 
 <p>You can use $u for things like margins, padding, height and  line-height.
 It will keep everything well aligned. It equals your default leading size.</p>
@@ -148,48 +152,52 @@ Just use it to set up margins and padding.
 If there&rsquo;s a headline that&rsquo;s bigger than basic font size,
 fit it into a line-hight that equals one $u.</p>
 
-<h2 id="mixins-and-functions">Mixins and Functions</h2>
+<h2 id="mixins-and-functions:639a9d470b05babc7c386789855af479">Mixins and Functions</h2>
 
 <p>If you use more than one font settings stack:</p>
 
-<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span></span><span class="k">@mixin</span><span class="nf"> font-base</span> <span class="p">{</span>
-  <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">text-color</span><span class="o">;</span>
-  <span class="nt">font-family</span><span class="nd">:</span> <span class="err">$</span><span class="nt">base-font-family</span><span class="o">;</span>
-  <span class="nt">font-size</span><span class="nd">:</span>  <span class="err">$</span><span class="nt">base-font-size</span><span class="o">;</span>
-  <span class="nt">line-height</span><span class="nd">:</span> <span class="err">$</span><span class="nt">base-line-height</span><span class="o">;</span>
-<span class="p">}</span>
 
-<span class="k">@mixin</span><span class="nf"> font-mono</span> <span class="p">{</span>
-  <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">grey-dark</span><span class="o">;</span>
-  <span class="nt">font-family</span><span class="nd">:</span> <span class="err">$</span><span class="nt">mono-font-family</span><span class="o">;</span>
-  <span class="nt">font-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">small-font-size</span><span class="o">;</span>
-  <span class="nt">line-height</span><span class="nd">:</span> <span class="nt">0</span><span class="nc">.75</span> <span class="o">*</span> <span class="err">$</span><span class="nt">u</span><span class="o">;</span>
-  <span class="o">//</span> <span class="nt">4</span> <span class="nt">lines</span> <span class="nt">of</span> <span class="nt">code</span> <span class="nt">will</span> <span class="nt">give</span> <span class="nt">3x</span> <span class="nt">default</span> <span class="nt">leading</span>
-<span class="p">}</span>
-</code></pre></div>
+
+@mixin font-base {
+  color: $text-color;
+  font-family: $base-font-family;
+  font-size:  $base-font-size;
+  line-height: $base-line-height;
+}
+
+@mixin font-mono {
+  color: $grey-dark;
+  font-family: $mono-font-family;
+  font-size: $small-font-size;
+  line-height: 0.75 * $u;
+  // 4 lines of code will give 3x default leading
+}
+
 
 
 <p>Assets directory path helpers:</p>
 
-<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span></span><span class="nv">$assets-dir</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">assets&#39;</span><span class="p">;</span>
-
-<span class="k">@function</span> <span class="nt">image</span><span class="o">(</span><span class="err">$</span><span class="nt">name</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nt">url</span><span class="o">(</span><span class="nc">..</span><span class="o">/</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">assets-dir</span><span class="p">}</span><span class="o">/</span><span class="nt">img</span><span class="o">/</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">name</span><span class="p">}</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="k">@function</span> <span class="nt">font</span><span class="o">(</span><span class="err">$</span><span class="nt">name</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@return</span> <span class="nt">url</span><span class="o">(</span><span class="nc">..</span><span class="o">/</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">assets-dir</span><span class="p">}</span><span class="o">/</span><span class="nt">fonts</span><span class="o">/</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">name</span><span class="p">}</span><span class="o">);</span>
-
-<span class="p">}</span>
-
-<span class="c1">// usage</span>
-<span class="c1">// .masthead {</span>
-<span class="c1">//   background-image: image(&#39;clouds.svg&#39;);</span>
-<span class="c1">// }</span>
-</code></pre></div>
 
 
-<h2 id="files">Files</h2>
+$assets-dir: 'assets';
+
+@function image($name) {
+  @return url(../#{$assets-dir}/img/#{$name});
+}
+
+@function font($name) {
+  @return url(../#{$assets-dir}/fonts/#{$name});
+
+}
+
+// usage
+// .masthead {
+//   background-image: image('clouds.svg');
+// }
+
+
+
+<h2 id="files:639a9d470b05babc7c386789855af479">Files</h2>
 
 <p>Lets assume that you spotted some problem with an article layout.
 If your <code>.scss</code> files are big and complex, you&rsquo;ll need to do some little research before editing.
@@ -210,7 +218,7 @@ If you have a lot of well organized small ones you know where to go:</p>
 <li>logo</li>
 </ul>
 
-<h2 id="helpers">Helpers</h2>
+<h2 id="helpers:639a9d470b05babc7c386789855af479">Helpers</h2>
 
 <p>It&rsquo;s good to have a <code>helpers.scss</code> file. It&rsquo;s a place to store classes and mixins like:</p>
 
@@ -224,13 +232,13 @@ If you have a lot of well organized small ones you know where to go:</p>
 
 <p>Little n&rsquo; handy stuff.</p>
 
-<h2 id="conventions-and-rules">Conventions and Rules</h2>
+<h2 id="conventions-and-rules:639a9d470b05babc7c386789855af479">Conventions and Rules</h2>
 
 <p>Rules and conventions are better than total configurability.
 Set main building blocks of your future product and stick to them.
 It&rsquo;s better for your brain than playing with endless options.</p>
 
-<h3 id="you-re-doing-too-much-anyway">You&rsquo;re Doing too Much Anyway</h3>
+<h3 id="you-re-doing-too-much-anyway:639a9d470b05babc7c386789855af479">You&rsquo;re Doing too Much Anyway</h3>
 
 <p>Having max three extra colors beside your default text color is most of the time enough.</p>
 
@@ -248,7 +256,7 @@ Mod classes are something like this: <code>.photo-big,
 
 <p>That way your UI is more predictable for users and yourself.</p>
 
-<h3 id="more-on-typography">More on Typography</h3>
+<h3 id="more-on-typography:639a9d470b05babc7c386789855af479">More on Typography</h3>
 
 <p>I like to limit myself to 3 font sizes.</p>
 
@@ -266,20 +274,21 @@ Visual identity stuff is done mostly with colors, weights and placement.</p>
 
 <p>Look at UIs of Twitter, Google search results and GitHub profiles. How many font sizes and families do you see at a glance?</p>
 
-<h2 id="stay-small">Stay Small</h2>
+<h2 id="stay-small:639a9d470b05babc7c386789855af479">Stay Small</h2>
 
 <p>One of the biggest factors of maintainability is codebase size itself.
 More code, more problems.
 It&rsquo;s good to think about how particular element is useful.
 Does it pay for itself?</p>
 
-<h2 id="you-don-t-know-the-future">You Don&rsquo;t Know the Future</h2>
+<h2 id="you-don-t-know-the-future:639a9d470b05babc7c386789855af479">You Don&rsquo;t Know the Future</h2>
 
 <p>Maybe something complex will need to be modified.
 Maybe your thing is not so great in some situations.
 Maybe you won&rsquo;t remember how you figured it out.</p>
 
 <p><strong>The whole point is to take advantage from uncertainty</strong>.</p>
+
     
     <div class="date secondary"> Nov 10, 2015 </div>
   </div>

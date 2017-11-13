@@ -8,7 +8,7 @@
 
   <meta name="theme-color" content="#7700ff">
 
-  <meta name="generator" content="Hugo 0.17" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
  
   <title> A Hint on How to Speed Up Jekyll Regeneration </title>
   
@@ -63,11 +63,9 @@ It took around 1 minute per regeneration and much more for starting a server.</p
 
 <p>I made some improvement by excluding a few files from the conversion.</p>
 
-<p></p>
-
 <p>_config.yml:
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="ss">exclude</span><span class="p">:</span> <span class="o">[</span><span class="n">file</span><span class="o">.</span><span class="n">js</span><span class="p">,</span> <span class="n">somefolder</span><span class="p">,</span> <span class="n">otherfolder</span><span class="p">,</span> <span class="o">...]</span>
-</code></pre></div>
+
+exclude: [file.js, somefolder, otherfolder, ...]
 </p>
 
 <p>It wasn&rsquo;t a big improvement so I kept digging.
@@ -83,9 +81,10 @@ One &lsquo;node_modules&rsquo; folder turned to be the pain point. I didn&rsquo;
 it was hidden somewhere deeper in the directory.</p>
 
 <p>I reorganized my files so now it&rsquo;s easy to locate that kind of stuff.
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="ss">exclude</span><span class="p">:</span> <span class="o">[</span><span class="n">file</span><span class="o">.</span><span class="n">js</span><span class="p">,</span> <span class="n">somefolder</span><span class="p">,</span> <span class="n">projects</span><span class="o">/*/</span><span class="n">node_modules</span><span class="p">,</span> <span class="o">...]</span>
-</code></pre></div>
+
+exclude: [file.js, somefolder, projects/*/node_modules, ...]
 </p>
+
     
     <div class="date secondary"> Dec 27, 2015 </div>
   </div>

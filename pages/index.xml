@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages-rss on UI design and development</title>
-    <link>https://bart747.github.io/pages/index.xml</link>
-    <description>Recent content in Pages-rss on UI design and development</description>
+    <title>Pages on UI design and development</title>
+    <link>https://bart747.github.io/pages/</link>
+    <description>Recent content in Pages on UI design and development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://bart747.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://bart747.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Dang! It looks like you&#39;re offline.</title>
@@ -14,14 +16,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bart747.github.io/offline/</guid>
-      <description>&lt;p&gt;Here&amp;rsquo;s some saved content you might enjoy:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bart747.github.io/resilient-ui/&#34;&gt;5 Notes on How to Design a Resilient UI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://bart747.github.io/research-decision/&#34;&gt;Research vs Making Decisions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://bart747.github.io/henry-ford-for-makers/&#34;&gt;Henry Ford for Makers: Quotes on Design&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Here&amp;rsquo;s some saved content you might enjoy:
+ 5 Notes on How to Design a Resilient UI Research vs Making Decisions Henry Ford for Makers: Quotes on Design  </description>
     </item>
     
     <item>
@@ -30,6 +26,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bart747.github.io/howiwork/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hi, this is how I work. It&#39;s about coding to sell.</title>
+      <link>https://bart747.github.io/howiworktest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/howiworktest/</guid>
       <description></description>
     </item>
     

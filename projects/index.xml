@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects-rss on UI design and development</title>
-    <link>https://bart747.github.io/projects/index.xml</link>
-    <description>Recent content in Projects-rss on UI design and development</description>
+    <title>Projects on UI design and development</title>
+    <link>https://bart747.github.io/projects/</link>
+    <description>Recent content in Projects on UI design and development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 25 Apr 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://bart747.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://bart747.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title></title>
@@ -15,19 +17,7 @@
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bart747.github.io/patterns/</guid>
-      <description>&lt;h1&gt;Modular Interfaces&lt;/h1&gt;
-
-&lt;p&gt;
-Modular UIs are easier to edit in the long run.
-When your interface is divided into distinct parts, you can also separate chunks of code by following that divisions.
-Than you can adjust to the real world without tedious redesigns:
-&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;You can just swap UI modules in an HTML or template file.&lt;/li&gt;
-  &lt;li&gt;You can edit a module in its own file — no need to dig into complex code that’s responsible for many things.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Modular Interfaces  Modular UIs are easier to edit in the long run. When your interface is divided into distinct parts, you can also separate chunks of code by following that divisions. Than you can adjust to the real world without tedious redesigns:  You can just swap UI modules in an HTML or template file. You can edit a module in its own file — no need to dig into complex code that’s responsible for many things.</description>
     </item>
     
     <item>
