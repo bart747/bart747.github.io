@@ -41,15 +41,11 @@ self.addEventListener('activate', function (event) {
 })
 
 self.addEventListener('fetch', function (event) {
-  if (event.request.mode === 'navigate') {
-    console.log('[ServiceWorker] Fetch', event.request.url)
-    event.respondWith(
-      caches.match(event.request).then(function (response) {
-        return response || fetch(event.request)
-      }).catch(function () {
-        // When can't access the network return an offline page from the cache
-        return caches.match(offlinePage)
-      })
-    )
-  }
+  console.log('[ServiceWorker] Fetch', event.request.url)
+  event.respondWith(
+    fetch(event.request).catch(function () {
+      // When can't access the network return an offline page from the cache
+      return caches.match(offlinePage)
+    })
+  )
 })
