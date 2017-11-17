@@ -42,16 +42,11 @@ self.addEventListener('activate', function (event) {
 self.addEventListener('fetch', function (event) {
   console.log('[ServiceWorker] Fetch', event.request.url)
   event.respondWith(
-    caches.open(cacheName).then(function(cache) {
-      return cache.match(event.request).then(function (response) {
-        return response || fetch(event.request).then(function (response) {
-          cache.put(event.request, response.clone())
-          return response
-        })
+    // try network first, than cache, than offline page
+    fetch(event.request).catch(function() {
+      return caches.match(event.request).then(function (response) {
+        return response || caches.match(offlinePage)
       })
-    }).catch(function () {
-      // When can't access the network return an offline page from the cache
-      return caches.match(offlinePage)
     })
   )
 })
