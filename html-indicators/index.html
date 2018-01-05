@@ -38,7 +38,7 @@
     <a class="topbar--link" href="https://bart747.github.io">
       Blog
     </a>
-  </div>
+  </div> 
 
   <div class="topbar--unit">
     <a class="topbar--link" href="https://bart747.github.io/howiwork/">
@@ -48,15 +48,16 @@
 
 </nav>
 
+
+
 <section class="article">
 
-      
-  <div class="article--narrow">
+  
 
+  <div class="article--narrow">
     
       <h1 class="article-title">Structuring HTML Form Validation Indicators</h1>
         
-    
     
     <p>Should I add a &lsquo;success&rsquo; class to an input element or some other part of my form?
 How to show an error indicator during live validation? How to manage a few different ways of validation?</p>
@@ -113,35 +114,35 @@ than attache a proper method of validation.</p>
 <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div></p>
 
 <p>Now, try to find which classes will be used:
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss">/* icons */
-.validate .icon-error,
-.validate .icon-success {
-  display: none;
-}
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* icons */</span>
+<span class="p">.</span><span class="nc">validate</span> <span class="p">.</span><span class="nc">icon-error</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">validate</span> <span class="p">.</span><span class="nc">icon-success</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
 
-.input-error .icon-error {
-  color: $red;
-  display: inline;
-}
+<span class="p">.</span><span class="nc">input-error</span> <span class="p">.</span><span class="nc">icon-error</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="err">$</span><span class="kc">red</span><span class="p">;</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">inline</span><span class="p">;</span>
+<span class="p">}</span>
 
-.input-success .icon-success {
-  color: $green;
-  display: inline;
-}
+<span class="p">.</span><span class="nc">input-success</span> <span class="p">.</span><span class="nc">icon-success</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="err">$</span><span class="kc">green</span><span class="p">;</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">inline</span><span class="p">;</span>
+<span class="p">}</span>
 
-/* text messages */
-.validate .text-error,
-.validate .text-success {
-  display: none;
-}
+<span class="c">/* text messages */</span>
+<span class="p">.</span><span class="nc">validate</span> <span class="p">.</span><span class="nc">text-error</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">validate</span> <span class="p">.</span><span class="nc">text-success</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
 
-.input-error .text-error {
-  display: block;
-}
+<span class="p">.</span><span class="nc">input-error</span> <span class="p">.</span><span class="nc">text-error</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+<span class="p">}</span>
 
-.input-success .text-success {
-  display: block;
-}</code></pre></div></p>
+<span class="p">.</span><span class="nc">input-success</span> <span class="p">.</span><span class="nc">text-success</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div></p>
 
 <p>As you can see, I can show the right icon in the right color by adding just one CSS class.
 Text messages work the same way.</p>
@@ -155,8 +156,7 @@ The script has to tweak only one element to mark an error.</p>
 <h2 id="short-conclusion">Short Conclusion</h2>
 
 <p>Good data structures make your work simpler.
-When a structure is right, a procedure that uses it can be more straight forward.</p>
-    
+When a structure is right, a procedure that uses it can be more straight forward.</p> 
     <div class="date secondary"> Oct 24, 2016 </div>
   </div>
 
