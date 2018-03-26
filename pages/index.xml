@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on UI design and development</title>
-    <link>https://bart747.github.io/pages/</link>
+    <link>bart747.github.io/pages/</link>
     <description>Recent content in Pages on UI design and development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://bart747.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="bart747.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dang! It looks like you&#39;re offline.</title>
-      <link>https://bart747.github.io/offline/</link>
+      <link>bart747.github.io/offline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/offline/</guid>
+      <guid>bart747.github.io/offline/</guid>
       <description>Here&amp;rsquo;s some saved content you might enjoy:
  5 Notes on How to Design a Resilient UI Research vs Making Decisions Henry Ford for Makers: Quotes on Design  </description>
     </item>
     
     <item>
       <title>Hi, this is how I work. It&#39;s about coding to sell.</title>
-      <link>https://bart747.github.io/howiwork/</link>
+      <link>bart747.github.io/howiwork/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/howiwork/</guid>
+      <guid>bart747.github.io/howiwork/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hi, this is how I work. It&#39;s about coding to sell.</title>
-      <link>https://bart747.github.io/howiworktest/</link>
+      <link>bart747.github.io/howiworktest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/howiworktest/</guid>
+      <guid>bart747.github.io/howiworktest/</guid>
       <description></description>
     </item>
     

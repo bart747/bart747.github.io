@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>UI design and development</title>
-    <link>https://bart747.github.io/</link>
+    <link>bart747.github.io/</link>
     <description>Recent content on UI design and development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://bart747.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="bart747.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>David Lynch on Catching Ideas</title>
-      <link>https://bart747.github.io/lynch-ideas/</link>
+      <link>bart747.github.io/lynch-ideas/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/lynch-ideas/</guid>
+      <guid>bart747.github.io/lynch-ideas/</guid>
       <description>&lt;p&gt;&lt;small&gt;2.5 minutes&lt;/small&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -34,29 +34,29 @@
     
     <item>
       <title>Play is Essential</title>
-      <link>https://bart747.github.io/play/</link>
+      <link>bart747.github.io/play/</link>
       <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/play/</guid>
+      <guid>bart747.github.io/play/</guid>
       <description>You need experimentation with freedom. Play to figure things out and get unstuck.
 Ideas that you get by doing are more in touch with reality – they are more likely to work.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://bart747.github.io/patterns/</link>
+      <link>bart747.github.io/patterns/</link>
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/patterns/</guid>
+      <guid>bart747.github.io/patterns/</guid>
       <description>Modular Interfaces  Modular UIs are easier to edit in the long run. When your interface is divided into distinct parts, you can also separate chunks of code by following that divisions. Than you can adjust to the real world without tedious redesigns:  You can just swap UI modules in an HTML or template file. You can edit a module in its own file — no need to dig into complex code that’s responsible for many things.</description>
     </item>
     
     <item>
       <title>On Fragility of Plans and Adaptability: How Buildings Learn</title>
-      <link>https://bart747.github.io/adaptability-planning/</link>
+      <link>bart747.github.io/adaptability-planning/</link>
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/adaptability-planning/</guid>
+      <guid>bart747.github.io/adaptability-planning/</guid>
       <description>30 min
  time is the main architect design with adaptability in mind people will have to or want to change their buildings in the future  I noticed many similar problems in software design.
 It&amp;rsquo;s the first part of six-part BBC TV series How Buildings Learn. Written and presented by Stewart Brand.</description>
@@ -64,10 +64,10 @@ It&amp;rsquo;s the first part of six-part BBC TV series How Buildings Learn. Wri
     
     <item>
       <title>5 Notes on How to Design a Resilient UI</title>
-      <link>https://bart747.github.io/resilient-ui/</link>
+      <link>bart747.github.io/resilient-ui/</link>
       <pubDate>Wed, 05 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/resilient-ui/</guid>
+      <guid>bart747.github.io/resilient-ui/</guid>
       <description>&lt;p&gt;The most interesting things happen once your software is in real use.
 That&amp;rsquo;s when you can really see what&amp;rsquo;s working and what to change.&lt;/p&gt;
 
@@ -80,10 +80,10 @@ You need to design your software with ease of modification in mind.&lt;/p&gt;
     
     <item>
       <title>Henry Ford on What Promoted His Cars The Most</title>
-      <link>https://bart747.github.io/ford-marketing/</link>
+      <link>bart747.github.io/ford-marketing/</link>
       <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/ford-marketing/</guid>
+      <guid>bart747.github.io/ford-marketing/</guid>
       <description>&lt;p&gt;Oldie but goodie. Quotes form Henry Ford&amp;rsquo;s &lt;i&gt;My Life and Work&lt;/i&gt; on his experiences with advertising/marketing.&lt;/p&gt;
 
 &lt;h2 id=&#34;racing&#34;&gt;Racing&lt;/h2&gt;
@@ -102,20 +102,20 @@ The public thought nothing of a car unless it made speed—unless it beat other 
     
     <item>
       <title>Working on Ambitious Projects: Jonathan Blow on Game Design</title>
-      <link>https://bart747.github.io/ambitious-projects/</link>
+      <link>bart747.github.io/ambitious-projects/</link>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/ambitious-projects/</guid>
+      <guid>bart747.github.io/ambitious-projects/</guid>
       <description>67 minutes
 With emphasis on mental and philosophical side of creating complicated things. It&amp;rsquo;s about handling negative emotions, picking the right thing to work on, creative process.</description>
     </item>
     
     <item>
       <title>Structuring HTML Form Validation Indicators</title>
-      <link>https://bart747.github.io/html-indicators/</link>
+      <link>bart747.github.io/html-indicators/</link>
       <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/html-indicators/</guid>
+      <guid>bart747.github.io/html-indicators/</guid>
       <description>&lt;p&gt;Should I add a &amp;lsquo;success&amp;rsquo; class to an input element or some other part of my form?
 How to show an error indicator during live validation? How to manage a few different ways of validation?&lt;/p&gt;
 
@@ -124,10 +124,10 @@ How to show an error indicator during live validation? How to manage a few diffe
     
     <item>
       <title>On Lazy Load Overuse and What You Can Do Instead</title>
-      <link>https://bart747.github.io/alt-lazy-load/</link>
+      <link>bart747.github.io/alt-lazy-load/</link>
       <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/alt-lazy-load/</guid>
+      <guid>bart747.github.io/alt-lazy-load/</guid>
       <description>&lt;p&gt;Lazy Load is a great idea, so it&amp;rsquo;s overused frequently.
 Do you remember that situation when you scrolled down
 quickly to get to the middle part and the picture wasn&amp;rsquo;t there yet?&lt;/p&gt;
@@ -137,20 +137,20 @@ quickly to get to the middle part and the picture wasn&amp;rsquo;t there yet?&lt
     
     <item>
       <title>Looking at Craftsmen</title>
-      <link>https://bart747.github.io/craftsmen-at-work/</link>
+      <link>bart747.github.io/craftsmen-at-work/</link>
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/craftsmen-at-work/</guid>
+      <guid>bart747.github.io/craftsmen-at-work/</guid>
       <description>I enjoy looking at craftsmen at work. You can learn from it by seeing the process, tricks of the trade, work on details that most people won&amp;rsquo;t even notice. It doesn&amp;rsquo;t matter that it&amp;rsquo;s not my field. It&amp;rsquo;s about that detail-oriented thinking.
 Video made by Wranglerstar.</description>
     </item>
     
     <item>
       <title>Max Planck on New Ideas and Creative Work</title>
-      <link>https://bart747.github.io/planck/</link>
+      <link>bart747.github.io/planck/</link>
       <pubDate>Fri, 09 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/planck/</guid>
+      <guid>bart747.github.io/planck/</guid>
       <description>&lt;p&gt;Here are few famous quotes related to &lt;a href=&#34;https://bart747.github.io/process/&#34;&gt;creative work&lt;/a&gt;, by Max Planck:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -163,10 +163,10 @@ and a new generation grows up that is familiar with it.&lt;/p&gt;
     
     <item>
       <title>Learning UI Design from Coins (on Contrast)</title>
-      <link>https://bart747.github.io/ui-coins/</link>
+      <link>bart747.github.io/ui-coins/</link>
       <pubDate>Fri, 19 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/ui-coins/</guid>
+      <guid>bart747.github.io/ui-coins/</guid>
       <description>&lt;p&gt;Contrast is an essential concept when it comes to UI usability. It solves more problems than you think.&lt;/p&gt;
 
 &lt;p&gt;Lets take coins as an example.
@@ -179,10 +179,10 @@ Each of these features is useful in some situation.&lt;/p&gt;
     
     <item>
       <title>Payment UIs Can be Used to Reduce Friction</title>
-      <link>https://bart747.github.io/payment-ui-friction/</link>
+      <link>bart747.github.io/payment-ui-friction/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/payment-ui-friction/</guid>
+      <guid>bart747.github.io/payment-ui-friction/</guid>
       <description>&lt;p&gt;A page with a final &amp;ldquo;buy&amp;rdquo; button or a credit card data form
 is a huge friction trigger.
 It&amp;rsquo;s the moment when you, as a buyer, think again about spendings
@@ -194,10 +194,10 @@ The fact that you&amp;rsquo;re about to say bye to some of your money triggers t
     
     <item>
       <title>A Hint on How to Speed Up Jekyll Regeneration</title>
-      <link>https://bart747.github.io/jekyll-speed/</link>
+      <link>bart747.github.io/jekyll-speed/</link>
       <pubDate>Sun, 27 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/jekyll-speed/</guid>
+      <guid>bart747.github.io/jekyll-speed/</guid>
       <description>&lt;p&gt;My Jekyll site was way too slow recently.
 It took around 1 minute per regeneration and much more for starting a server.&lt;/p&gt;
 
@@ -208,10 +208,10 @@ It took around 1 minute per regeneration and much more for starting a server.&lt
     
     <item>
       <title>Vim Typography: Better Readability and Look</title>
-      <link>https://bart747.github.io/vim-typography/</link>
+      <link>bart747.github.io/vim-typography/</link>
       <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/vim-typography/</guid>
+      <guid>bart747.github.io/vim-typography/</guid>
       <description>&lt;p&gt;A few tricks to improve your Vim editor&amp;rsquo;s readability and theming.
 All examples are for editing &lt;code&gt;.vimrc&lt;/code&gt; and &lt;code&gt;.gvimrc&lt;/code&gt; files.&lt;/p&gt;
 
@@ -220,10 +220,10 @@ All examples are for editing &lt;code&gt;.vimrc&lt;/code&gt; and &lt;code&gt;.gv
     
     <item>
       <title>Research vs Making Decisions</title>
-      <link>https://bart747.github.io/research-decision/</link>
+      <link>bart747.github.io/research-decision/</link>
       <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/research-decision/</guid>
+      <guid>bart747.github.io/research-decision/</guid>
       <description>&lt;p&gt;More often than not, research is something that prevents you from making a decision.
 You want to be sure, so you seek more.
 But your brain is somehow full of doubts all the time, no matter what you know.&lt;/p&gt;
@@ -233,10 +233,10 @@ But your brain is somehow full of doubts all the time, no matter what you know.&
     
     <item>
       <title>Henry Ford for Makers: Quotes on Design</title>
-      <link>https://bart747.github.io/henry-ford-for-makers/</link>
+      <link>bart747.github.io/henry-ford-for-makers/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/henry-ford-for-makers/</guid>
+      <guid>bart747.github.io/henry-ford-for-makers/</guid>
       <description>&lt;p&gt;These are short excerpts from Henry Ford&amp;rsquo;s “My Life and Work”. I picked
 the ones that will be helpful especially to makers&amp;mdash;designers, developers, etc.&lt;/p&gt;
 
@@ -254,10 +254,10 @@ much simpler than they now are and at the same time be better looking.&lt;/p&gt;
     
     <item>
       <title>Maintainable UI: How to Improve Code Editing with SASS</title>
-      <link>https://bart747.github.io/maintainable-ui/</link>
+      <link>bart747.github.io/maintainable-ui/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/maintainable-ui/</guid>
+      <guid>bart747.github.io/maintainable-ui/</guid>
       <description>&lt;p&gt;Changes are unavoidable. And you can’t predict the future.
 You also can’t solve problems in theory only, without prototyping.
 So make your life easier and build things that are easy to edit.&lt;/p&gt;
@@ -269,38 +269,38 @@ So make your life easier and build things that are easy to edit.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://bart747.github.io/dripmailsales/</link>
+      <link>bart747.github.io/dripmailsales/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/dripmailsales/</guid>
+      <guid>bart747.github.io/dripmailsales/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dang! It looks like you&#39;re offline.</title>
-      <link>https://bart747.github.io/offline/</link>
+      <link>bart747.github.io/offline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/offline/</guid>
+      <guid>bart747.github.io/offline/</guid>
       <description>Here&amp;rsquo;s some saved content you might enjoy:
  5 Notes on How to Design a Resilient UI Research vs Making Decisions Henry Ford for Makers: Quotes on Design  </description>
     </item>
     
     <item>
       <title>Hi, this is how I work. It&#39;s about coding to sell.</title>
-      <link>https://bart747.github.io/howiwork/</link>
+      <link>bart747.github.io/howiwork/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/howiwork/</guid>
+      <guid>bart747.github.io/howiwork/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hi, this is how I work. It&#39;s about coding to sell.</title>
-      <link>https://bart747.github.io/howiworktest/</link>
+      <link>bart747.github.io/howiworktest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/howiworktest/</guid>
+      <guid>bart747.github.io/howiworktest/</guid>
       <description></description>
     </item>
     
