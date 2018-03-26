@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on UI design and development</title>
-    <link>bart747.github.io/categories/</link>
+    <link>www.bart747.github.io/categories/</link>
     <description>Recent content in Categories on UI design and development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="bart747.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="www.bart747.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Nosummary</title>
-      <link>bart747.github.io/categories/nosummary/</link>
+      <link>www.bart747.github.io/categories/nosummary/</link>
       <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>bart747.github.io/categories/nosummary/</guid>
+      <guid>www.bart747.github.io/categories/nosummary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quote Bundle</title>
-      <link>bart747.github.io/categories/quote-bundle/</link>
+      <link>www.bart747.github.io/categories/quote-bundle/</link>
       <pubDate>Fri, 09 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>bart747.github.io/categories/quote-bundle/</guid>
+      <guid>www.bart747.github.io/categories/quote-bundle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Video</title>
-      <link>bart747.github.io/categories/video/</link>
+      <link>www.bart747.github.io/categories/video/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>bart747.github.io/categories/video/</guid>
+      <guid>www.bart747.github.io/categories/video/</guid>
       <description></description>
     </item>
     

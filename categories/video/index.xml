@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Video on UI design and development</title>
-    <link>bart747.github.io/categories/video/</link>
+    <link>www.bart747.github.io/categories/video/</link>
     <description>Recent content in Video on UI design and development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="bart747.github.io/categories/video/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="www.bart747.github.io/categories/video/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>David Lynch on Catching Ideas</title>
-      <link>bart747.github.io/lynch-ideas/</link>
+      <link>www.bart747.github.io/lynch-ideas/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>bart747.github.io/lynch-ideas/</guid>
+      <guid>www.bart747.github.io/lynch-ideas/</guid>
       <description>&lt;p&gt;&lt;small&gt;2.5 minutes&lt;/small&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -34,10 +34,10 @@
     
     <item>
       <title>On Fragility of Plans and Adaptability: How Buildings Learn</title>
-      <link>bart747.github.io/adaptability-planning/</link>
+      <link>www.bart747.github.io/adaptability-planning/</link>
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>bart747.github.io/adaptability-planning/</guid>
+      <guid>www.bart747.github.io/adaptability-planning/</guid>
       <description>30 min
  time is the main architect design with adaptability in mind people will have to or want to change their buildings in the future  I noticed many similar problems in software design.
 It&amp;rsquo;s the first part of six-part BBC TV series How Buildings Learn. Written and presented by Stewart Brand.</description>
@@ -45,20 +45,20 @@ It&amp;rsquo;s the first part of six-part BBC TV series How Buildings Learn. Wri
     
     <item>
       <title>Working on Ambitious Projects: Jonathan Blow on Game Design</title>
-      <link>bart747.github.io/ambitious-projects/</link>
+      <link>www.bart747.github.io/ambitious-projects/</link>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>bart747.github.io/ambitious-projects/</guid>
+      <guid>www.bart747.github.io/ambitious-projects/</guid>
       <description>67 minutes
 With emphasis on mental and philosophical side of creating complicated things. It&amp;rsquo;s about handling negative emotions, picking the right thing to work on, creative process.</description>
     </item>
     
     <item>
       <title>Looking at Craftsmen</title>
-      <link>bart747.github.io/craftsmen-at-work/</link>
+      <link>www.bart747.github.io/craftsmen-at-work/</link>
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>bart747.github.io/craftsmen-at-work/</guid>
+      <guid>www.bart747.github.io/craftsmen-at-work/</guid>
       <description>I enjoy looking at craftsmen at work. You can learn from it by seeing the process, tricks of the trade, work on details that most people won&amp;rsquo;t even notice. It doesn&amp;rsquo;t matter that it&amp;rsquo;s not my field. It&amp;rsquo;s about that detail-oriented thinking.
 Video made by Wranglerstar.</description>
     </item>
