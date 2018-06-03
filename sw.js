@@ -1,16 +1,14 @@
 
 const cacheName = "simple-cache";
 const cacheFiles = [
-  "/",
-  "/howiwork/",
   "/offline/",
   "/resilient-ui/",
   "/research-decision/",
   "/henry-ford-for-makers/",
   "/manifest.json",
-  "/dist/bundle.js",
   "/dist/bundle.css",
-  "/icon320.png",
+  "/dist/bundle.js"
+
 ];
 const offlinePage = "./offline/";
 
