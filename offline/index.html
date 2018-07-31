@@ -9,26 +9,6 @@
   <meta name="theme-color" content="#ff6622">
 
   <title>Dang! It looks like you&#39;re offline.</title>
-  <meta name="description" content="">
-
-  
-  <meta itemprop="name" content="Dang! It looks like you&#39;re offline.">
-  <meta itemprop="description" content="Here&rsquo;s some saved content you might enjoy:
- 5 Notes on How to Design a Resilient UI Research vs Making Decisions Henry Ford for Makers: Quotes on Design  ">
-
-  
-  <meta property="og:url" content="https://bart747.github.io">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Dang! It looks like you&#39;re offline.">
-  <meta property="og:description" content="Here&rsquo;s some saved content you might enjoy:
- 5 Notes on How to Design a Resilient UI Research vs Making Decisions Henry Ford for Makers: Quotes on Design  ">
-
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Dang! It looks like you&#39;re offline.">
-  <meta name="twitter:creator" content="@bwhimself">
-  <meta name="twitter:description" content="Here&rsquo;s some saved content you might enjoy:
- 5 Notes on How to Design a Resilient UI Research vs Making Decisions Henry Ford for Makers: Quotes on Design  ">
 
   <meta name="generator" content="Hugo 0.40.2" />
 
@@ -36,22 +16,13 @@
   
 
   
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/dist/bundle.css?1532969933">
-
-  <link rel="icon" type="image/png" href="/icon152.png?v=2" sizes="152x152">
-  <link rel="icon" type="image/png" href="/icon320.png?v=2" sizes="320x320">
-  <link rel="icon" type="image/png" href="/icon512.png?v=2" sizes="512v512">
-  <link rel="apple-touch-icon" href="/icon320.png?v=2">
+  <link rel="stylesheet" type="text/css" href="/dist/bundle.css?1533055029">
 
   <link rel="manifest" href="/manifest.json">
-
-  <meta name="google-site-verification" content="vBPgvbkTPtu2MKsCfMMETSBB-crQhj8AZuJ2JUUF2_0" />
 
 </head>
 <body>
 <div id="allwrapper">
-
 
 <nav id="nav top" class="topbar">
 
@@ -77,7 +48,9 @@
 <div class="article article--narrow">
     <h1 class="article-title">Dang! It looks like you&#39;re offline.</h1>
     
-    <p>Here&rsquo;s some saved content you might enjoy:</p>
+    <p>Please try again as soon as your connection is OK again.</p>
+
+<p>Here&rsquo;s some cached content you might enjoy:</p>
 
 <ul>
 <li><a href="/resilient-ui/">5 Notes on How to Design a Resilient UI</a></li>
@@ -88,14 +61,13 @@
     
 </div>
 
-
 <footer>
 
     <div>
       <ul class="list--contacts">
         <li>
           <div class="list-contacts-tag">email:&nbsp;</div>
-          <div class="liame"></div>
+          <div id="liame"></div>
         </li>
         <li>
           <div class="list-contacts-tag">github:&nbsp;</div> <div><a href="https://github.com/bart747">bart747</a></div>
@@ -117,7 +89,14 @@
 
 </footer>
 
-<script src="/dist/bundle.js?1532969933">
+<script>
+var place = document.getElementById("liame");
+
+var p1 = "hello.bartosz";;
+var p2 = "gmail";
+
+var addr = p1 + "@" + p2 + ".com";
+place.innerHTML = "<a href=mailto:" + addr + ">" + addr + "</a>";
 </script>
 
 </div>
