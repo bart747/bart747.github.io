@@ -6,10 +6,23 @@
     <description>Recent content in Blog on UI design and development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bart747.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Old Programming Wisdom Beats Crowdsourced Advice</title>
+      <link>https://bart747.github.io/crowd/</link>
+      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/crowd/</guid>
+      <description>&lt;p&gt;Programmers as a crowd, like any crowd, are dumb. People find some wierd kind of safety in following popular opinion. They see it as something of high value — worth sacrificing trust in their own instincts.
+This is why I like to look for advice by turning to individuals who achieved something worth admiring and
+show signs of independent thinking.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>We&#39;re so Bad at Judging Complexity, yet We Like to Predict</title>
