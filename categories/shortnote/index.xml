@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shortnote on UI design and development</title>
+    <link>https://bart747.github.io/categories/shortnote/</link>
+    <description>Recent content in Shortnote on UI design and development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bart747.github.io/categories/shortnote/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Play is Essential</title>
+      <link>https://bart747.github.io/play/</link>
+      <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/play/</guid>
+      <description>You need experimentation with freedom. Play to figure things out and get unstuck.
+Ideas that you get by doing are more in touch with reality — they are more likely to work.</description>
+    </item>
+    
+  </channel>
+</rss>
