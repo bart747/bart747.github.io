@@ -207,20 +207,6 @@ The fact that you&amp;rsquo;re about to say bye to some of your money triggers t
     </item>
     
     <item>
-      <title>A Hint on How to Speed Up Jekyll Regeneration</title>
-      <link>https://bart747.github.io/jekyll-speed/</link>
-      <pubDate>Sun, 27 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://bart747.github.io/jekyll-speed/</guid>
-      <description>&lt;p&gt;My Jekyll site was way too slow recently.
-It took around 1 minute per regeneration and much more for starting a server.&lt;/p&gt;
-
-&lt;p&gt;I made some improvement by excluding a few files from the conversion.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Vim Typography: Better Readability and Look</title>
       <link>https://bart747.github.io/vim-typography/</link>
       <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
