@@ -13,7 +13,7 @@
    height="550"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    inkscape:export-filename="/home/bartek/mysite/hugo/themes/metrumy/static/icon.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
@@ -27,17 +27,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="82.690783"
-     inkscape:cy="479.02475"
+     inkscape:zoom="0.35"
+     inkscape:cx="1652.2107"
+     inkscape:cy="542.88558"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1050"
-     inkscape:window-x="0"
-     inkscape:window-y="30"
-     inkscape:window-maximized="1">
+     showgrid="false"
+     inkscape:window-width="1885"
+     inkscape:window-height="1052"
+     inkscape:window-x="35"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:object-paths="false"
+     inkscape:snap-intersection-paths="false"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:object-nodes="true">
     <inkscape:grid
        type="xygrid"
        id="grid2985"
@@ -64,24 +68,13 @@
      id="layer1"
      transform="translate(0,-502.36218)">
     <rect
-       style="fill:#22bbff;fill-opacity:1;stroke:none"
+       style="fill:#000000;fill-opacity:1;stroke:none"
        id="rect2988"
        width="550"
        height="550"
        x="0"
        y="0"
        transform="translate(0,502.36218)" />
-    <text
-       xml:space="preserve"
-       style="font-size:500px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
-       x="320"
-       y="952.36218"
-       id="text3004"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3006"
-         x="320"
-         y="952.36218">{</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:500px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Fira Mono;-inkscape-font-specification:Fira Mono Bold"
@@ -93,5 +86,12 @@
          id="tspan3006-7"
          x="-40"
          y="972.36218" /></text>
+    <rect
+       style="fill:#ff7f2a;fill-opacity:1;stroke:none;stroke-width:2"
+       id="rect3339"
+       width="550"
+       height="55"
+       x="0"
+       y="942.36218" />
   </g>
 </svg>
