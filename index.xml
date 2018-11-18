@@ -58,15 +58,6 @@ the most convoluted ones, but actually, everyday things like traffic or sales ar
     </item>
     
     <item>
-      <title></title>
-      <link>https://bart747.github.io/patterns/</link>
-      <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://bart747.github.io/patterns/</guid>
-      <description>Modular Interfaces  Modular UIs are easier to edit in the long run. When your interface is divided into distinct parts, you can also separate chunks of code by following that divisions. Than you can adjust to the real world without tedious redesigns:  You can just swap UI modules in an HTML or template file. You can edit a module in its own file — no need to dig into complex code that’s responsible for many things.</description>
-    </item>
-    
-    <item>
       <title>On Fragility of Plans and Adaptability: How Buildings Learn</title>
       <link>https://bart747.github.io/adaptability-planning/</link>
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
@@ -267,15 +258,6 @@ So make your life easier and build things that are easy to edit.&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
-      <link>https://bart747.github.io/dripmailsales/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bart747.github.io/dripmailsales/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Archives!</title>
       <link>https://bart747.github.io/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -293,24 +275,6 @@ So make your life easier and build things that are easy to edit.&lt;/p&gt;
       <description>Please try again as soon as your connection is OK again.
 Here&amp;rsquo;s some cached content you might enjoy:
  5 Notes on How to Design a Resilient UI Research vs Making Decisions Henry Ford for Makers: Quotes on Design  </description>
-    </item>
-    
-    <item>
-      <title>Hi, this is how I work. It&#39;s about coding to sell.</title>
-      <link>https://bart747.github.io/howiwork/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bart747.github.io/howiwork/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hi, this is how I work. It&#39;s about coding to sell.</title>
-      <link>https://bart747.github.io/howiworktest/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bart747.github.io/howiworktest/</guid>
-      <description></description>
     </item>
     
   </channel>

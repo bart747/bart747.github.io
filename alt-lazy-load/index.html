@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="theme-color" content="#ff6622">
+    <meta name="theme-color" content="#ff6622">
 
-  <title>On Lazy Load Overuse and What You Can Do Instead</title>
-  <meta name="description" content="">
+    <title>On Lazy Load Overuse and What You Can Do Instead</title>
+    <meta name="description" content="">
 
-  
-  <meta itemprop="name" content="On Lazy Load Overuse and What You Can Do Instead">
-  <meta itemprop="description" content="Lazy Load is a great idea, so it&rsquo;s overused frequently.
+    
+    <meta itemprop="name" content="On Lazy Load Overuse and What You Can Do Instead">
+    <meta itemprop="description" content="Lazy Load is a great idea, so it&rsquo;s overused frequently.
 Do you remember that situation when you scrolled down
 quickly to get to the middle part and the picture wasn&rsquo;t there yet?
 
 ">
 
-  
-  <meta property="og:url" content="https://bart747.github.io">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="On Lazy Load Overuse and What You Can Do Instead">
-  <meta property="og:description" content="Lazy Load is a great idea, so it&rsquo;s overused frequently.
+    
+    <meta property="og:url" content="https://bart747.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="On Lazy Load Overuse and What You Can Do Instead">
+    <meta property="og:description" content="Lazy Load is a great idea, so it&rsquo;s overused frequently.
 Do you remember that situation when you scrolled down
 quickly to get to the middle part and the picture wasn&rsquo;t there yet?
 
 ">
 
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="On Lazy Load Overuse and What You Can Do Instead">
-  <meta name="twitter:creator" content="@bwhimself">
-  <meta name="twitter:description" content="Lazy Load is a great idea, so it&rsquo;s overused frequently.
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="On Lazy Load Overuse and What You Can Do Instead">
+    <meta name="twitter:creator" content="@bwhimself">
+    <meta name="twitter:description" content="Lazy Load is a great idea, so it&rsquo;s overused frequently.
 Do you remember that situation when you scrolled down
 quickly to get to the middle part and the picture wasn&rsquo;t there yet?
 
 ">
 
-  <meta name="generator" content="Hugo 0.40.2" />
+    <meta name="generator" content="Hugo 0.40.2" />
 
-  <link rel="canonical" href="https://bart747.github.io/alt-lazy-load/">
-  
+    <link rel="canonical" href="https://bart747.github.io/alt-lazy-load/">
+    
 
-  
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/dist/bundle.css?1542488186">
+    
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/dist/bundle.css?1542569750">
 
-  <link rel="icon" type="image/png" href="/icon512.png?v=3" sizes="512v512">
-  <link rel="apple-touch-icon" href="/icon512.png?v=3" sizes="512v512">
+    <link rel="icon" type="image/png" href="/icon512.png?v=3" sizes="512v512">
+    <link rel="apple-touch-icon" href="/icon512.png?v=3" sizes="512v512">
 
-  <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/manifest.json">
 
-  <meta name="google-site-verification" content="vBPgvbkTPtu2MKsCfMMETSBB-crQhj8AZuJ2JUUF2_0" />
+    <meta name="google-site-verification" content="vBPgvbkTPtu2MKsCfMMETSBB-crQhj8AZuJ2JUUF2_0" />
 
 </head>
-<body>
-<div id="allwrapper">
 
+<body>
+    <div id="allwrapper">
 
     <a class="logo--link" href="/">
         <div class="logo">
@@ -69,15 +70,15 @@ quickly to get to the middle part and the picture wasn&rsquo;t there yet?
 
 <section class="article selectable-article">
 
-  
-
-  <div class="article--narrow">
     
-      <div class="date secondary"> Oct 19, 2016 </div>
-      <h1 class="article-title">On Lazy Load Overuse and What You Can Do Instead</h1>
-     
 
-    <p>Lazy Load is a great idea, so it&rsquo;s overused frequently.
+    <div class="article--narrow">
+        
+        <div class="date secondary"> Oct 19, 2016 </div>
+        <h1 class="article-title">On Lazy Load Overuse and What You Can Do Instead</h1>
+        
+
+        <p>Lazy Load is a great idea, so it&rsquo;s overused frequently.
 Do you remember that situation when you scrolled down
 quickly to get to the middle part and the picture wasn&rsquo;t there yet?</p>
 
@@ -122,9 +123,9 @@ The selected top images will get loaded faster than usual because they won&rsquo
     <span class="nx">bottomImgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span> <span class="nx">el</span> <span class="p">=&gt;</span> <span class="p">{</span>
       <span class="nx">el</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&#34;data-imgload&#34;</span><span class="p">);</span>
     <span class="p">});</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 
-  <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="nx">loadBottomImgs</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 </code></pre></div>
 
 <p>There are 10 available iterations.
@@ -145,59 +146,63 @@ In that kind of situation speed of above the fold content is no longer a priorit
 You will need to tune the <em>count</em> and the <em>setTimeout()</em>.
 Anyhow, it&rsquo;s good to have it in a toolbox.</p>
 
-<p>(I hope it&rsquo;s clear enough despite my limited English skills.)</p> 
-    
-  </div>
+<p>(I hope it&rsquo;s clear enough despite my limited English skills.)</p>
+
+    </div>
 
 </section>
 
 <section class="subnav">
-  <div class="subnav--line">
-    
-      <div class="subnav--tag">prev: </div>
-      <div><a class="previous" href="https://bart747.github.io/craftsmen-at-work/"> Looking at Craftsmen</a></div>
-    
-  </div>
-  <div class="subnav--line">
-    
-      <div class="subnav--tag">next: </div>
-      <div><a class="next" href="https://bart747.github.io/html-indicators/"> Structuring HTML Form Validation Indicators</a></div>
-    
-  </div>
+    <div class="subnav--row">
+        
+        <div class="subnav--tag">prev: </div>
+        <div><a class="previous" href="https://bart747.github.io/craftsmen-at-work/"> Looking at Craftsmen</a></div>
+        
+    </div>
+    <div class="subnav--row">
+        
+        <div class="subnav--tag">next: </div>
+        <div><a class="next" href="https://bart747.github.io/html-indicators/"> Structuring HTML Form Validation Indicators</a></div>
+        
+    </div>
 </section>
-
 
 <footer>
 
     <div>
-      <ul class="list--contacts">
-        <li>
-          <div class="list-contacts-tag">email:&nbsp;</div>
-          <div class="liame"></div>
-        </li>
-        <li>
-          <div class="list-contacts-tag">github:&nbsp;</div> <div><a href="https://github.com/bart747">bart747</a></div>
-        </li>
-        <li>
-          <div class="list-contacts-tag">twitter:&nbsp;</div> <div><a href="https://twitter.com/bwhimself">bwhimself</a></div>
-        </li>
-      </ul>
+        <ul class="list--contacts">
+            <li>
+                <div class="list-contacts-tag">email:&nbsp;</div>
+                <div class="liame"></div>
+            </li>
+            <li>
+                <div class="list-contacts-tag">github:&nbsp;</div>
+                <div><a href="https://github.com/bart747">bart747</a></div>
+            </li>
+            <li>
+                <div class="list-contacts-tag">twitter:&nbsp;</div>
+                <div><a href="https://twitter.com/bwhimself">bwhimself</a></div>
+            </li>
+        </ul>
     </div>
     <small>
-    &copy;2016-2018 Bartosz Wieczorek.
-    <a href="https://creativecommons.org/licenses/by/3.0/">
-    Some rights reserved</a> &mdash; please attribute and link back.
+        &copy;2016-2018 Bartosz Wieczorek.
+        <a href="https://creativecommons.org/licenses/by/3.0/">
+            Some rights reserved
+        </a>
+        &mdash; please attribute and link back.
     </small>
 
-<div class="footer--top">
-<a href="#top">top</a>
-</div>
+    <div class="footer--link-top">
+        <a href="#top">top</a>
+    </div>
 
 </footer>
 
-<script src="/dist/main.js?1542488186">
+<script src="/dist/main.js?1542569750">
 </script>
 
 </div>
 </body>
+
 </html>
