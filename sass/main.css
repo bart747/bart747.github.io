@@ -9,7 +9,7 @@ body {
   overflow-x: hidden; }
   @media print {
     body {
-      color: #5f5f5f; } }
+      color: #5f5e5e; } }
 
 ::selection {
   color: #222;
@@ -211,7 +211,7 @@ blockquote {
       margin: 12px 0; } }
 
 .secondary {
-  color: #5f5f5f; }
+  color: #5f5e5e; }
 
 .article-title {
   margin-top: 1em;
@@ -565,7 +565,7 @@ a {
     text-decoration-color: #383838; }
   @media print {
     a {
-      color: #5f5f5f; } }
+      color: #5f5e5e; } }
 
 button,
 .btn {
@@ -900,7 +900,7 @@ h3.post-list--post-title--video,
 
 .post-list--post-subtitle,
 h3.post-list--post-subtitle {
-  color: #5f5f5f;
+  color: #5f5e5e;
   font-weight: bold;
   font-size: 19px;
   font-weight: normal;
