@@ -1,16 +1,11 @@
-
 const cacheName = "simple-cache";
 const cacheFiles = [
-    "/offline/",
-    "/resilient-ui/",
-    "/research-decision/",
-    "/henry-ford-for-makers/",
     "/manifest.json",
-    "/dist/bundle.css",
-    "/dist/bundle.js"
+    "/sass/main.min.css",
+    "/js/main.js"
 
 ];
-const offlinePage = "./offline/";
+//const offlinePage = "./offline/";
 
 self.addEventListener("install", (event) => {
     // console.log("[ServiceWorker] Install");
@@ -43,7 +38,7 @@ self.addEventListener("fetch", (event) => {
         // try network first, than cache, than offline page
         fetch(event.request).catch(() => {
             return caches.match(event.request).then((response) => {
-                return response || caches.match(offlinePage);
+                return response; // || caches.match(offlinePage);
             });
         })
     );

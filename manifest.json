@@ -3,7 +3,10 @@
   "short_name": "UI Dev",
   "display": "browser",
   "start_url": ".",
-  "theme_color": "#ff6622",
+  "lang": "en-US",
+  "orientation": "any",
+  "serviceworker": {"src": "./sw.js" },
+  "theme_color": "#dd4422",
   "background_color": "#faf7f5",
   "icons": [
     {
