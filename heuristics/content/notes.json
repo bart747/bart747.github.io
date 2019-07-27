@@ -1,0 +1,6 @@
+{
+  "sample1": [["Some content ot the note one. Examplary content ot the note two."], [["cat1"], ["cat3"]]],
+  "sample2": [["!!Some content ot the note one. Examplary content ot the note two."], [["cat2"],[]]],
+  "sample3": [["Some content ot the note one!! Examplary content ot the note two!!"], [["cat1"], ["cat2"]]],
+  "sample4": [["Hey! Some content ot the note one!! Examplary content ot the note two!!"], [["cat3"], ["cat5"]]]
+}
