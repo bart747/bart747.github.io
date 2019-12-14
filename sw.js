@@ -1,4 +1,4 @@
-const myCache = "sw-cache-v4";
+const myCache = "sw-cache-v5";
 const cacheFiles = [
     "./manifest.json",
     "./sass/main.min.css",
@@ -15,34 +15,18 @@ self.addEventListener("install", (event) => {
     event.waitUntil(precache());
 });
 
+
+
 self.addEventListener("fetch", (event) => {
     console.log("[ServiceWorker] Serving the asset");
-    event.respondWith(fromCache(event.request));
-    event.waitUntil(update(event.request));
-});
-
-function precache() {
-    return caches.open(myCache).then((cache) => {
-        console.log("[ServiceWorker] Caching preselected assets");
-        return cache.addAll(cacheFiles);
-    });
-}
-
-function fromCache(request) {
-    return caches.open(myCache).then((cache) => {
-        return cache.match(request).then(function(matching) {
-            return matching || fetch(request).then(function(response) {
-                cache.put(request, response.clone());
-                return response;
+    event.respondWith(
+        caches.open(myCache).then((cache) => {
+            return cache.match(event.request).then(function(matching) {
+                return matching || fetch(event.request).then(function(response) {
+                    cache.put(event.request, response.clone());
+                    return response;
+                });
             });
-        });
-    });
-}
-
-function update(request) {
-    return caches.open(myCache).then(function(cache) {
-        return fetch(request).then(function(response) {
-            return cache.put(request, response);
-        });
-    });
-}
+        })
+    );
+});
