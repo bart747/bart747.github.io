@@ -1,4 +1,4 @@
-const myCache = "sw-cache-v3";
+const myCache = "sw-cache-v4";
 const cacheFiles = [
     "./manifest.json",
     "./sass/main.min.css",
@@ -26,15 +26,18 @@ function precache() {
         console.log("[ServiceWorker] Caching preselected assets");
         return cache.addAll(cacheFiles);
     });
-};
+}
 
 function fromCache(request) {
     return caches.open(myCache).then((cache) => {
         return cache.match(request).then(function(matching) {
-            return matching || Promise.reject("no match in cache");
+            return matching || fetch(request).then(function(response) {
+                cache.put(request, response.clone());
+                return response;
+            });
         });
     });
-};
+}
 
 function update(request) {
     return caches.open(myCache).then(function(cache) {
@@ -42,4 +45,4 @@ function update(request) {
             return cache.put(request, response);
         });
     });
-};
+}
