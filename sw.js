@@ -1,29 +1,27 @@
-const cacheName = "simple-cache";
+const myCache = 'sw-cache-v2';
 const cacheFiles = [
-    "/manifest.json",
-    "/sass/main.min.css",
-    "/js/main.js"
-
+    "./manifest.json",
+    "./sass/main.min.css",
+    "./js/main.v2.js",
+    // recent (non-draft) and popular posts for quick load:
+    "./crowd/",
+    "./complexity/",
+    "./resilient-ui/"
 ];
 //const offlinePage = "./offline/";
 
 self.addEventListener("install", (event) => {
-    // console.log("[ServiceWorker] Install");
-    event.waitUntil(
-        caches.open(cacheName).then((cache) => {
-            // console.log("[ServiceWorker] Caching preselected assets");
-            return cache.addAll(cacheFiles);
-        })
-    );
+    console.log("[ServiceWorker] Install");
+    event.waitUntil(precache());
 });
 
 self.addEventListener("activate", (event) => {
-    // console.log("[ServiceWorker] Activate");
+    console.log("[ServiceWorker] Activate");
     event.waitUntil(
         caches.keys().then((keyList) => {
             return Promise.all(keyList.map((key) => {
-                if (key !== cacheName) {
-                // console.log("[ServiceWorker] Removing old cache", key)
+                if (key !== myCache) {
+                console.log("[ServiceWorker] Removing old cache", key)
                     return caches.delete(key);
                 }
             }));
@@ -33,13 +31,30 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-    // console.log("[ServiceWorker] Fetch", event.request.url);
-    event.respondWith(
-        // try network first, than cache, than offline page
-        fetch(event.request).catch(() => {
-            return caches.match(event.request).then((response) => {
-                return response; // || caches.match(offlinePage);
-            });
-        })
-    );
+    console.log('[ServiceWorker] Serving the asset');
+    event.respondWith(fromCache(event.request));
+    event.waitUntil(update(event.request));
 });
+
+function precache() {
+    return caches.open(myCache).then((cache) => {
+        console.log("[ServiceWorker] Caching preselected assets");
+        return cache.addAll(cacheFiles);
+    });
+};
+
+function fromCache(request) {
+    return caches.open(myCache).then((cache) => {
+        return cache.match(request).then(function(matching) {
+            return matching || Promise.reject('no-match');
+        });
+    });
+};
+
+function update(request) {
+    return caches.open(myCache).then(function(cache) {
+        return fetch(request).then(function(response) {
+            return cache.put(request, response);
+        });
+    });
+};
