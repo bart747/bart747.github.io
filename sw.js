@@ -1,4 +1,4 @@
-const myCache = 'sw-cache-v2';
+const myCache = "sw-cache-v3";
 const cacheFiles = [
     "./manifest.json",
     "./sass/main.min.css",
@@ -15,23 +15,8 @@ self.addEventListener("install", (event) => {
     event.waitUntil(precache());
 });
 
-self.addEventListener("activate", (event) => {
-    console.log("[ServiceWorker] Activate");
-    event.waitUntil(
-        caches.keys().then((keyList) => {
-            return Promise.all(keyList.map((key) => {
-                if (key !== myCache) {
-                console.log("[ServiceWorker] Removing old cache", key)
-                    return caches.delete(key);
-                }
-            }));
-        })
-    );
-    return self.clients.claim();
-});
-
 self.addEventListener("fetch", (event) => {
-    console.log('[ServiceWorker] Serving the asset');
+    console.log("[ServiceWorker] Serving the asset");
     event.respondWith(fromCache(event.request));
     event.waitUntil(update(event.request));
 });
@@ -46,7 +31,7 @@ function precache() {
 function fromCache(request) {
     return caches.open(myCache).then((cache) => {
         return cache.match(request).then(function(matching) {
-            return matching || Promise.reject('no-match');
+            return matching || Promise.reject("no match in cache");
         });
     });
 };
