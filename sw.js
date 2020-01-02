@@ -19,8 +19,6 @@ self.addEventListener("install", function (event) {
     );
 });
 
-
-
 self.addEventListener("fetch", (event) => {
     console.log("[ServiceWorker] Serving the asset");
     event.respondWith(
