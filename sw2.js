@@ -1,4 +1,4 @@
-const myCache = "sw-cache-v6";
+const myCache = "sw-cache-v7";
 const cacheFiles = [
     "./manifest.json",
     "./sass/main.min.css",
