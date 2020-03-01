@@ -6,9 +6,270 @@
     <description>Recent content on UI performance and resilience</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 04 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bart747.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Old Programming Wisdom Beats Crowdsourced Advice</title>
+      <link>https://bart747.github.io/crowd/</link>
+      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/crowd/</guid>
+      <description>&lt;p&gt;Programmers as a crowd, like any crowd, are dumb. People find safety in following popular opinions. They see it as something of high value — worth sacrificing trust in their own instincts.
+This is why I like to look for advice by turning to individuals who achieved something worth admiring and
+show signs of independent thinking.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>We&#39;re so Bad at Judging Complexity, yet We Like to Predict</title>
+      <link>https://bart747.github.io/complexity/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/complexity/</guid>
+      <description>&lt;p&gt;Living in a bubble, the one that&amp;rsquo;s unavoidable, makes us misjudge what are
+the most complex things we have to face.
+We think that some technical (software/hardware) problems are
+the most convoluted ones, but actually, everyday things like traffic or sales are way more complex.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>David Lynch on Catching Ideas</title>
+      <link>https://bart747.github.io/lynch-ideas/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/lynch-ideas/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;You can be surprised by what kind of places will let you catch ideas&lt;/li&gt;
+&lt;li&gt;“There&amp;rsquo;s no original ideas, it&amp;rsquo;s just the ideas that you caught”&lt;/li&gt;
+&lt;li&gt;“Happiness in the doing is so important &amp;hellip; It&amp;rsquo;s our life going by”&lt;/li&gt;
+&lt;li&gt;When you&amp;rsquo;re in a creative flow ideas are easier to catch&lt;/li&gt;
+&lt;li&gt;“Ideas can take you out of drudgery work”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the way, just look at these amazing animations and color compositions.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>On Fragility of Plans and Adaptability: How Buildings Learn</title>
+      <link>https://bart747.github.io/adaptability-planning/</link>
+      <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/adaptability-planning/</guid>
+      <description>Architecture is surprisingly similar to software design.
+ Time is the main architect. Design with adaptability in mind. People will have to or want to change their buildings in the future.  It&amp;rsquo;s the first part of six-part BBC TV series How Buildings Learn.</description>
+    </item>
+    
+    <item>
+      <title>5 Notes on How to Design a Resilient UI</title>
+      <link>https://bart747.github.io/resilient-ui/</link>
+      <pubDate>Wed, 05 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/resilient-ui/</guid>
+      <description>&lt;p&gt;The most interesting things happen once your software is in real use.
+That&amp;rsquo;s when you can really see what&amp;rsquo;s working and what to change.&lt;/p&gt;
+
+&lt;p&gt;It brings us to the problem of editing already working thing. In the wild.
+It happens all the time. Don&amp;rsquo;t think you can predict the future.
+You need to design your software with ease of modification in mind.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Henry Ford on What Promoted His Cars The Most</title>
+      <link>https://bart747.github.io/ford-marketing/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/ford-marketing/</guid>
+      <description>&lt;p&gt;Oldie but goodie. Quotes form Henry Ford&amp;rsquo;s &lt;i&gt;My Life and Work&lt;/i&gt; on his experiences with advertising/marketing.&lt;/p&gt;
+
+&lt;h2 id=&#34;racing&#34;&gt;Racing&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I designed a two-cylinder enclosed engine of a more compact type than I had before used,
+fitted it into a skeleton chassis,
+found that I could make speed, and arranged a race with Winton.
+We met on the Grosse Point track at Detroit.
+I beat him. That was my first race, and it brought advertising of the only kind that people cared to read.
+The public thought nothing of a car unless it made speed—unless it beat other racing cars.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Working on Ambitious Projects: Jonathan Blow on Game Design</title>
+      <link>https://bart747.github.io/ambitious-projects/</link>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/ambitious-projects/</guid>
+      <description>It&amp;rsquo;s about handling negative emotions, picking the right thing to work on, creative process. With emphasis on mental and philosophical side of creating complicated things.</description>
+    </item>
+    
+    <item>
+      <title>Structuring HTML Form Validation Indicators</title>
+      <link>https://bart747.github.io/html-indicators/</link>
+      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/html-indicators/</guid>
+      <description>&lt;p&gt;Should I add a &amp;lsquo;success&amp;rsquo; class to an input element or some other part of my form?
+How to show an error indicator during live validation? How to manage a few different ways of validation?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>On Lazy Load Overuse and What You Can Do Instead</title>
+      <link>https://bart747.github.io/alt-lazy-load/</link>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/alt-lazy-load/</guid>
+      <description>&lt;p&gt;Lazy Load is a great idea, so it&amp;rsquo;s overused frequently.
+Do you remember that situation when you scrolled down
+quickly to get to the middle part and the picture wasn&amp;rsquo;t there yet?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Looking at Craftsmen</title>
+      <link>https://bart747.github.io/craftsmen-at-work/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/craftsmen-at-work/</guid>
+      <description>I enjoy looking at craftsmen at work. You can learn from it by seeing the process, tricks of the trade, work on details that most people won&amp;rsquo;t even notice. It doesn&amp;rsquo;t matter that it&amp;rsquo;s not my field, it&amp;rsquo;s about that detail-oriented thinking.</description>
+    </item>
+    
+    <item>
+      <title>Max Planck on New Ideas and Creative Work</title>
+      <link>https://bart747.github.io/planck/</link>
+      <pubDate>Fri, 09 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/planck/</guid>
+      <description>&lt;p&gt;Here are few famous quotes related to &lt;a href=&#34;https://bart747.github.io/process/&#34;&gt;creative work&lt;/a&gt;, by Max Planck:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A new scientific truth does not triumph by convincing
+its opponents and making them see the light,
+but rather because its opponents eventually die,
+and a new generation grows up that is familiar with it.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learning UI Design from Coins (on Contrast)</title>
+      <link>https://bart747.github.io/ui-coins/</link>
+      <pubDate>Fri, 19 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/ui-coins/</guid>
+      <description>&lt;p&gt;Contrast is an essential concept when it comes to UI usability. It solves more problems than you think.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s take coins as an example.
+When it comes to look: at first glance you see differences in size, color (types of metals) and visual patterns.
+Feel in hand is also important. Some seem heavier than others. You can detect size by touch too.
+Each of these features is useful in some situation.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Payment UIs Can be Used to Reduce Friction</title>
+      <link>https://bart747.github.io/payment-ui-friction/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/payment-ui-friction/</guid>
+      <description>&lt;p&gt;A page with a final “buy” button or a credit card data form
+is a huge friction trigger.
+It&amp;rsquo;s the moment when you, as a buyer, think again about expense
+and transaction safety.
+The fact that you&amp;rsquo;re about to say bye to some of your money triggers that.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vim Typography: Better Readability and Look</title>
+      <link>https://bart747.github.io/vim-typography/</link>
+      <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/vim-typography/</guid>
+      <description>&lt;p&gt;A few tricks to improve your Vim editor&amp;rsquo;s readability and theming.
+All examples are for editing &lt;code&gt;.vimrc&lt;/code&gt; and &lt;code&gt;.gvimrc&lt;/code&gt; files.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Research vs Making Decisions</title>
+      <link>https://bart747.github.io/research-decision/</link>
+      <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/research-decision/</guid>
+      <description>&lt;p&gt;More often than not, research is something that prevents you from making a decision.
+You want to be sure, so you seek more.
+But your brain is somehow full of doubts all the time, no matter what you know.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Henry Ford for Makers: Quotes on Design</title>
+      <link>https://bart747.github.io/henry-ford-for-makers/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/henry-ford-for-makers/</guid>
+      <description>&lt;p&gt;These are short excerpts from Henry Ford&amp;rsquo;s “My Life and Work”. I picked
+the ones that will be helpful especially to makers — designers, developers, etc.&lt;/p&gt;
+
+&lt;h2 id=&#34;simplicity&#34;&gt;Simplicity&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;My effort is in the direction of simplicity.
+&amp;hellip;
+Because nearly everything that we make is much
+more complex than it needs to be.
+Our clothing, our food, our household furnishings—all could be
+much simpler than they now are and at the same time be better looking.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Maintainable UI: How to Improve Code Editing with SASS</title>
+      <link>https://bart747.github.io/maintainable-ui/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/maintainable-ui/</guid>
+      <description>&lt;p&gt;Changes are unavoidable. And you can’t predict the future.
+You also can’t solve problems in theory only, without prototyping.
+So make your life easier and build things that are easy to edit.
+Here are some examples of SASS based solutions that you can use to make UI more maintainable and “themable”.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Archives!</title>
+      <link>https://bart747.github.io/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/archive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cookie Policy for This Website</title>
+      <link>https://bart747.github.io/cookies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/cookies/</guid>
+      <description>What Are Cookies HTTP cookies are pieces of data that can by sent by a website to the user&amp;rsquo;s web browser. Usually they are used to record the user&amp;rsquo;s browsing activity.
+For more information see the Wikipedia article.
+The Cookies on the Site Third Party Cookies: Cookies can be set by third party software.</description>
+    </item>
+    
+    <item>
+      <title>Dang! It looks like you&#39;re offline.</title>
+      <link>https://bart747.github.io/offline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/offline/</guid>
+      <description>Please try again as soon as your connection is OK again.
+Here&amp;rsquo;s some cached content you might enjoy:
+ 5 Notes on How to Design a Resilient UI Research vs Making Decisions Henry Ford for Makers: Quotes on Design  </description>
+    </item>
+    
+    <item>
+      <title>UI Sandbox</title>
+      <link>https://bart747.github.io/experiments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bart747.github.io/experiments/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
