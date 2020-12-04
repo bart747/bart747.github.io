@@ -6,11 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="theme-color" content="#ff6622">
 
     <title>Structuring HTML Form Validation Indicators</title>
-    
+
     <link rel="preload" href="/fonts/IBMPlexSans-Regular-Latin1.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
     <link rel="preload" href="/fonts/IBMPlexSans-Bold-Latin1.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
     <link rel="preload" href="/fonts/IBMPlexSans-Italic-Latin1.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
@@ -36,16 +35,13 @@ How to show an error indicator during live validation? How to manage a few diffe
     <meta name="twitter:description" content="Should I add a &lsquo;success&rsquo; class to an input element or some other part of my form?
 How to show an error indicator during live validation? How to manage a few different ways of validation?">
 
-    <meta name="generator" content="Hugo 0.53" />
-
+    <meta name="generator" content="Hugo 0.75.1" />
     <link rel="canonical" href="https://bart747.github.io/html-indicators/">
     
 
     
-
     
-    <link rel="stylesheet" href="https://bart747.github.io/sass/main.min.css?v=1592591470">
-    
+    <link rel="stylesheet" href="https://bart747.github.io/sass/main.min.css?v=1607048419">
     <link rel="icon" type="image/png" href="/icon512.png?v=3" sizes="512v512">
     <link rel="apple-touch-icon" href="/icon512.png?v=3" sizes="512v512">
 
@@ -66,8 +62,9 @@ How to show an error indicator during live validation? How to manage a few diffe
 </head>
 
 <body>
-    <div id="top"></div> 
+    <div id="top"></div>
     <div id="allwrapper">
+
 
 <div class="logo">
     <a class="logo--link" href="/">mad software<br>musings</a>
@@ -87,14 +84,11 @@ How to show an error indicator during live validation? How to manage a few diffe
 
         <p>Should I add a &lsquo;success&rsquo; class to an input element or some other part of my form?
 How to show an error indicator during live validation? How to manage a few different ways of validation?</p>
-
 <p>Here&rsquo;s a code example that makes these problems simpler.
 It makes adding CSS classes cleaner.
 It allows you to make flexible JavaScript loops that can go through many inputs easily and check them.
 And there&rsquo;s flexibility when it comes to indicating errors.</p>
-
 <p>I&rsquo;m showing code snippets first, then explaining them.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container-input validate&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;admin-email&#34;</span><span class="p">&gt;</span>
     Your Email
@@ -106,7 +100,6 @@ And there&rsquo;s flexibility when it comes to indicating errors.</p>
          <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">required</span>
   <span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-
 <p>Here&rsquo;s an example of JS loop that can check input values and much more:
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js">  <span class="nx">inputContainers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">elt</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">elt</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&#34;input&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
@@ -115,16 +108,12 @@ And there&rsquo;s flexibility when it comes to indicating errors.</p>
     <span class="p">...</span>
   <span class="p">});</span>
 </code></pre></div></p>
-
 <p>Because it goes through containers (DIVs), not inputs themselves,
 we have easy access to everything inside them.
 It can be, for instance, a label, an icon or a text below a field.</p>
-
 <p>In each iteration it can check what kind of input it&rsquo;s dealing with, and
 then attach a proper method of validation.</p>
-
 <h2 id="input-with-an-error-indicator">Input with an error indicator</h2>
-
 <p>The only difference is the last class name in the div element:
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container-input validate input-error&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;admin-email&#34;</span><span class="p">&gt;</span>
@@ -137,7 +126,6 @@ then attach a proper method of validation.</p>
          <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">required</span>
   <span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div></p>
-
 <p>Now, try to find which classes will be used:
 <div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* icons */</span>
 <span class="p">.</span><span class="nc">validate</span> <span class="p">.</span><span class="nc">icon-error</span><span class="o">,</span>
@@ -168,18 +156,13 @@ then attach a proper method of validation.</p>
 <span class="p">.</span><span class="nc">input-success</span> <span class="p">.</span><span class="nc">text-success</span> <span class="p">{</span>
   <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div></p>
-
 <p>As you can see, I can show the right icon in the right color by adding just one CSS class.
 Text messages work the same way.</p>
-
 <p>Indicators are not displayed by default.
 Only when the container has an <em>error</em> or a <em>success</em> class a browser will show some of them.</p>
-
 <p>Manipulating CSS class names in only one DIV makes input validation easier.
 The script has to tweak only one element to mark an error.</p>
-
 <h2 id="short-conclusion">Short Conclusion</h2>
-
 <p>Good data structures make your work simpler.
 When a structure is right, a procedure that uses it can be more straight forward.</p>
 
@@ -194,7 +177,6 @@ When a structure is right, a procedure that uses it can be more straight forward
 </section>
 
 <footer>
-
     <div>
         <ul class="list--contacts">
             <li>
@@ -218,27 +200,40 @@ When a structure is right, a procedure that uses it can be more straight forward
         </a>
         &mdash; please attribute and link back.
     </div>
-
     <div class="footer--link-top">
         <a href="#top">
-            <button class="button--orange">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+            <button class="button--blue">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="28" height="28" viewBox="0 0 24 24"
+                >
                     <path fill="none" d="M0 0h24v24H0V0z"/>
-                    <path fill="#ff6622" d="M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z"/>
+                    <path fill="#ff6622"
+                      d="M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z"
+                    />
                 </svg>
-                top &nbsp;
+                <span>top &nbsp;</span>
             </button>
         </a>
     </div>
-
 </footer>
-
 </div>
 
 
-<script src="https://bart747.github.io/js/main-bundle.v3.js?v=1592591470"></script>
 
+
+
+<script src="https://bart747.github.io/js/base.abf5435e2645d3434c0e44655b5610b15cab0ace056f09dbe42958220be4a983.js"
+        data-srcmap="https://bart747.github.io/js/base.js.map">
+</script>
+
+
+
+
+
+<script src="https://bart747.github.io/js/app.a483dd9527807e835ebacb9872e531fcaa9b8c323111d9520a91c831ec1f81ec.js"
+        data-srcmap="https://bart747.github.io/js/app.js.map"
+        async>
+</script>
 </body>
-
 </html>
 

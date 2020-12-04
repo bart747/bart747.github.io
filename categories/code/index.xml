@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Code on UI performance and resilience</title>
+    <title>code on UI performance and resilience</title>
     <link>https://bart747.github.io/categories/code/</link>
-    <description>Recent content in Code on UI performance and resilience</description>
+    <description>Recent content in code on UI performance and resilience</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Oct 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://bart747.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 24 Oct 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://bart747.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Structuring HTML Form Validation Indicators</title>
       <link>https://bart747.github.io/html-indicators/</link>
@@ -39,7 +35,7 @@ quickly to get to the middle part and the picture wasn&amp;rsquo;t there yet?&lt
       
       <guid>https://bart747.github.io/vim-typography/</guid>
       <description>&lt;p&gt;A few tricks to improve your Vim editor&amp;rsquo;s readability and theming.
-All examples are for editing &lt;code&gt;.vimrc&lt;/code&gt; and &lt;code&gt;.gvimrc&lt;/code&gt; files.&lt;/p&gt;</description>
+All examples are for editing &lt;!-- raw HTML omitted --&gt;.vimrc&lt;!-- raw HTML omitted --&gt; and &lt;!-- raw HTML omitted --&gt;.gvimrc&lt;!-- raw HTML omitted --&gt; files.&lt;/p&gt;</description>
     </item>
     
     <item>

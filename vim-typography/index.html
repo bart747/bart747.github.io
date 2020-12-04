@@ -6,11 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="theme-color" content="#ff6622">
 
     <title>Vim Typography: Better Readability and Look</title>
-    
+
     <link rel="preload" href="/fonts/IBMPlexSans-Regular-Latin1.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
     <link rel="preload" href="/fonts/IBMPlexSans-Bold-Latin1.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
     <link rel="preload" href="/fonts/IBMPlexSans-Italic-Latin1.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
@@ -36,16 +35,13 @@ All examples are for editing .vimrc and .gvimrc files.">
     <meta name="twitter:description" content="A few tricks to improve your Vim editor&rsquo;s readability and theming.
 All examples are for editing .vimrc and .gvimrc files.">
 
-    <meta name="generator" content="Hugo 0.53" />
-
+    <meta name="generator" content="Hugo 0.75.1" />
     <link rel="canonical" href="https://bart747.github.io/vim-typography/">
     
 
     
-
     
-    <link rel="stylesheet" href="https://bart747.github.io/sass/main.min.css?v=1592591470">
-    
+    <link rel="stylesheet" href="https://bart747.github.io/sass/main.min.css?v=1607048419">
     <link rel="icon" type="image/png" href="/icon512.png?v=3" sizes="512v512">
     <link rel="apple-touch-icon" href="/icon512.png?v=3" sizes="512v512">
 
@@ -66,8 +62,9 @@ All examples are for editing .vimrc and .gvimrc files.">
 </head>
 
 <body>
-    <div id="top"></div> 
+    <div id="top"></div>
     <div id="allwrapper">
+
 
 <div class="logo">
     <a class="logo--link" href="/">mad software<br>musings</a>
@@ -86,96 +83,65 @@ All examples are for editing .vimrc and .gvimrc files.">
         
 
         <p>A few tricks to improve your Vim editor&rsquo;s readability and theming.
-All examples are for editing <code>.vimrc</code> and <code>.gvimrc</code> files.</p>
-
-<p><code>.gvimrc</code> is for GUI specific commands.
+All examples are for editing <!-- raw HTML omitted -->.vimrc<!-- raw HTML omitted --> and <!-- raw HTML omitted -->.gvimrc<!-- raw HTML omitted --> files.</p>
+<p><!-- raw HTML omitted -->.gvimrc<!-- raw HTML omitted --> is for GUI specific commands.
 For instance, you should use it for things that you want to see in gVim or MacVim
 and can&rsquo;t or don&rsquo;t want to use when Vim is running via terminal.</p>
-
 <h2 id="gui-specific">GUI Specific:</h2>
-
 <h3 id="theming-syntax-highlighter">Theming (syntax highlighter)</h3>
-
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">background</span><span class="p">=</span><span class="nb">dark</span><span class="err">
 </span><span class="err"></span><span class="nx">colorscheme</span> <span class="nx">themeName</span> </code></pre></div>
-
-<p>Color schemes are stored in <code>.vim/colors</code> folder.</p>
-
+<p>Color schemes are stored in <!-- raw HTML omitted -->.vim/colors<!-- raw HTML omitted --> folder.</p>
 <h3 id="fonts">Fonts</h3>
-
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Droid</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span>\ <span class="m">14</span><span class="c">
-</span><span class="c">&#34;&#34; or</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">DejaVu</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span><span class="p">:</span><span class="nx">h13</span></code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Droid</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span>\ <span class="m">14</span><span class="err">
+</span><span class="err"></span><span class="c">&#34;&#34; or</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">DejaVu</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span>:<span class="nx">h13</span></code></pre></div>
 <p>As you can see, when there are spaces in a font name, you have to use
-<code>\ </code>before them. There are also system differences when it comes to picking size.</p>
-
+<!-- raw HTML omitted -->\ <!-- raw HTML omitted -->before them. There are also system differences when it comes to picking size.</p>
 <p>This is an example of setup for many operating systems:
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="c">&#34;gui_gtk2&#34;)</span><span class="err">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s2">&#34;gui_gtk2&#34;</span><span class="p">)</span><span class="err">
 </span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Droid</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span>\ <span class="m">13</span><span class="err">
-</span><span class="err"></span><span class="k">elseif</span> <span class="nx">has</span><span class="p">(</span><span class="c">&#34;gui_macvim&#34;)</span><span class="err">
-</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Menlo</span>\ <span class="nx">Regular</span><span class="p">:</span><span class="nx">h14</span><span class="err">
-</span><span class="err"></span><span class="k">elseif</span> <span class="nx">has</span><span class="p">(</span><span class="c">&#34;gui_win32&#34;)</span><span class="err">
-</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">ConsolascANSI</span><span class="err">
+</span><span class="err"></span><span class="k">elseif</span> <span class="nx">has</span><span class="p">(</span><span class="s2">&#34;gui_macvim&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Menlo</span>\ <span class="nx">Regular</span>:<span class="nx">h14</span><span class="err">
+</span><span class="err"></span><span class="k">elseif</span> <span class="nx">has</span><span class="p">(</span><span class="s2">&#34;gui_win32&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Consolas</span>:<span class="nx">h11</span>:<span class="nx">cANSI</span><span class="err">
 </span><span class="err"></span><span class="k">endif</span></code></pre></div></p>
-
 <h3 id="linespace-almost-like-line-height-in-css">Linespace (almost like line-height in CSS)</h3>
-
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">linespace</span><span class="p">=</span><span class="m">4</span></code></pre></div>
-
-<p><code>Linespace</code> property doesn&rsquo;t work exactly like
-<code>line-height</code> in CSS.
+<p><!-- raw HTML omitted -->Linespace<!-- raw HTML omitted --> property doesn&rsquo;t work exactly like
+<!-- raw HTML omitted -->line-height<!-- raw HTML omitted --> in CSS.
 It sets the space between lines, not leading.</p>
-
 <p>The default is 0. I like to use something around 4 or 5, it depends on
 the font face.</p>
-
 <h2 id="general">General:</h2>
-
 <h3 id="terminal-vs-gui">Terminal vs GUI</h3>
-
 <p>Things listed below don&rsquo;t look as well in a terminal as in a GUI rich editor
 with a nice theme:</p>
-
 <ul>
 <li>error highlighting (ie: spellcheck),</li>
 <li>character limit line,</li>
 <li>current line highlight (not so bad but still worse than GUI apps).</li>
 </ul>
-
 <p>Sometimes they work more like distractions than like handy hits.
-Consider using some of them in <code>.gvimrc</code> instead of <code>.vimrc</code>.</p>
-
+Consider using some of them in <!-- raw HTML omitted -->.gvimrc<!-- raw HTML omitted --> instead of <!-- raw HTML omitted -->.vimrc<!-- raw HTML omitted -->.</p>
 <h3 id="characters-per-line-limit">Characters per line limit</h3>
-
 <p>Set and show 80 characters limit.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">textwidth</span><span class="p">=</span><span class="m">80</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">colorcolumn</span><span class="p">=+</span><span class="m">1</span>  </code></pre></div>
-
 <p>You&rsquo;ll see a line after 80th column.</p>
-
 <h3 id="line-numbers">Line Numbers</h3>
-
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">number</span><span class="c">          &#34; show line numbers</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">numberwidth</span><span class="p">=</span><span class="m">4</span><span class="c">   &#34; width of number bar</span></code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">number</span>          <span class="c">&#34; show line numbers</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">numberwidth</span><span class="p">=</span><span class="m">4</span>   <span class="c">&#34; width of number bar</span></code></pre></div>
 <h3 id="text-highlighting">Text Highlighting</h3>
-
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">cursorline</span><span class="c">      &#34; highlight current line</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">showmatch</span><span class="c">       &#34; highlight matching &lt;[{()}]&gt;</span></code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">cursorline</span>      <span class="c">&#34; highlight current line</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">showmatch</span>       <span class="c">&#34; highlight matching &lt;[{()}]&gt;</span></code></pre></div>
 <h3 id="autoindenting">Autoindenting</h3>
-
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">autoindent</span><span class="c">      &#34; set autoindenting on</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">copyindent</span><span class="c">      &#34; copy the indentation from previous line</span></code></pre></div>
-
-<h3 id="spell-check-word-completion">Spell Check + Word Completion</h3>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">autoindent</span>      <span class="c">&#34; set autoindenting on</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">copyindent</span>      <span class="c">&#34; copy the indentation from previous line</span></code></pre></div>
+<h3 id="spell-check--word-completion">Spell Check + Word Completion</h3>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">spell</span> <span class="nx">spelllang</span><span class="p">=</span><span class="nx">en_us</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">complete</span><span class="p">+=</span><span class="nx">kspell</span> </code></pre></div>
-
 <p>Press CTRL-N or CTRL-P in insert-mode to complete current word.</p>
 
         <div class="center">&#10086;</div>
@@ -194,7 +160,6 @@ Consider using some of them in <code>.gvimrc</code> instead of <code>.vimrc</cod
 </section>
 
 <footer>
-
     <div>
         <ul class="list--contacts">
             <li>
@@ -218,27 +183,40 @@ Consider using some of them in <code>.gvimrc</code> instead of <code>.vimrc</cod
         </a>
         &mdash; please attribute and link back.
     </div>
-
     <div class="footer--link-top">
         <a href="#top">
-            <button class="button--orange">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+            <button class="button--blue">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="28" height="28" viewBox="0 0 24 24"
+                >
                     <path fill="none" d="M0 0h24v24H0V0z"/>
-                    <path fill="#ff6622" d="M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z"/>
+                    <path fill="#ff6622"
+                      d="M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z"
+                    />
                 </svg>
-                top &nbsp;
+                <span>top &nbsp;</span>
             </button>
         </a>
     </div>
-
 </footer>
-
 </div>
 
 
-<script src="https://bart747.github.io/js/main-bundle.v3.js?v=1592591470"></script>
 
+
+
+<script src="https://bart747.github.io/js/base.abf5435e2645d3434c0e44655b5610b15cab0ace056f09dbe42958220be4a983.js"
+        data-srcmap="https://bart747.github.io/js/base.js.map">
+</script>
+
+
+
+
+
+<script src="https://bart747.github.io/js/app.a483dd9527807e835ebacb9872e531fcaa9b8c323111d9520a91c831ec1f81ec.js"
+        data-srcmap="https://bart747.github.io/js/app.js.map"
+        async>
+</script>
 </body>
-
 </html>
 

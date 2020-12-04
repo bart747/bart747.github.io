@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on UI performance and resilience</title>
@@ -6,21 +6,18 @@
     <description>Recent content in Categories on UI performance and resilience</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    
-	<atom:link href="https://bart747.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://bart747.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Code</title>
-      <link>https://bart747.github.io/categories/code/</link>
-      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+      <title>video</title>
+      <link>https://bart747.github.io/categories/video/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/categories/code/</guid>
+      <guid>https://bart747.github.io/categories/video/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Nosummary</title>
+      <title>nosummary</title>
       <link>https://bart747.github.io/categories/nosummary/</link>
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
       
@@ -29,20 +26,20 @@
     </item>
     
     <item>
-      <title>Quote Bundle</title>
-      <link>https://bart747.github.io/categories/quote-bundle/</link>
-      <pubDate>Fri, 09 Sep 2016 00:00:00 +0000</pubDate>
+      <title>code</title>
+      <link>https://bart747.github.io/categories/code/</link>
+      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/categories/quote-bundle/</guid>
+      <guid>https://bart747.github.io/categories/code/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Video</title>
-      <link>https://bart747.github.io/categories/video/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      <title>quote-bundle</title>
+      <link>https://bart747.github.io/categories/quote-bundle/</link>
+      <pubDate>Fri, 09 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bart747.github.io/categories/video/</guid>
+      <guid>https://bart747.github.io/categories/quote-bundle/</guid>
       <description></description>
     </item>
     

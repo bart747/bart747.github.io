@@ -106,14 +106,14 @@
 
 // Since it's about super crucial data I decided to use older JS.
 // It's an exception so everything else is setted up with modern JS in mind.
-var places = document.getElementsByClassName("liame");
-var p1 = "hello";
-var p2 = ".bartosz";
-var p3 = "liamg";
-var addr = p1 + p2 + "@" + rev(p3) + ".com";
+var places = document.getElementsByClassName('liame');
+var p1 = 'hello';
+var p2 = '.bartosz';
+var p3 = 'liamg';
+var addr = p1 + p2 + '@' + rev(p3) + '.com';
 
 function rev(s) {
-  return s.split("").reverse().join("");
+  return s.split('').reverse().join('');
 }
 
 (function create() {
@@ -121,7 +121,7 @@ function rev(s) {
   var l = places.length;
 
   for (i = 0; i < l; i += 1) {
-    places[i].innerHTML = "<a href=mailto:" + addr + ">" + addr + "</a>";
+    places[i].innerHTML = '<a href=mailto:' + addr + '>' + addr + '</a>';
   }
 })();
 
@@ -139,20 +139,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var cookieconsent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! cookieconsent */ "./node_modules/cookieconsent/build/cookieconsent.min.js");
 /* harmony import */ var cookieconsent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(cookieconsent__WEBPACK_IMPORTED_MODULE_0__);
 
-window.addEventListener("load", function () {
+window.addEventListener('load', function () {
   window.cookieconsent.initialise({
-    "palette": {
-      "popup": {
-        "background": "#335"
+    palette: {
+      popup: {
+        background: '#335'
       },
-      "button": {
-        "background": "#ff7733"
+      button: {
+        background: '#ff7733'
       }
     },
-    "theme": "classic",
-    "content": {
-      "message": "This website uses cookies to ensure you get the best experience.",
-      "href": "/cookies"
+    theme: 'classic',
+    content: {
+      message: 'This website uses cookies to ensure you get the best experience.',
+      href: '/cookies'
     }
   });
 });
@@ -171,11 +171,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cookies_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cookies.js */ "./src/cookies.js");
 /* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact.js */ "./src/contact.js");
 /* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_contact_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _scrollEvents_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scrollEvents.js */ "./src/scrollEvents.js");
-/* harmony import */ var _scrollEvents_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scrollEvents_js__WEBPACK_IMPORTED_MODULE_2__);
 
-
- // import './ReactIndex.js'
 
 /*
 if ('serviceWorker' in navigator) {
@@ -189,26 +185,14 @@ if ('serviceWorker' in navigator) {
 }
 */
 
-console.log("I'm runnin'");
-
-/***/ }),
-
-/***/ "./src/scrollEvents.js":
-/*!*****************************!*\
-  !*** ./src/scrollEvents.js ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var yPosition = 0;
-window.addEventListener('scroll', function () {
-  yPosition = window.scrollY;
-  window.requestAnimationFrame(function () {
-    console.log('scroll event: ' + yPosition);
-  });
+window.addEventListener('error', function () {
+  if (ErrorEvent.message) {
+    console.log('Early errror: ' + ErrorEvent.message);
+  }
 });
+window.setTimeout(window.removeEventListener('error', console.log("Ready and runnin'")), 1000);
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main-bundle.v3.js.map
+//# sourceMappingURL=main-bundle.js.map

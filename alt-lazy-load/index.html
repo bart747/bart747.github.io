@@ -6,11 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="theme-color" content="#ff6622">
 
     <title>On Lazy Load Overuse and What You Can Do Instead</title>
-    
+
     <link rel="preload" href="/fonts/IBMPlexSans-Regular-Latin1.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
     <link rel="preload" href="/fonts/IBMPlexSans-Bold-Latin1.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
     <link rel="preload" href="/fonts/IBMPlexSans-Italic-Latin1.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
@@ -40,16 +39,13 @@ quickly to get to the middle part and the picture wasn&rsquo;t there yet?">
 Do you remember that situation when you scrolled down
 quickly to get to the middle part and the picture wasn&rsquo;t there yet?">
 
-    <meta name="generator" content="Hugo 0.53" />
-
+    <meta name="generator" content="Hugo 0.75.1" />
     <link rel="canonical" href="https://bart747.github.io/alt-lazy-load/">
     
 
     
-
     
-    <link rel="stylesheet" href="https://bart747.github.io/sass/main.min.css?v=1592591470">
-    
+    <link rel="stylesheet" href="https://bart747.github.io/sass/main.min.css?v=1607048419">
     <link rel="icon" type="image/png" href="/icon512.png?v=3" sizes="512v512">
     <link rel="apple-touch-icon" href="/icon512.png?v=3" sizes="512v512">
 
@@ -70,8 +66,9 @@ quickly to get to the middle part and the picture wasn&rsquo;t there yet?">
 </head>
 
 <body>
-    <div id="top"></div> 
+    <div id="top"></div>
     <div id="allwrapper">
+
 
 <div class="logo">
     <a class="logo--link" href="/">mad software<br>musings</a>
@@ -92,23 +89,18 @@ quickly to get to the middle part and the picture wasn&rsquo;t there yet?">
         <p>Lazy Load is a great idea, so it&rsquo;s overused frequently.
 Do you remember that situation when you scrolled down
 quickly to get to the middle part and the picture wasn&rsquo;t there yet?</p>
-
 <p>When using a plugin, you can use a threshold/offset option to fire the thing earlier.
 But people can scroll fast.
 If someone visits a site for, let&rsquo;s say,
 the third time and knows that the part she wants is somewhere close to the bottom,
 she will scroll down really, really fast.</p>
-
 <p>In that kind of situations it might be better to forget about typical Lazy Load.</p>
-
 <p>The simple trick that I like is to set up a couple of top images first,
 wait for them,
 than load the rest.
 No waiting for a user to scroll-down.
 The selected top images will get loaded faster than usual because they won&rsquo;t share the bandwidth with others.</p>
-
 <p>Here&rsquo;s a very general example of the main mechanism:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="nx">count</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">setTimeout</span><span class="p">(</span> <span class="nx">_</span><span class="p">=&gt;</span> <span class="p">{</span>
@@ -136,25 +128,18 @@ The selected top images will get loaded faster than usual because they won&rsquo
 
 <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 </code></pre></div>
-
 <p>There are 10 available iterations.
 Each one waits 200ms.
 Then the script checks the image completion.</p>
-
 <p>If the last top image is ready, the script loads the bottom images and we&rsquo;re done.</p>
-
 <p>If not, we have another iteration.</p>
-
 <p>In case that after all iterations the last top image is still not complete,
 the script will load the bottom group without waiting for anything.</p>
-
 <p>The iteration limit is useful when a connection is slow and a user starts to scroll down the page almost immediately.
 In that kind of situation speed of above the fold content is no longer a priority.</p>
-
 <p>It&rsquo;s not a universal method.
 You will need to tune the <em>count</em> and the <em>setTimeout()</em>.
 Anyhow, it&rsquo;s good to have it in a toolbox.</p>
-
 <p>(I hope it&rsquo;s clear enough despite my limited English skills.)</p>
 
         <div class="center">&#10086;</div>
@@ -168,7 +153,6 @@ Anyhow, it&rsquo;s good to have it in a toolbox.</p>
 </section>
 
 <footer>
-
     <div>
         <ul class="list--contacts">
             <li>
@@ -192,27 +176,40 @@ Anyhow, it&rsquo;s good to have it in a toolbox.</p>
         </a>
         &mdash; please attribute and link back.
     </div>
-
     <div class="footer--link-top">
         <a href="#top">
-            <button class="button--orange">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+            <button class="button--blue">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="28" height="28" viewBox="0 0 24 24"
+                >
                     <path fill="none" d="M0 0h24v24H0V0z"/>
-                    <path fill="#ff6622" d="M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z"/>
+                    <path fill="#ff6622"
+                      d="M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z"
+                    />
                 </svg>
-                top &nbsp;
+                <span>top &nbsp;</span>
             </button>
         </a>
     </div>
-
 </footer>
-
 </div>
 
 
-<script src="https://bart747.github.io/js/main-bundle.v3.js?v=1592591470"></script>
 
+
+
+<script src="https://bart747.github.io/js/base.abf5435e2645d3434c0e44655b5610b15cab0ace056f09dbe42958220be4a983.js"
+        data-srcmap="https://bart747.github.io/js/base.js.map">
+</script>
+
+
+
+
+
+<script src="https://bart747.github.io/js/app.a483dd9527807e835ebacb9872e531fcaa9b8c323111d9520a91c831ec1f81ec.js"
+        data-srcmap="https://bart747.github.io/js/app.js.map"
+        async>
+</script>
 </body>
-
 </html>
 
