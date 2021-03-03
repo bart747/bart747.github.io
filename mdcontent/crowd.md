@@ -49,5 +49,3 @@ It's not a kind of content you see often. There are many programs written in con
 >— [Ted Nelson](http://xanadu.com.au/ted/XU/XuPageKeio.html)
 
 <br>
-
-.
