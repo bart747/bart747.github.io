@@ -27,3 +27,5 @@ Then, if you **know where you're going**, you know how to correct the course.
 You make a decision about the next move and stop looking for crystal balls.
 
 BTW, have you heard about [The Foolscap Method](https://www.youtube.com/watch?v=S8sqQ_p6aR8)?
+
+<small>2015-12-19</small>
