@@ -46,7 +46,7 @@ Every detail had been fully tested in practice.
 concentrating on one thing, they can, if they have a mind that way,
 usually devise some improvement.
 
-> None of our machines is ever built haphazardly. ... 
+> None of our machines is ever built haphazardly. ...
 Sometimes wooden models are constructed or again the parts are drawn
 to full size on a blackboard. We are not bound by precedent but we
 leave nothing to luck.
@@ -65,7 +65,7 @@ exactly the opposite course.
 > I cannot discover that any one knows enough about anything on this
 earth definitely to say what is and what is not possible.
 
-**“Because nearly everything that we make is much more complex
+**“Nearly everything that we make is much more complex
 than it needs to be”**
 
 <small>2015-11-10</small>
