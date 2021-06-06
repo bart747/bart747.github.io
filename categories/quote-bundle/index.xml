@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quote-bundle on Pixels / Clarity / Changeability</title>
+    <link>/categories/quote-bundle/</link>
+    <description>Recent content in quote-bundle on Pixels / Clarity / Changeability</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Sep 2016 00:00:00 +0000</lastBuildDate><atom:link href="/categories/quote-bundle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Max Planck on New Ideas and Creative Work</title>
+      <link>/planck/</link>
+      <pubDate>Fri, 09 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/planck/</guid>
+      <description>Here are few famous quotes related to creative work, by Max Planck:
+ A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die, and a new generation grows up that is familiar with it.
+  Anybody who has been seriously engaged in scientific work of any kind realizes that over the entrance to the gates of the temple of science are written the words: Ye must have faith.</description>
+    </item>
+    
+  </channel>
+</rss>

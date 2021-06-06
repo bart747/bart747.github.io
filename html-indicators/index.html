@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+><head>
+  <meta property="og:site_name" content="Pixels / Clarity / Changeability">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Structuring HTML Form Validation Indicators</title>
+
+  <meta property="og:locale" content="en">
+  <meta property="og:title" content="Structuring HTML Form Validation Indicators">
+  <meta name="description" content="Making UIs clear and changable. | Design is never done. | Fight complexity.">
+  <meta property="og:description" content="Making UIs clear and changable. | Design is never done. | Fight complexity.">
+  
+  <style type="text/css">
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Italic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "IBM Plex Mono";
+      src: url("/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IBM Plex Mono";
+      src: url("/fonts/IBMPlexMono-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IBM Plex Mono Italic";
+      src: url("/fonts/IBMPlexMono-Italic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: italic;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="/scss/main.min.9049698fcbee8e754001cf89a648493d8063fb73f84ce06cce903da86c8e9038.css">
+</head>
+<body>
+    <nav role="navigation"``>
+  <a href="/" class="link__icon-home">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24" height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon-home feather">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      <polyline points="9 22 9 12 15 12 15 22">
+      </polyline>
+    </svg>
+  </a>
+</nav>
+<div id="content">
+  <main aria-role="main" class="main-wrapper">
+    <header class="homepage-header">
+    </header>
+    <article>
+      <h1>Structuring HTML Form Validation Indicators</h1>
+      <p>Should I add a &lsquo;success&rsquo; class to an input element or some other part of my form?
+How to show an error indicator during live validation? How to manage a few different ways of validation?</p>
+<p>Here&rsquo;s a code example that makes these problems simpler.
+It makes adding CSS classes cleaner.
+It allows you to make flexible JavaScript loops that can go through many inputs easily and check them.
+And there&rsquo;s flexibility when it comes to indicating errors.</p>
+<p>I&rsquo;m showing code snippets first, then explaining them.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">div</span> class=<span style="font-style:italic">&#34;container-input validate&#34;</span>&gt;
+  &lt;<span style="font-weight:bold">label</span> for=<span style="font-style:italic">&#34;admin-email&#34;</span>&gt;
+    Your Email
+  &lt;/<span style="font-weight:bold">label</span>&gt;
+  &lt;<span style="font-weight:bold">span</span> class=<span style="font-style:italic">&#34;icon-error&#34;</span>&gt;&lt;/<span style="font-weight:bold">span</span>&gt;
+  &lt;<span style="font-weight:bold">span</span> class=<span style="font-style:italic">&#34;icon-success&#34;</span>&gt;&lt;/<span style="font-weight:bold">span</span>&gt;
+  &lt;<span style="font-weight:bold">input</span> type=<span style="font-style:italic">&#34;email&#34;</span>
+         id=<span style="font-style:italic">&#34;admin-email&#34;</span>
+         autocomplete=<span style="font-style:italic">&#34;email&#34;</span> required
+  &gt;
+&lt;/<span style="font-weight:bold">div</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+<p>Here&rsquo;s an example of JS loop that can check input values and much more:
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">  inputContainers.forEach(elt =&gt; {
+    <span style="font-weight:bold">let</span> input = elt.getElementsByTagName(<span style="font-style:italic">&#34;input&#34;</span>)[0];
+    ...
+    <span style="font-weight:bold">if</span> (input ...) { ... }
+    ...
+  });</code></pre></td></tr></table>
+</div>
+</div></p>
+<p>Because it goes through containers (DIVs), not inputs themselves,
+we have easy access to everything inside them.
+It can be, for instance, a label, an icon or a text below a field.</p>
+<p>In each iteration it can check what kind of input it&rsquo;s dealing with, and
+then attach a proper method of validation.</p>
+<h2 id="input-with-an-error-indicator">Input with an error indicator</h2>
+<p>The only difference is the last class name in the div element:
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">div</span> class=<span style="font-style:italic">&#34;container-input validate input-error&#34;</span>&gt;
+  &lt;<span style="font-weight:bold">label</span> for=<span style="font-style:italic">&#34;admin-email&#34;</span>&gt;
+    Your Email
+  &lt;/<span style="font-weight:bold">label</span>&gt;
+  &lt;<span style="font-weight:bold">span</span> class=<span style="font-style:italic">&#34;icon-error&#34;</span>&gt;&lt;/<span style="font-weight:bold">span</span>&gt;
+  &lt;<span style="font-weight:bold">span</span> class=<span style="font-style:italic">&#34;icon-success&#34;</span>&gt;&lt;/<span style="font-weight:bold">span</span>&gt;
+  &lt;<span style="font-weight:bold">input</span> type=<span style="font-style:italic">&#34;email&#34;</span>
+         id=<span style="font-style:italic">&#34;admin-email&#34;</span>
+         autocomplete=<span style="font-style:italic">&#34;email&#34;</span> required
+  &gt;
+&lt;/<span style="font-weight:bold">div</span>&gt;</code></pre></td></tr></table>
+</div>
+</div></p>
+<p>Now, try to find which classes will be used:
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="font-style:italic">/* icons */</span>
+.<span style="font-weight:bold">validate</span> .<span style="font-weight:bold">icon-error</span>,
+.<span style="font-weight:bold">validate</span> .<span style="font-weight:bold">icon-success</span> {
+  <span style="font-weight:bold">display</span>: <span style="font-weight:bold">none</span>;
+}
+
+.<span style="font-weight:bold">input-error</span> .<span style="font-weight:bold">icon-error</span> {
+  <span style="font-weight:bold">color</span>: <span style="">$</span><span style="font-weight:bold">red</span>;
+  <span style="font-weight:bold">display</span>: <span style="font-weight:bold">inline</span>;
+}
+
+.<span style="font-weight:bold">input-success</span> .<span style="font-weight:bold">icon-success</span> {
+  <span style="font-weight:bold">color</span>: <span style="">$</span><span style="font-weight:bold">green</span>;
+  <span style="font-weight:bold">display</span>: <span style="font-weight:bold">inline</span>;
+}
+
+<span style="font-style:italic">/* text messages */</span>
+.<span style="font-weight:bold">validate</span> .<span style="font-weight:bold">text-error</span>,
+.<span style="font-weight:bold">validate</span> .<span style="font-weight:bold">text-success</span> {
+  <span style="font-weight:bold">display</span>: <span style="font-weight:bold">none</span>;
+}
+
+.<span style="font-weight:bold">input-error</span> .<span style="font-weight:bold">text-error</span> {
+  <span style="font-weight:bold">display</span>: <span style="font-weight:bold">block</span>;
+}
+
+.<span style="font-weight:bold">input-success</span> .<span style="font-weight:bold">text-success</span> {
+  <span style="font-weight:bold">display</span>: <span style="font-weight:bold">block</span>;
+}</code></pre></td></tr></table>
+</div>
+</div></p>
+<p>As you can see, I can show the right icon in the right color by adding just one CSS class.
+Text messages work the same way.</p>
+<p>Indicators are not displayed by default.
+Only when the container has an <em>error</em> or a <em>success</em> class a browser will show some of them.</p>
+<p>Manipulating CSS class names in only one DIV makes input validation easier.
+The script has to tweak only one element to mark an error.</p>
+<h2 id="short-conclusion">Short Conclusion</h2>
+<p>Good data structures make your work simpler.
+When a structure is right, a procedure that uses it can be more straight forward.</p>
+    </article>
+  </main>
+
+    </div><footer class="footer_footer__3LSES">
+  <p>©2016-2021 Bartosz Wieczorek.
+  <br>
+  Some rights reserved — <a href="https://creativecommons.org/licenses/by/4.0/">
+  CC BY 4.0</a> — please attribute and link back.
+  </p>
+</footer>
+
+<script src="/js/contact.min.8de316376a6db33a928cbfe65779ba6a7ae611243b2c99f0169ee6186b47b5c7.js"></script>
+</body>
+</html>

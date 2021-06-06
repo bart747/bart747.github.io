@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+><head>
+  <meta property="og:site_name" content="Pixels / Clarity / Changeability">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>On Lazy Load Overuse and What You Can Do Instead</title>
+
+  <meta property="og:locale" content="en">
+  <meta property="og:title" content="On Lazy Load Overuse and What You Can Do Instead">
+  <meta name="description" content="Making UIs clear and changable. | Design is never done. | Fight complexity.">
+  <meta property="og:description" content="Making UIs clear and changable. | Design is never done. | Fight complexity.">
+  
+  <style type="text/css">
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Italic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "IBM Plex Mono";
+      src: url("/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IBM Plex Mono";
+      src: url("/fonts/IBMPlexMono-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IBM Plex Mono Italic";
+      src: url("/fonts/IBMPlexMono-Italic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: italic;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="/scss/main.min.9049698fcbee8e754001cf89a648493d8063fb73f84ce06cce903da86c8e9038.css">
+</head>
+<body>
+    <nav role="navigation"``>
+  <a href="/" class="link__icon-home">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24" height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon-home feather">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      <polyline points="9 22 9 12 15 12 15 22">
+      </polyline>
+    </svg>
+  </a>
+</nav>
+<div id="content">
+  <main aria-role="main" class="main-wrapper">
+    <header class="homepage-header">
+    </header>
+    <article>
+      <h1>On Lazy Load Overuse and What You Can Do Instead</h1>
+      <p>Lazy Load is a great idea, so it&rsquo;s overused frequently.
+Do you remember that situation when you scrolled down
+quickly to get to the middle part and the picture wasn&rsquo;t there yet?</p>
+<p>When using a plugin, you can use a threshold/offset option to fire the thing earlier.
+But people can scroll fast.
+If someone visits a site for, let&rsquo;s say,
+the third time and knows that the part she wants is somewhere close to the bottom,
+she will scroll down really, really fast.</p>
+<p>In that kind of situations it might be better to forget about typical Lazy Load.</p>
+<p>The simple trick that I like is to set up a couple of top images first,
+wait for them,
+than load the rest.
+No waiting for a user to scroll-down.
+The selected top images will get loaded faster than usual because they won&rsquo;t share the bandwidth with others.</p>
+<p>Here&rsquo;s a very general example of the main mechanism:</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="font-weight:bold">function</span> loadBottomImgs(count) {
+  <span style="font-weight:bold">if</span> (count &gt; 0) {
+    setTimeout( _=&gt; {
+
+      <span style="font-style:italic">// when last image from the TOP group is ready, load the rest
+</span><span style="font-style:italic"></span>      <span style="font-weight:bold">if</span> (lastTopImg.complete) {
+        bottomImgs.forEach( el =&gt; {
+          el.src = el.getAttribute(<span style="font-style:italic">&#34;data-imgload&#34;</span>);
+        });
+      
+      <span style="font-style:italic">// otherwise, run the function again
+</span><span style="font-style:italic"></span>      } <span style="font-weight:bold">else</span> {
+        loadBottomImgs(count - 1); 
+      } 
+
+    }, 200); <span style="font-style:italic">// each iteration gives top images some time
+</span><span style="font-style:italic"></span>
+    <span style="font-style:italic">// if the last top image is not complete after all iterations,
+</span><span style="font-style:italic"></span>    <span style="font-style:italic">// load the rest of images anyway
+</span><span style="font-style:italic"></span>  } <span style="font-weight:bold">else</span> {        
+    bottomImgs.forEach( el =&gt; {
+      el.src = el.getAttribute(<span style="font-style:italic">&#34;data-imgload&#34;</span>);
+    });
+}
+
+loadBottomImgs(10);</code></pre></td></tr></table>
+</div>
+</div>
+<p>There are 10 available iterations.
+Each one waits 200ms.
+Then the script checks the image completion.</p>
+<p>If the last top image is ready, the script loads the bottom images and we&rsquo;re done.</p>
+<p>If not, we have another iteration.</p>
+<p>In case that after all iterations the last top image is still not complete,
+the script will load the bottom group without waiting for anything.</p>
+<p>The iteration limit is useful when a connection is slow and a user starts to scroll down the page almost immediately.
+In that kind of situation speed of above the fold content is no longer a priority.</p>
+<p>It&rsquo;s not a universal method.
+You will need to tune the <em>count</em> and the <em>setTimeout()</em>.
+Anyhow, it&rsquo;s good to have it in a toolbox.</p>
+<p>(I hope it&rsquo;s clear enough despite my limited English skills.)</p>
+    </article>
+  </main>
+
+    </div><footer class="footer_footer__3LSES">
+  <p>©2016-2021 Bartosz Wieczorek.
+  <br>
+  Some rights reserved — <a href="https://creativecommons.org/licenses/by/4.0/">
+  CC BY 4.0</a> — please attribute and link back.
+  </p>
+</footer>
+
+<script src="/js/contact.min.8de316376a6db33a928cbfe65779ba6a7ae611243b2c99f0169ee6186b47b5c7.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+><head>
+  <meta property="og:site_name" content="Pixels / Clarity / Changeability">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>5 Notes on How to Design a Resilient UI</title>
+
+  <meta property="og:locale" content="en">
+  <meta property="og:title" content="5 Notes on How to Design a Resilient UI">
+  <meta name="description" content="Making UIs clear and changable. | Design is never done. | Fight complexity.">
+  <meta property="og:description" content="Making UIs clear and changable. | Design is never done. | Fight complexity.">
+  
+  <style type="text/css">
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Italic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "IBM Plex Mono";
+      src: url("/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IBM Plex Mono";
+      src: url("/fonts/IBMPlexMono-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IBM Plex Mono Italic";
+      src: url("/fonts/IBMPlexMono-Italic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: italic;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="/scss/main.min.9049698fcbee8e754001cf89a648493d8063fb73f84ce06cce903da86c8e9038.css">
+</head>
+<body>
+    <nav role="navigation"``>
+  <a href="/" class="link__icon-home">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24" height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon-home feather">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      <polyline points="9 22 9 12 15 12 15 22">
+      </polyline>
+    </svg>
+  </a>
+</nav>
+<div id="content">
+  <main aria-role="main" class="main-wrapper">
+    <header class="homepage-header">
+    </header>
+    <article>
+      <h1>5 Notes on How to Design a Resilient UI</h1>
+      <p>The most interesting things happen once your software is in real use.
+That&rsquo;s when you can really see what&rsquo;s working and what to change.</p>
+<p>It brings us to the problem of editing already working thing. In the wild.
+It happens all the time. Don&rsquo;t think you can predict the future.
+You need to design your software with ease of modification in mind.</p>
+<p>Here are some ideas how to do that:</p>
+<h3 id="modularity">Modularity</h3>
+<p>Modular UIs are easier to edit in the long run.
+When your interface is divided into distinct parts, you can also separate chunks of code by following that divisions.
+That way changes will be way less tedious. For instance:</p>
+<ol>
+<li>You can just swap UI modules in an HTML or template file.</li>
+<li>You can edit a module in its own file — no need to dig into complex code that&rsquo;s responsible for many things.</li>
+</ol>
+<h3 id="embrace-foundations">Embrace Foundations</h3>
+<p>If I need to pick between working on something essential or adding bells and whistles, I pick essentials.
+It&rsquo;s just hard to be really good at all of them, so why even focus on <em>nice to haves</em>? What usually piss people off is fundamentals refusing to work as they should — not lack of <em>bahama yellow</em> in a color palette.</p>
+<p>Working extra on things like clarity (intuitiveness, readability) and speed
+will give you more than any neophiliac thing.</p>
+<h3 id="simplicity-is-tricky">Simplicity is Tricky</h3>
+<p>It&rsquo;s easy to achieve perceived simplicity and pay for it with real complexity.
+For instance, you can make an intuitive UI while ignoring clarity of its implementation.
+Sooner or later it will cause all kinds of unexpected problems.
+Real simplicity of an interface means neat visuals <strong>and</strong> clear implementation.
+To achieve that, you often need to sacrifice some non-crucial features.
+And remember about <em>YAGNI</em>.</p>
+<h3 id="smooth-interactions">Smooth Interactions</h3>
+<p>There&rsquo;s an overwhelming variety of internet browsing devices on the market.
+We need to think about what will make the product work smoothly on a sub-average hardware and half-decent wi-fi.
+People will often use your stuff at train stations, airports or in restaurants. And they will use more than one app/website at the same time. How many browser tabs do you have open right now?</p>
+<p>(There&rsquo;s a good article in this matter: <a href="http://prog21.dadgum.com/61.html">Optimizing for Fan Noise</a>)</p>
+<h3 id="words-win">Words Win</h3>
+<p>People say “a picture is like a thousand words”.
+But a picture will not make a proposition as clear and precise as a well designed sentence or phrase.
+Text is also trivial to edit.
+That&rsquo;s why I like typography — it&rsquo;s a tool to achieve clarity and flexibility.</p>
+<p>Don&rsquo;t overthink that weird icon. If it&rsquo;s not obvious, text will be better.</p>
+    </article>
+  </main>
+
+    </div><footer class="footer_footer__3LSES">
+  <p>©2016-2021 Bartosz Wieczorek.
+  <br>
+  Some rights reserved — <a href="https://creativecommons.org/licenses/by/4.0/">
+  CC BY 4.0</a> — please attribute and link back.
+  </p>
+</footer>
+
+<script src="/js/contact.min.8de316376a6db33a928cbfe65779ba6a7ae611243b2c99f0169ee6186b47b5c7.js"></script>
+</body>
+</html>

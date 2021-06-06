@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+><head>
+  <meta property="og:site_name" content="Pixels / Clarity / Changeability">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Maintainable UI: How to Improve Code Editing with SASS</title>
+
+  <meta property="og:locale" content="en">
+  <meta property="og:title" content="Maintainable UI: How to Improve Code Editing with SASS">
+  <meta name="description" content="Making UIs clear and changable. | Design is never done. | Fight complexity.">
+  <meta property="og:description" content="Making UIs clear and changable. | Design is never done. | Fight complexity.">
+  
+  <style type="text/css">
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Italic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "IBM Plex Mono";
+      src: url("/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IBM Plex Mono";
+      src: url("/fonts/IBMPlexMono-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IBM Plex Mono Italic";
+      src: url("/fonts/IBMPlexMono-Italic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: italic;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="/scss/main.min.9049698fcbee8e754001cf89a648493d8063fb73f84ce06cce903da86c8e9038.css">
+</head>
+<body>
+    <nav role="navigation"``>
+  <a href="/" class="link__icon-home">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24" height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon-home feather">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      <polyline points="9 22 9 12 15 12 15 22">
+      </polyline>
+    </svg>
+  </a>
+</nav>
+<div id="content">
+  <main aria-role="main" class="main-wrapper">
+    <header class="homepage-header">
+    </header>
+    <article>
+      <h1>Maintainable UI: How to Improve Code Editing with SASS</h1>
+      <p>Changes are unavoidable. And you can’t predict the future.
+You also can’t solve problems in theory only, without prototyping.
+So make your life easier and build things that are easy to edit.
+Here are some examples of SASS based solutions that you can use to make UI more maintainable and “themable”.</p>
+<h2 id="variables">Variables</h2>
+<p>With SASS variables you can control your basic UI properties from one, organized file.
+The obvious ones are font families, media queries, colors and sizes.</p>
+<p>Here&rsquo;s quick example:</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="font-style:italic">// fonts
+</span><span style="font-style:italic"></span>$family:           <span style="font-style:italic">&#34;Source Sans Pro&#34;</span>, sans-serif;
+
+<span style="font-style:italic">// colors
+</span><span style="font-style:italic"></span>$txt:              #404040;
+$blue:             #2233ff;
+$red:              #ff3322;
+$green:            #22ff33;
+
+<span style="font-style:italic">// sizes
+</span><span style="font-style:italic"></span>$base-font-size:   18<span style="">px</span>;
+$large-font-size:  21<span style="">px</span>;
+$small-font-size:  16<span style="">px</span>;
+$base-line-height: 1.6;
+
+<span style="font-style:italic">// breakepoints
+</span><span style="font-style:italic"></span>$sm:               568<span style="">px</span>;
+$md:               768<span style="">px</span>;
+$lg:               1024<span style="">px</span>;</code></pre></td></tr></table>
+</div>
+</div>
+<p>But hey, not all colors are equal. And when it comes to sizes, we can get much more.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="font-style:italic">// FONTS
+</span><span style="font-style:italic"></span>
+$base-family:           <span style="font-style:italic">&#34;Source Sans Pro&#34;</span>, sans-serif;
+$mono-family:           <span style="font-style:italic">&#34;Droid Sans Mono&#34;</span>, monospace;
+
+
+<span style="font-style:italic">// COLORS
+</span><span style="font-style:italic"></span>
+<span style="font-style:italic">// base
+</span><span style="font-style:italic"></span>$txt:              #404040;
+$blue:             #2233ff;
+$red:              #ff3322;
+$green:            #22ff33;
+
+<span style="font-style:italic">// branding
+</span><span style="font-style:italic"></span>$brand-blue:       $blue;
+$brand-gold:       #e5b23b;
+
+
+<span style="font-style:italic">// SIZES
+</span><span style="font-style:italic"></span>
+$base-font-size:   18<span style="">px</span>;
+$large-font-size:  21<span style="">px</span>;
+$small-font-size:  16<span style="">px</span>;
+$base-line-height: 1.6;
+
+<span style="font-style:italic">// marketing headlines;
+</span><span style="font-style:italic"></span>$extra-fonts-size: 28<span style="">px</span>;
+
+<span style="font-style:italic">// rhythm unit (leading)
+</span><span style="font-style:italic"></span>$u:                1<span style="">rem</span> * $base-line-height;
+
+
+<span style="font-style:italic">// BREAKEPOINTS
+</span><span style="font-style:italic"></span>$sm:               568<span style="">px</span>;
+$md:               768<span style="">px</span>;
+$lg:               1024<span style="">px</span>;</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="whats-rhythm-unit-u">What&rsquo;s rhythm unit ($u)?</h3>
+<p>You can use $u for things like margins, padding, height and  line-height.
+It will keep everything well aligned. It equals your default leading size.</p>
+<p>For instance, when you have two different UI blocks (like media object) in-line,
+it will prevent misalignment.
+Just use it to set up margins and padding.
+If there&rsquo;s a headline that&rsquo;s bigger than basic font size,
+fit it into a line-hight that equals one $u.</p>
+<h2 id="mixins-and-functions">Mixins and Functions</h2>
+<p>If you use more than one font settings stack:</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="font-weight:bold">@mixin</span> font-base {
+  <span style="font-weight:bold">color</span>: <span style="">$</span><span style="font-weight:bold">text-color</span>;
+  <span style="font-weight:bold">font-family</span>: <span style="">$</span><span style="font-weight:bold">base-font-family</span>;
+  <span style="font-weight:bold">font-size</span>:  <span style="">$</span><span style="font-weight:bold">base-font-size</span>;
+  <span style="font-weight:bold">line-height</span>: <span style="">$</span><span style="font-weight:bold">base-line-height</span>;
+}
+
+<span style="font-weight:bold">@mixin</span> font-mono {
+  <span style="font-weight:bold">color</span>: <span style="">$</span><span style="font-weight:bold">grey-dark</span>;
+  <span style="font-weight:bold">font-family</span>: <span style="">$</span><span style="font-weight:bold">mono-font-family</span>;
+  <span style="font-weight:bold">font-size</span>: <span style="">$</span><span style="font-weight:bold">small-font-size</span>;
+  <span style="font-weight:bold">line-height</span>: <span style="font-weight:bold">0</span><span style="font-weight:bold">.75</span> * <span style="">$</span><span style="font-weight:bold">u</span>;
+  <span style="font-style:italic">// 4 lines of code will give 3x default leading
+</span><span style="font-style:italic"></span>}</code></pre></td></tr></table>
+</div>
+</div>
+<p>Assets directory path helpers:</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss">$assets-dir: <span style="font-style:italic">&#39;assets&#39;</span>;
+
+<span style="font-weight:bold">@function</span> <span style="font-weight:bold">image</span>(<span style="">$</span><span style="font-weight:bold">name</span>) {
+  <span style="font-weight:bold">@return</span> <span style="font-weight:bold">url</span>(<span style="font-weight:bold">..</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">assets-dir</span>}/<span style="font-weight:bold">img</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">name</span>});
+}
+
+<span style="font-weight:bold">@function</span> <span style="font-weight:bold">font</span>(<span style="">$</span><span style="font-weight:bold">name</span>) {
+  <span style="font-weight:bold">@return</span> <span style="font-weight:bold">url</span>(<span style="font-weight:bold">..</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">assets-dir</span>}/<span style="font-weight:bold">fonts</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">name</span>});
+
+}
+
+<span style="font-style:italic">// usage
+</span><span style="font-style:italic">// .masthead {
+</span><span style="font-style:italic">//   background-image: image(&#39;clouds.svg&#39;);
+</span><span style="font-style:italic"></span>// }</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="files">Files</h2>
+<p>Let&rsquo;s assume that you spotted some problem with an article layout.
+If your <code>.scss</code> files are big and complex, you&rsquo;ll need to do some little research before editing.
+If you have a lot of well organized small ones you know where to go:</p>
+<ul>
+<li>main (imports)</li>
+<li>variables</li>
+<li>mixins</li>
+<li>base (html and body properties, things like box-sizing)</li>
+<li>typography (global)</li>
+<li>grid</li>
+<li>menu</li>
+<li>masthead</li>
+<li>article</li>
+<li>avatar</li>
+<li>footer</li>
+<li>logo</li>
+</ul>
+<h2 id="helpers">Helpers</h2>
+<p>It&rsquo;s good to have a <code>helpers.scss</code> file. It&rsquo;s a place to store classes and mixins like:</p>
+<ul>
+<li>.center,</li>
+<li>.bold,</li>
+<li>.hidden,</li>
+<li>.muted</li>
+<li>@mixin center</li>
+</ul>
+<p>Little and handy stuff.</p>
+<h2 id="conventions-and-rules">Conventions and Rules</h2>
+<p>Rules and conventions are better than total customization.
+Set main building blocks of your future product and stick to them.
+It&rsquo;s better for your brain than playing with endless options.</p>
+<h3 id="youre-doing-too-much-anyway">You&rsquo;re Doing too Much Anyway</h3>
+<p>Having max three extra colors beside your default text color is most of the time enough.</p>
+<p>A grid system with only 4 classes: <code>.row, .half, .third, .quarter</code>, is often enough.</p>
+<p>Having 3–5 font sizes is enough.</p>
+<p>Building a gallery based on halves and quarters, or rule of thirds gives enough flexibility.</p>
+<p>Your article page doesn&rsquo;t need a three-column version.</p>
+<p>One media-object layout with extra modifier classes is better than a few completely different ones.
+Mod classes are something like this: <code>.photo-big,
+.text-only, .secondary.</code></p>
+<p>That way your UI is more predictable for users and yourself.</p>
+<h3 id="more-on-typography">More on Typography</h3>
+<p>I like to limit myself to 3 font sizes.</p>
+<ol>
+<li>There&rsquo;s a basic size.</li>
+<li>A little bigger one that fits the same leading.</li>
+<li>The biggest size (significantly) that fits exactly 2x basic leading.</li>
+</ol>
+<p>Other hierarchy related things are solved by using different weights and colors.
+That way I don&rsquo;t have to worry about typographic rhythm and spend a lot of time aligning things.</p>
+<p>I also don&rsquo;t pair fonts. I pick one that is flexible and predictable.
+Visual identity stuff is done mostly with colors, weights and placement.</p>
+<p>Look at UIs of Twitter, Google search results and GitHub profiles. How many font sizes and families do you see at a glance?</p>
+<h2 id="stay-small">Stay Small</h2>
+<p>One of the biggest factors of maintainability is codebase size itself.
+More code, more problems.
+It&rsquo;s good to think about how particular element is useful.
+Does it pay for itself?</p>
+<h2 id="you-dont-know-the-future">You Don&rsquo;t Know the Future</h2>
+<p>Maybe something complex will need to be modified.
+Maybe your thing is not so great in some situations.
+Maybe you won&rsquo;t remember how you figured it out.</p>
+<p><strong>The whole point is to take advantage from uncertainty</strong>.</p>
+    </article>
+  </main>
+
+    </div><footer class="footer_footer__3LSES">
+  <p>©2016-2021 Bartosz Wieczorek.
+  <br>
+  Some rights reserved — <a href="https://creativecommons.org/licenses/by/4.0/">
+  CC BY 4.0</a> — please attribute and link back.
+  </p>
+</footer>
+
+<script src="/js/contact.min.8de316376a6db33a928cbfe65779ba6a7ae611243b2c99f0169ee6186b47b5c7.js"></script>
+</body>
+</html>

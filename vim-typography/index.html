@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+><head>
+  <meta property="og:site_name" content="Pixels / Clarity / Changeability">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Vim Typography: Better Readability and Look</title>
+
+  <meta property="og:locale" content="en">
+  <meta property="og:title" content="Vim Typography: Better Readability and Look">
+  <meta name="description" content="Making UIs clear and changable. | Design is never done. | Fight complexity.">
+  <meta property="og:description" content="Making UIs clear and changable. | Design is never done. | Fight complexity.">
+  
+  <style type="text/css">
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto-Italic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "IBM Plex Mono";
+      src: url("/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IBM Plex Mono";
+      src: url("/fonts/IBMPlexMono-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IBM Plex Mono Italic";
+      src: url("/fonts/IBMPlexMono-Italic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: italic;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="/scss/main.min.9049698fcbee8e754001cf89a648493d8063fb73f84ce06cce903da86c8e9038.css">
+</head>
+<body>
+    <nav role="navigation"``>
+  <a href="/" class="link__icon-home">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24" height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon-home feather">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      <polyline points="9 22 9 12 15 12 15 22">
+      </polyline>
+    </svg>
+  </a>
+</nav>
+<div id="content">
+  <main aria-role="main" class="main-wrapper">
+    <header class="homepage-header">
+    </header>
+    <article>
+      <h1>Vim Typography: Better Readability and Look</h1>
+      <p>A few tricks to improve your Vim editor&rsquo;s readability and theming.
+All examples are for editing <code>.vimrc</code> and <code>.gvimrc</code> files.</p>
+<p><code>.gvimrc</code> is for GUI specific commands.
+For instance, you should use it for things that you want to see in gVim or MacVim
+and can&rsquo;t or don&rsquo;t want to use when Vim is running via terminal.</p>
+<h2 id="gui-specific">GUI Specific:</h2>
+<h3 id="theming-syntax-highlighter">Theming (syntax highlighter)</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">syntax enable<span style="">
+</span><span style=""></span>set background=dark<span style="">
+</span><span style=""></span>colorscheme themeName</code></pre></td></tr></table>
+</div>
+</div>
+<p>Color schemes are stored in <code>.vim/colors</code> folder.</p>
+<h3 id="fonts">Fonts</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set guifont=Droid\ Sans\ Mono\ 14<span style="">
+</span><span style=""></span><span style="font-style:italic">&#34;&#34; or</span><span style="">
+</span><span style=""></span>set guifont=DejaVu\ Sans\ Mono:h13</code></pre></td></tr></table>
+</div>
+</div>
+<p>As you can see, when there are spaces in a font name, you have to use
+<code>\ </code>before them. There are also system differences when it comes to picking size.</p>
+<p>This is an example of setup for many operating systems:
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="font-weight:bold">if</span> has(<span style="font-style:italic">&#34;gui_gtk2&#34;</span>)<span style="">
+</span><span style=""></span>  set guifont=Droid\ Sans\ Mono\ 13<span style="">
+</span><span style=""></span><span style="font-weight:bold">elseif</span> has(<span style="font-style:italic">&#34;gui_macvim&#34;</span>)<span style="">
+</span><span style=""></span>  set guifont=Menlo\ Regular:h14<span style="">
+</span><span style=""></span><span style="font-weight:bold">elseif</span> has(<span style="font-style:italic">&#34;gui_win32&#34;</span>)<span style="">
+</span><span style=""></span>  set guifont=Consolas:h11:cANSI<span style="">
+</span><span style=""></span><span style="font-weight:bold">endif</span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="linespace-almost-like-line-height-in-css">Linespace (almost like line-height in CSS)</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">linespace=4</code></pre></td></tr></table>
+</div>
+</div>
+<p><code>Linespace</code> property doesn&rsquo;t work exactly like
+<code>line-height</code> in CSS.
+It sets the space between lines, not leading.</p>
+<p>The default is 0. I like to use something around 4 or 5, it depends on
+the font face.</p>
+<h2 id="general">General:</h2>
+<h3 id="terminal-vs-gui">Terminal vs GUI</h3>
+<p>Things listed below don&rsquo;t look as well in a terminal as in a GUI rich editor
+with a nice theme:</p>
+<ul>
+<li>error highlighting (ie: spellcheck),</li>
+<li>character limit line,</li>
+<li>current line highlight (not so bad but still worse than GUI apps).</li>
+</ul>
+<p>Sometimes they work more like distractions than like handy hits.
+Consider using some of them in <code>.gvimrc</code> instead of <code>.vimrc</code>.</p>
+<h3 id="characters-per-line-limit">Characters per line limit</h3>
+<p>Set and show 80 characters limit.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set textwidth=80<span style="">
+</span><span style=""></span>set colorcolumn=+1</code></pre></td></tr></table>
+</div>
+</div>
+<p>You&rsquo;ll see a line after 80th column.</p>
+<h3 id="line-numbers">Line Numbers</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set number          <span style="font-style:italic">&#34; show line numbers</span><span style="">
+</span><span style=""></span>set numberwidth=4   <span style="font-style:italic">&#34; width of number bar</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="text-highlighting">Text Highlighting</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set cursorline      <span style="font-style:italic">&#34; highlight current line</span><span style="">
+</span><span style=""></span>set showmatch       <span style="font-style:italic">&#34; highlight matching &lt;[{()}]&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="autoindenting">Autoindenting</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set autoindent      <span style="font-style:italic">&#34; set autoindenting on</span><span style="">
+</span><span style=""></span>set copyindent      <span style="font-style:italic">&#34; copy the indentation from previous line</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="spell-check--word-completion">Spell Check + Word Completion</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set spell spelllang=en_us<span style="">
+</span><span style=""></span>set complete+=kspell</code></pre></td></tr></table>
+</div>
+</div>
+<p>Press CTRL-N or CTRL-P in insert-mode to complete current word.</p>
+    </article>
+  </main>
+
+    </div><footer class="footer_footer__3LSES">
+  <p>©2016-2021 Bartosz Wieczorek.
+  <br>
+  Some rights reserved — <a href="https://creativecommons.org/licenses/by/4.0/">
+  CC BY 4.0</a> — please attribute and link back.
+  </p>
+</footer>
+
+<script src="/js/contact.min.8de316376a6db33a928cbfe65779ba6a7ae611243b2c99f0169ee6186b47b5c7.js"></script>
+</body>
+</html>

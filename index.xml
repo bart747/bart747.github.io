@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pixels / Clarity / Changeability</title>
+    <link>/</link>
+    <description>Recent content on Pixels / Clarity / Changeability</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test project</title>
+      <link>/testproj/</link>
+      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/testproj/</guid>
+      <description>abc</description>
+    </item>
+    
+    <item>
+      <title>Old Programming Wisdom Beats Crowdsourced Advice</title>
+      <link>/crowd/</link>
+      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/crowd/</guid>
+      <description>&lt;p&gt;Programmers as a crowd, like any crowd, are dumb. People find safety in following popular opinions. They see it as something of high value — worth sacrificing trust in their own instincts.
+This is why I like to look for advice by turning to individuals who achieved something worth admiring and
+show signs of independent thinking.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>We&#39;re so Bad at Judging Complexity, yet We Like to Predict</title>
+      <link>/complexity/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/complexity/</guid>
+      <description>&lt;p&gt;Living in a bubble, the one that&amp;rsquo;s unavoidable, makes us misjudge what are
+the most complex things we have to face.
+We think that some technical (software/hardware) problems are
+the most convoluted ones, but actually, everyday things like traffic or sales are way more complex.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>5 Notes on How to Design a Resilient UI</title>
+      <link>/resilient-ui/</link>
+      <pubDate>Wed, 05 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/resilient-ui/</guid>
+      <description>&lt;p&gt;The most interesting things happen once your software is in real use.
+That&amp;rsquo;s when you can really see what&amp;rsquo;s working and what to change.&lt;/p&gt;
+&lt;p&gt;It brings us to the problem of editing already working thing. In the wild.
+It happens all the time. Don&amp;rsquo;t think you can predict the future.
+You need to design your software with ease of modification in mind.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Henry Ford on What Promoted His Cars The Most</title>
+      <link>/ford-marketing/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/ford-marketing/</guid>
+      <description>&lt;p&gt;Oldie but goodie. Quotes form Henry Ford&amp;rsquo;s &lt;i&gt;My Life and Work&lt;/i&gt; on his experiences with advertising/marketing.&lt;/p&gt;
+&lt;h2 id=&#34;racing&#34;&gt;Racing&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I designed a two-cylinder enclosed engine of a more compact type than I had before used,
+fitted it into a skeleton chassis,
+found that I could make speed, and arranged a race with Winton.
+We met on the Grosse Point track at Detroit.
+I beat him. That was my first race, and it brought advertising of the only kind that people cared to read.
+The public thought nothing of a car unless it made speed—unless it beat other racing cars.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Structuring HTML Form Validation Indicators</title>
+      <link>/html-indicators/</link>
+      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/html-indicators/</guid>
+      <description>&lt;p&gt;Should I add a &amp;lsquo;success&amp;rsquo; class to an input element or some other part of my form?
+How to show an error indicator during live validation? How to manage a few different ways of validation?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>On Lazy Load Overuse and What You Can Do Instead</title>
+      <link>/alt-lazy-load/</link>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/alt-lazy-load/</guid>
+      <description>&lt;p&gt;Lazy Load is a great idea, so it&amp;rsquo;s overused frequently.
+Do you remember that situation when you scrolled down
+quickly to get to the middle part and the picture wasn&amp;rsquo;t there yet?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Max Planck on New Ideas and Creative Work</title>
+      <link>/planck/</link>
+      <pubDate>Fri, 09 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/planck/</guid>
+      <description>Here are few famous quotes related to creative work, by Max Planck:
+ A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die, and a new generation grows up that is familiar with it.
+  Anybody who has been seriously engaged in scientific work of any kind realizes that over the entrance to the gates of the temple of science are written the words: Ye must have faith.</description>
+    </item>
+    
+    <item>
+      <title>Learning UI Design from Coins (on Contrast)</title>
+      <link>/ui-coins/</link>
+      <pubDate>Fri, 19 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/ui-coins/</guid>
+      <description>&lt;p&gt;Contrast is an essential concept when it comes to UI usability. It solves more problems than you think.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s take coins as an example.
+When it comes to look: at first glance you see differences in size, color (types of metals) and visual patterns.
+Feel in hand is also important. Some seem heavier than others. You can detect size by touch too.
+Each of these features is useful in some situation.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Payment UIs Can be Used to Reduce Friction</title>
+      <link>/payment-ui-friction/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/payment-ui-friction/</guid>
+      <description>&lt;p&gt;A page with a final “buy” button or a credit card data form
+is a huge friction trigger.
+It&amp;rsquo;s the moment when you, as a buyer, think again about expense
+and transaction safety.
+The fact that you&amp;rsquo;re about to say bye to some of your money triggers that.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vim Typography: Better Readability and Look</title>
+      <link>/vim-typography/</link>
+      <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/vim-typography/</guid>
+      <description>&lt;p&gt;A few tricks to improve your Vim editor&amp;rsquo;s readability and theming.
+All examples are for editing &lt;code&gt;.vimrc&lt;/code&gt; and &lt;code&gt;.gvimrc&lt;/code&gt; files.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Research vs Making Decisions</title>
+      <link>/research-decision/</link>
+      <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/research-decision/</guid>
+      <description>&lt;p&gt;More often than not, research is something that prevents you from making a decision.
+You want to be sure, so you seek more.
+But your brain is somehow full of doubts all the time, no matter what you know.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Henry Ford for Makers: Quotes on Design</title>
+      <link>/henry-ford-for-makers/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/henry-ford-for-makers/</guid>
+      <description>&lt;p&gt;These are short excerpts from Henry Ford&amp;rsquo;s “My Life and Work”. I picked
+the ones that will be helpful especially to makers — designers, developers, etc.&lt;/p&gt;
+&lt;h2 id=&#34;simplicity&#34;&gt;Simplicity&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;My effort is in the direction of simplicity.
+&amp;hellip;
+Because nearly everything that we make is much
+more complex than it needs to be.
+Our clothing, our food, our household furnishings—all could be
+much simpler than they now are and at the same time be better looking.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Maintainable UI: How to Improve Code Editing with SASS</title>
+      <link>/maintainable-ui/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/maintainable-ui/</guid>
+      <description>&lt;p&gt;Changes are unavoidable. And you can’t predict the future.
+You also can’t solve problems in theory only, without prototyping.
+So make your life easier and build things that are easy to edit.
+Here are some examples of SASS based solutions that you can use to make UI more maintainable and “themable”.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
