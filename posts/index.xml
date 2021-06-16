@@ -62,16 +62,6 @@ The public thought nothing of a car unless it made speed—unless it beat other 
     </item>
     
     <item>
-      <title>Structuring HTML Form Validation Indicators</title>
-      <link>/html-indicators/</link>
-      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/html-indicators/</guid>
-      <description>&lt;p&gt;Should I add a &amp;lsquo;success&amp;rsquo; class to an input element or some other part of my form?
-How to show an error indicator during live validation? How to manage a few different ways of validation?&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>On Lazy Load Overuse and What You Can Do Instead</title>
       <link>/alt-lazy-load/</link>
       <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
