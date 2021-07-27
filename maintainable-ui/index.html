@@ -58,11 +58,11 @@
     }
   </style>
   
-  <link rel="stylesheet" href="/scss/main.min.32a3d9422c9e56921a36b8f853eabb3764c29e228552c3b58545ba7ab10397d7.css">
+  <link rel="stylesheet" href="/scss/base.min.f3f781777e6c069c203f8e775cd4458a3a94ea6e2b28107e6f96e89352fc10a4.css">
 </head>
 <body>
-    <nav role="navigation"``>
-  <a href="/" class="link__icon-home">
+    <nav role="navigation">
+  <a href="/" class="link-home">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24" height="24"
@@ -72,7 +72,7 @@
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="icon-home feather">
+      class="icon-home feather inline-block">
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
       <polyline points="9 22 9 12 15 12 15 22">
       </polyline>
@@ -93,129 +93,129 @@ Here are some examples of SASS based solutions that you can use to make UI more 
 <p>With SASS variables you can control your basic UI properties from one, organized file.
 The obvious ones are font families, media queries, colors and sizes.</p>
 <p>Here&rsquo;s quick example:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="font-style:italic">// fonts
-</span><span style="font-style:italic"></span>$family:           <span style="font-style:italic">&#34;Source Sans Pro&#34;</span>, sans-serif;
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// fonts
+</span><span class="c1"></span><span class="nv">$family</span><span class="o">:</span>           <span class="s2">&#34;Source Sans Pro&#34;</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
 
-<span style="font-style:italic">// colors
-</span><span style="font-style:italic"></span>$txt:              #404040;
-$blue:             #2233ff;
-$red:              #ff3322;
-$green:            #22ff33;
+<span class="c1">// colors
+</span><span class="c1"></span><span class="nv">$txt</span><span class="o">:</span>              <span class="mh">#404040</span><span class="p">;</span>
+<span class="nv">$blue</span><span class="o">:</span>             <span class="mh">#2233ff</span><span class="p">;</span>
+<span class="nv">$red</span><span class="o">:</span>              <span class="mh">#ff3322</span><span class="p">;</span>
+<span class="nv">$green</span><span class="o">:</span>            <span class="mh">#22ff33</span><span class="p">;</span>
 
-<span style="font-style:italic">// sizes
-</span><span style="font-style:italic"></span>$base-font-size:   18<span style="">px</span>;
-$large-font-size:  21<span style="">px</span>;
-$small-font-size:  16<span style="">px</span>;
-$base-line-height: 1.6;
+<span class="c1">// sizes
+</span><span class="c1"></span><span class="nv">$base-font-size</span><span class="o">:</span>   <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$large-font-size</span><span class="o">:</span>  <span class="mi">21</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$small-font-size</span><span class="o">:</span>  <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$base-line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.6</span><span class="p">;</span>
 
-<span style="font-style:italic">// breakepoints
-</span><span style="font-style:italic"></span>$sm:               568<span style="">px</span>;
-$md:               768<span style="">px</span>;
-$lg:               1024<span style="">px</span>;</code></pre></td></tr></table>
+<span class="c1">// breakepoints
+</span><span class="c1"></span><span class="nv">$sm</span><span class="o">:</span>               <span class="mi">568</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$md</span><span class="o">:</span>               <span class="mi">768</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$lg</span><span class="o">:</span>               <span class="mi">1024</span><span class="kt">px</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>But hey, not all colors are equal. And when it comes to sizes, we can get much more.</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="font-style:italic">// FONTS
-</span><span style="font-style:italic"></span>
-$base-family:           <span style="font-style:italic">&#34;Source Sans Pro&#34;</span>, sans-serif;
-$mono-family:           <span style="font-style:italic">&#34;Droid Sans Mono&#34;</span>, monospace;
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// FONTS
+</span><span class="c1"></span>
+<span class="nv">$base-family</span><span class="o">:</span>           <span class="s2">&#34;Source Sans Pro&#34;</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
+<span class="nv">$mono-family</span><span class="o">:</span>           <span class="s2">&#34;Droid Sans Mono&#34;</span><span class="o">,</span> <span class="ni">monospace</span><span class="p">;</span>
 
 
-<span style="font-style:italic">// COLORS
-</span><span style="font-style:italic"></span>
-<span style="font-style:italic">// base
-</span><span style="font-style:italic"></span>$txt:              #404040;
-$blue:             #2233ff;
-$red:              #ff3322;
-$green:            #22ff33;
+<span class="c1">// COLORS
+</span><span class="c1"></span>
+<span class="c1">// base
+</span><span class="c1"></span><span class="nv">$txt</span><span class="o">:</span>              <span class="mh">#404040</span><span class="p">;</span>
+<span class="nv">$blue</span><span class="o">:</span>             <span class="mh">#2233ff</span><span class="p">;</span>
+<span class="nv">$red</span><span class="o">:</span>              <span class="mh">#ff3322</span><span class="p">;</span>
+<span class="nv">$green</span><span class="o">:</span>            <span class="mh">#22ff33</span><span class="p">;</span>
 
-<span style="font-style:italic">// branding
-</span><span style="font-style:italic"></span>$brand-blue:       $blue;
-$brand-gold:       #e5b23b;
-
-
-<span style="font-style:italic">// SIZES
-</span><span style="font-style:italic"></span>
-$base-font-size:   18<span style="">px</span>;
-$large-font-size:  21<span style="">px</span>;
-$small-font-size:  16<span style="">px</span>;
-$base-line-height: 1.6;
-
-<span style="font-style:italic">// marketing headlines;
-</span><span style="font-style:italic"></span>$extra-fonts-size: 28<span style="">px</span>;
-
-<span style="font-style:italic">// rhythm unit (leading)
-</span><span style="font-style:italic"></span>$u:                1<span style="">rem</span> * $base-line-height;
+<span class="c1">// branding
+</span><span class="c1"></span><span class="nv">$brand-blue</span><span class="o">:</span>       <span class="nv">$blue</span><span class="p">;</span>
+<span class="nv">$brand-gold</span><span class="o">:</span>       <span class="mh">#e5b23b</span><span class="p">;</span>
 
 
-<span style="font-style:italic">// BREAKEPOINTS
-</span><span style="font-style:italic"></span>$sm:               568<span style="">px</span>;
-$md:               768<span style="">px</span>;
-$lg:               1024<span style="">px</span>;</code></pre></td></tr></table>
+<span class="c1">// SIZES
+</span><span class="c1"></span>
+<span class="nv">$base-font-size</span><span class="o">:</span>   <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$large-font-size</span><span class="o">:</span>  <span class="mi">21</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$small-font-size</span><span class="o">:</span>  <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$base-line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.6</span><span class="p">;</span>
+
+<span class="c1">// marketing headlines;
+</span><span class="c1"></span><span class="nv">$extra-fonts-size</span><span class="o">:</span> <span class="mi">28</span><span class="kt">px</span><span class="p">;</span>
+
+<span class="c1">// rhythm unit (leading)
+</span><span class="c1"></span><span class="nv">$u</span><span class="o">:</span>                <span class="mi">1</span><span class="kt">rem</span> <span class="o">*</span> <span class="nv">$base-line-height</span><span class="p">;</span>
+
+
+<span class="c1">// BREAKEPOINTS
+</span><span class="c1"></span><span class="nv">$sm</span><span class="o">:</span>               <span class="mi">568</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$md</span><span class="o">:</span>               <span class="mi">768</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$lg</span><span class="o">:</span>               <span class="mi">1024</span><span class="kt">px</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="whats-rhythm-unit-u">What&rsquo;s rhythm unit ($u)?</h3>
@@ -228,75 +228,75 @@ If there&rsquo;s a headline that&rsquo;s bigger than basic font size,
 fit it into a line-hight that equals one $u.</p>
 <h2 id="mixins-and-functions">Mixins and Functions</h2>
 <p>If you use more than one font settings stack:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="font-weight:bold">@mixin</span> font-base {
-  <span style="font-weight:bold">color</span>: <span style="">$</span><span style="font-weight:bold">text-color</span>;
-  <span style="font-weight:bold">font-family</span>: <span style="">$</span><span style="font-weight:bold">base-font-family</span>;
-  <span style="font-weight:bold">font-size</span>:  <span style="">$</span><span style="font-weight:bold">base-font-size</span>;
-  <span style="font-weight:bold">line-height</span>: <span style="">$</span><span style="font-weight:bold">base-line-height</span>;
-}
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> font-base</span> <span class="p">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nv">$text-color</span><span class="p">;</span>
+  <span class="na">font-family</span><span class="o">:</span> <span class="nv">$base-font-family</span><span class="p">;</span>
+  <span class="na">font-size</span><span class="o">:</span>  <span class="nv">$base-font-size</span><span class="p">;</span>
+  <span class="na">line-height</span><span class="o">:</span> <span class="nv">$base-line-height</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span style="font-weight:bold">@mixin</span> font-mono {
-  <span style="font-weight:bold">color</span>: <span style="">$</span><span style="font-weight:bold">grey-dark</span>;
-  <span style="font-weight:bold">font-family</span>: <span style="">$</span><span style="font-weight:bold">mono-font-family</span>;
-  <span style="font-weight:bold">font-size</span>: <span style="">$</span><span style="font-weight:bold">small-font-size</span>;
-  <span style="font-weight:bold">line-height</span>: <span style="font-weight:bold">0</span><span style="font-weight:bold">.75</span> * <span style="">$</span><span style="font-weight:bold">u</span>;
-  <span style="font-style:italic">// 4 lines of code will give 3x default leading
-</span><span style="font-style:italic"></span>}</code></pre></td></tr></table>
+<span class="k">@mixin</span><span class="nf"> font-mono</span> <span class="p">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nv">$grey-dark</span><span class="p">;</span>
+  <span class="na">font-family</span><span class="o">:</span> <span class="nv">$mono-font-family</span><span class="p">;</span>
+  <span class="na">font-size</span><span class="o">:</span> <span class="nv">$small-font-size</span><span class="p">;</span>
+  <span class="na">line-height</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.75</span> <span class="o">*</span> <span class="nv">$u</span><span class="p">;</span>
+  <span class="c1">// 4 lines of code will give 3x default leading
+</span><span class="c1"></span><span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Assets directory path helpers:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss">$assets-dir: <span style="font-style:italic">&#39;assets&#39;</span>;
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$assets-dir</span><span class="o">:</span> <span class="s1">&#39;assets&#39;</span><span class="p">;</span>
 
-<span style="font-weight:bold">@function</span> <span style="font-weight:bold">image</span>(<span style="">$</span><span style="font-weight:bold">name</span>) {
-  <span style="font-weight:bold">@return</span> <span style="font-weight:bold">url</span>(<span style="font-weight:bold">..</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">assets-dir</span>}/<span style="font-weight:bold">img</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">name</span>});
-}
+<span class="k">@function</span><span class="nf"> image</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="sx">url(../</span><span class="si">#{</span><span class="nv">$assets-dir</span><span class="si">}</span><span class="sx">/img/</span><span class="si">#{</span><span class="nv">$name</span><span class="si">}</span><span class="sx">)</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span style="font-weight:bold">@function</span> <span style="font-weight:bold">font</span>(<span style="">$</span><span style="font-weight:bold">name</span>) {
-  <span style="font-weight:bold">@return</span> <span style="font-weight:bold">url</span>(<span style="font-weight:bold">..</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">assets-dir</span>}/<span style="font-weight:bold">fonts</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">name</span>});
+<span class="k">@function</span><span class="nf"> font</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="sx">url(../</span><span class="si">#{</span><span class="nv">$assets-dir</span><span class="si">}</span><span class="sx">/fonts/</span><span class="si">#{</span><span class="nv">$name</span><span class="si">}</span><span class="sx">)</span><span class="p">;</span>
 
-}
+<span class="p">}</span>
 
-<span style="font-style:italic">// usage
-</span><span style="font-style:italic">// .masthead {
-</span><span style="font-style:italic">//   background-image: image(&#39;clouds.svg&#39;);
-</span><span style="font-style:italic"></span>// }</code></pre></td></tr></table>
+<span class="c1">// usage
+</span><span class="c1">// .masthead {
+</span><span class="c1">//   background-image: image(&#39;clouds.svg&#39;);
+</span><span class="c1"></span><span class="o">//</span> <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
 <h2 id="files">Files</h2>
@@ -367,8 +367,8 @@ Maybe you won&rsquo;t remember how you figured it out.</p>
   </main>
 
     </div>
-    <nav role="navigation"``>
-  <a href="/" class="link__icon-home">
+    <nav role="navigation">
+  <a href="/" class="link-home">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24" height="24"
@@ -378,14 +378,14 @@ Maybe you won&rsquo;t remember how you figured it out.</p>
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="icon-home feather">
+      class="icon-home feather inline-block">
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
       <polyline points="9 22 9 12 15 12 15 22">
       </polyline>
     </svg>
   </a>
 </nav>
-<footer class="footer_footer__3LSES">
+<footer class="footer">
   <p>©2016-2021 Bartosz Wieczorek.
   <br>
   Some rights reserved — <a href="https://creativecommons.org/licenses/by/4.0/">
@@ -393,6 +393,9 @@ Maybe you won&rsquo;t remember how you figured it out.</p>
   </p>
 </footer>
 
-<script src="/js/contact.min.200179b2fd2d01bd4d5ae5279e599c0bba42204520486f6731c6b53b697d259f.js"></script>
+<script src="/js/contact.min.3d771cd88ca9426a6a6c6c2a805c7366794524897a018e8eb0e1f38033d78178.js"></script>
+
+<script type="module" src="/js/vuetest.min.a6ddef0e33e2a46a7a473f2723939e1bc53ddfdb2ca7cff5086545181d013fba.js"></script>
+
 </body>
 </html>

@@ -58,11 +58,11 @@
     }
   </style>
   
-  <link rel="stylesheet" href="/scss/main.min.32a3d9422c9e56921a36b8f853eabb3764c29e228552c3b58545ba7ab10397d7.css">
+  <link rel="stylesheet" href="/scss/base.min.f3f781777e6c069c203f8e775cd4458a3a94ea6e2b28107e6f96e89352fc10a4.css">
 </head>
 <body>
-    <nav role="navigation"``>
-  <a href="/" class="link__icon-home">
+    <nav role="navigation">
+  <a href="/" class="link-home">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24" height="24"
@@ -72,7 +72,7 @@
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="icon-home feather">
+      class="icon-home feather inline-block">
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
       <polyline points="9 22 9 12 15 12 15 22">
       </polyline>
@@ -100,62 +100,62 @@ than load the rest.
 No waiting for a user to scroll-down.
 The selected top images will get loaded faster than usual because they won&rsquo;t share the bandwidth with others.</p>
 <p>Here&rsquo;s a very general example of the main mechanism:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="font-weight:bold">function</span> loadBottomImgs(count) {
-  <span style="font-weight:bold">if</span> (count &gt; 0) {
-    setTimeout( _=&gt; {
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="nx">count</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(</span> <span class="mi">_</span><span class="p">=&gt;</span> <span class="p">{</span>
 
-      <span style="font-style:italic">// when last image from the TOP group is ready, load the rest
-</span><span style="font-style:italic"></span>      <span style="font-weight:bold">if</span> (lastTopImg.complete) {
-        bottomImgs.forEach( el =&gt; {
-          el.src = el.getAttribute(<span style="font-style:italic">&#34;data-imgload&#34;</span>);
-        });
+      <span class="c1">// when last image from the TOP group is ready, load the rest
+</span><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">lastTopImg</span><span class="p">.</span><span class="nx">complete</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">bottomImgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span> <span class="nx">el</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="nx">el</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&#34;data-imgload&#34;</span><span class="p">);</span>
+        <span class="p">});</span>
       
-      <span style="font-style:italic">// otherwise, run the function again
-</span><span style="font-style:italic"></span>      } <span style="font-weight:bold">else</span> {
-        loadBottomImgs(count - 1); 
-      } 
+      <span class="c1">// otherwise, run the function again
+</span><span class="c1"></span>      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">loadBottomImgs</span><span class="p">(</span><span class="nx">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span> 
+      <span class="p">}</span> 
 
-    }, 200); <span style="font-style:italic">// each iteration gives top images some time
-</span><span style="font-style:italic"></span>
-    <span style="font-style:italic">// if the last top image is not complete after all iterations,
-</span><span style="font-style:italic"></span>    <span style="font-style:italic">// load the rest of images anyway
-</span><span style="font-style:italic"></span>  } <span style="font-weight:bold">else</span> {        
-    bottomImgs.forEach( el =&gt; {
-      el.src = el.getAttribute(<span style="font-style:italic">&#34;data-imgload&#34;</span>);
-    });
-}
+    <span class="p">},</span> <span class="mi">200</span><span class="p">);</span> <span class="c1">// each iteration gives top images some time
+</span><span class="c1"></span>
+    <span class="c1">// if the last top image is not complete after all iterations,
+</span><span class="c1"></span>    <span class="c1">// load the rest of images anyway
+</span><span class="c1"></span>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>        
+    <span class="nx">bottomImgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span> <span class="nx">el</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">el</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&#34;data-imgload&#34;</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
 
-loadBottomImgs(10);</code></pre></td></tr></table>
+<span class="nx">loadBottomImgs</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>There are 10 available iterations.
@@ -171,12 +171,13 @@ In that kind of situation speed of above the fold content is no longer a priorit
 You will need to tune the <em>count</em> and the <em>setTimeout()</em>.
 Anyhow, it&rsquo;s good to have it in a toolbox.</p>
 <p>(I hope it&rsquo;s clear enough despite my limited English skills.)</p>
+
     </article>
   </main>
 
     </div>
-    <nav role="navigation"``>
-  <a href="/" class="link__icon-home">
+    <nav role="navigation">
+  <a href="/" class="link-home">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24" height="24"
@@ -186,14 +187,14 @@ Anyhow, it&rsquo;s good to have it in a toolbox.</p>
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="icon-home feather">
+      class="icon-home feather inline-block">
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
       <polyline points="9 22 9 12 15 12 15 22">
       </polyline>
     </svg>
   </a>
 </nav>
-<footer class="footer_footer__3LSES">
+<footer class="footer">
   <p>©2016-2021 Bartosz Wieczorek.
   <br>
   Some rights reserved — <a href="https://creativecommons.org/licenses/by/4.0/">
@@ -201,6 +202,9 @@ Anyhow, it&rsquo;s good to have it in a toolbox.</p>
   </p>
 </footer>
 
-<script src="/js/contact.min.200179b2fd2d01bd4d5ae5279e599c0bba42204520486f6731c6b53b697d259f.js"></script>
+<script src="/js/contact.min.3d771cd88ca9426a6a6c6c2a805c7366794524897a018e8eb0e1f38033d78178.js"></script>
+
+<script type="module" src="/js/vuetest.min.a6ddef0e33e2a46a7a473f2723939e1bc53ddfdb2ca7cff5086545181d013fba.js"></script>
+
 </body>
 </html>

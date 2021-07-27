@@ -67,9 +67,8 @@ The public thought nothing of a car unless it made speed—unless it beat other 
       <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>/alt-lazy-load/</guid>
-      <description>&lt;p&gt;Lazy Load is a great idea, so it&amp;rsquo;s overused frequently.
-Do you remember that situation when you scrolled down
-quickly to get to the middle part and the picture wasn&amp;rsquo;t there yet?&lt;/p&gt;</description>
+      <description>Lazy Load is a great idea, so it&amp;rsquo;s overused frequently. Do you remember that situation when you scrolled down quickly to get to the middle part and the picture wasn&amp;rsquo;t there yet?
+When using a plugin, you can use a threshold/offset option to fire the thing earlier. But people can scroll fast. If someone visits a site for, let&amp;rsquo;s say, the third time and knows that the part she wants is somewhere close to the bottom, she will scroll down really, really fast.</description>
     </item>
     
     <item>

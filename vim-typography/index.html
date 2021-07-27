@@ -58,11 +58,11 @@
     }
   </style>
   
-  <link rel="stylesheet" href="/scss/main.min.32a3d9422c9e56921a36b8f853eabb3764c29e228552c3b58545ba7ab10397d7.css">
+  <link rel="stylesheet" href="/scss/base.min.f3f781777e6c069c203f8e775cd4458a3a94ea6e2b28107e6f96e89352fc10a4.css">
 </head>
 <body>
-    <nav role="navigation"``>
-  <a href="/" class="link__icon-home">
+    <nav role="navigation">
+  <a href="/" class="link-home">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24" height="24"
@@ -72,7 +72,7 @@
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="icon-home feather">
+      class="icon-home feather inline-block">
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
       <polyline points="9 22 9 12 15 12 15 22">
       </polyline>
@@ -92,62 +92,62 @@ For instance, you should use it for things that you want to see in gVim or MacVi
 and can&rsquo;t or don&rsquo;t want to use when Vim is running via terminal.</p>
 <h2 id="gui-specific">GUI Specific:</h2>
 <h3 id="theming-syntax-highlighter">Theming (syntax highlighter)</h3>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">syntax enable<span style="">
-</span><span style=""></span>set background=dark<span style="">
-</span><span style=""></span>colorscheme themeName</code></pre></td></tr></table>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">background</span><span class="p">=</span><span class="nb">dark</span><span class="err">
+</span><span class="err"></span><span class="nx">colorscheme</span> <span class="nx">themeName</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Color schemes are stored in <code>.vim/colors</code> folder.</p>
 <h3 id="fonts">Fonts</h3>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set guifont=Droid\ Sans\ Mono\ 14<span style="">
-</span><span style=""></span><span style="font-style:italic">&#34;&#34; or</span><span style="">
-</span><span style=""></span>set guifont=DejaVu\ Sans\ Mono:h13</code></pre></td></tr></table>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Droid</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span>\ <span class="m">14</span><span class="err">
+</span><span class="err"></span><span class="c">&#34;&#34; or</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">DejaVu</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span>:<span class="nx">h13</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>As you can see, when there are spaces in a font name, you have to use
 <code>\ </code>before them. There are also system differences when it comes to picking size.</p>
 <p>This is an example of setup for many operating systems:
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="font-weight:bold">if</span> has(<span style="font-style:italic">&#34;gui_gtk2&#34;</span>)<span style="">
-</span><span style=""></span>  set guifont=Droid\ Sans\ Mono\ 13<span style="">
-</span><span style=""></span><span style="font-weight:bold">elseif</span> has(<span style="font-style:italic">&#34;gui_macvim&#34;</span>)<span style="">
-</span><span style=""></span>  set guifont=Menlo\ Regular:h14<span style="">
-</span><span style=""></span><span style="font-weight:bold">elseif</span> has(<span style="font-style:italic">&#34;gui_win32&#34;</span>)<span style="">
-</span><span style=""></span>  set guifont=Consolas:h11:cANSI<span style="">
-</span><span style=""></span><span style="font-weight:bold">endif</span></code></pre></td></tr></table>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s2">&#34;gui_gtk2&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Droid</span>\ <span class="nx">Sans</span>\ <span class="nx">Mono</span>\ <span class="m">13</span><span class="err">
+</span><span class="err"></span><span class="k">elseif</span> <span class="nx">has</span><span class="p">(</span><span class="s2">&#34;gui_macvim&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Menlo</span>\ <span class="nx">Regular</span>:<span class="nx">h14</span><span class="err">
+</span><span class="err"></span><span class="k">elseif</span> <span class="nx">has</span><span class="p">(</span><span class="s2">&#34;gui_win32&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guifont</span><span class="p">=</span><span class="nx">Consolas</span>:<span class="nx">h11</span>:<span class="nx">cANSI</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span></code></pre></td></tr></table>
 </div>
 </div></p>
 <h3 id="linespace-almost-like-line-height-in-css">Linespace (almost like line-height in CSS)</h3>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">linespace=4</code></pre></td></tr></table>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">linespace</span><span class="p">=</span><span class="m">4</span></code></pre></td></tr></table>
 </div>
 </div>
 <p><code>Linespace</code> property doesn&rsquo;t work exactly like
@@ -168,59 +168,59 @@ with a nice theme:</p>
 Consider using some of them in <code>.gvimrc</code> instead of <code>.vimrc</code>.</p>
 <h3 id="characters-per-line-limit">Characters per line limit</h3>
 <p>Set and show 80 characters limit.</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set textwidth=80<span style="">
-</span><span style=""></span>set colorcolumn=+1</code></pre></td></tr></table>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">textwidth</span><span class="p">=</span><span class="m">80</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">colorcolumn</span><span class="p">=+</span><span class="m">1</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>You&rsquo;ll see a line after 80th column.</p>
 <h3 id="line-numbers">Line Numbers</h3>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set number          <span style="font-style:italic">&#34; show line numbers</span><span style="">
-</span><span style=""></span>set numberwidth=4   <span style="font-style:italic">&#34; width of number bar</span></code></pre></td></tr></table>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">number</span>          <span class="c">&#34; show line numbers</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">numberwidth</span><span class="p">=</span><span class="m">4</span>   <span class="c">&#34; width of number bar</span></code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="text-highlighting">Text Highlighting</h3>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set cursorline      <span style="font-style:italic">&#34; highlight current line</span><span style="">
-</span><span style=""></span>set showmatch       <span style="font-style:italic">&#34; highlight matching &lt;[{()}]&gt;</span></code></pre></td></tr></table>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">cursorline</span>      <span class="c">&#34; highlight current line</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">showmatch</span>       <span class="c">&#34; highlight matching &lt;[{()}]&gt;</span></code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="autoindenting">Autoindenting</h3>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set autoindent      <span style="font-style:italic">&#34; set autoindenting on</span><span style="">
-</span><span style=""></span>set copyindent      <span style="font-style:italic">&#34; copy the indentation from previous line</span></code></pre></td></tr></table>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">autoindent</span>      <span class="c">&#34; set autoindenting on</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">copyindent</span>      <span class="c">&#34; copy the indentation from previous line</span></code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="spell-check--word-completion">Spell Check + Word Completion</h3>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">set spell spelllang=en_us<span style="">
-</span><span style=""></span>set complete+=kspell</code></pre></td></tr></table>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">spell</span> <span class="nx">spelllang</span><span class="p">=</span><span class="nx">en_us</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">complete</span><span class="p">+=</span><span class="nx">kspell</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Press CTRL-N or CTRL-P in insert-mode to complete current word.</p>
@@ -228,8 +228,8 @@ Consider using some of them in <code>.gvimrc</code> instead of <code>.vimrc</cod
   </main>
 
     </div>
-    <nav role="navigation"``>
-  <a href="/" class="link__icon-home">
+    <nav role="navigation">
+  <a href="/" class="link-home">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24" height="24"
@@ -239,14 +239,14 @@ Consider using some of them in <code>.gvimrc</code> instead of <code>.vimrc</cod
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="icon-home feather">
+      class="icon-home feather inline-block">
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
       <polyline points="9 22 9 12 15 12 15 22">
       </polyline>
     </svg>
   </a>
 </nav>
-<footer class="footer_footer__3LSES">
+<footer class="footer">
   <p>©2016-2021 Bartosz Wieczorek.
   <br>
   Some rights reserved — <a href="https://creativecommons.org/licenses/by/4.0/">
@@ -254,6 +254,9 @@ Consider using some of them in <code>.gvimrc</code> instead of <code>.vimrc</cod
   </p>
 </footer>
 
-<script src="/js/contact.min.200179b2fd2d01bd4d5ae5279e599c0bba42204520486f6731c6b53b697d259f.js"></script>
+<script src="/js/contact.min.3d771cd88ca9426a6a6c6c2a805c7366794524897a018e8eb0e1f38033d78178.js"></script>
+
+<script type="module" src="/js/vuetest.min.a6ddef0e33e2a46a7a473f2723939e1bc53ddfdb2ca7cff5086545181d013fba.js"></script>
+
 </body>
 </html>
