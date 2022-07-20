@@ -1,9 +1,6 @@
 # *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://bart747.github.io
+User-agent: * 
+Disallow: 
 
 # Sitemaps
 Sitemap: https://bart747.github.io/sitemap.xml
