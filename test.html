@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test MD Page</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a href="./" style="font-size: 1.5rem; text-decoration: none">📋↩️</a>
+  <h1>Test MD Page</h1>
+<pre><code>2022-10-01
+</code></pre>
+<p>A paragraph. One, two.
+Sasoif oiasjfa foiajs oiajsfaf.
+Hsdmaopsmf ais skdasf owasf asoiaj fsf.
+asofna oaisff aiajs vmokvoidva ioajfa oiasfsf.</p>
+<pre><code>func parseMarkdownFile(fileName string) string {
+    var buf bytes.Buffer
+    f, err := os.ReadFile(&quot;./&quot; + fileName)
+    check(err)
+    if err := goldmark.Convert(f, &amp;buf); err != nil {
+	    panic(err)
+    }
+    return buf.String()
+}
+</code></pre>
+<p>With a <a href="./">strong ecosystem</a> of tools and APIs on major cloud providers, it is easier than ever to build services with Go.</p>
+<h2>Some headline</h2>
+<p>With a strong ecosystem of tools and APIs on major cloud providers, it is easier than ever to build services with Go.</p>
+<p>With a strong ecosystem of tools and APIs on major cloud providers, it is easier than ever to build services with Go.</p>
+<h3>Headline theree</h3>
+<p>With a strong ecosystem of tools and APIs on major cloud providers, it is easier than ever to build services with Go.</p>
+
+  <footer>
+  The My Site, 2024.
+  </footer>
+</body>
+</html>

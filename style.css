@@ -1,0 +1,47 @@
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #ddd;
+  background-color: #232329;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+p, h1, h2, h3, h4, h5, h6, ul, ol, li, table, blockquote {
+  max-width: 720px;
+  font-size: 17px;
+}
+a, a:visited {
+  color: white;
+}
+h1 {
+  margin: 3rem 0;
+}
+h2 {
+  margin: 2rem 0;
+}
+pre {
+  line-height: 1.25;
+}
+code {
+  font-family: monospace;
+  font-size: 14px;
+  color: #bad
+}
+footer {
+  margin: 4rem 0 3rem;
+}
+ul {
+  padding: 0 0 0 1.5rem;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+}
+
