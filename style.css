@@ -22,25 +22,32 @@ h1 {
 h2 {
   margin: 2rem 0;
 }
+p, pre, ul, ol, table, blockquote {
+  margin: 1rem 0;
+}
 pre {
-  line-height: 1.25;
+  line-height: 1.2;
+  overflow: auto;
 }
 code {
   font-family: monospace;
   font-size: 14px;
-  color: #bad
+  color: #db7;
 }
 footer {
   margin: 4rem 0 3rem;
+  font-size: 14px;
 }
 ul {
   padding: 0 0 0 1.5rem;
 }
-
+li {
+  margin: 0 0 0.75rem 0;
+}
 .menu {
   list-style: none;
+  padding: 0;
 }
-
 .menu li a {
   text-decoration: none;
 }
