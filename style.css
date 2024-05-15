@@ -4,13 +4,12 @@ body {
   line-height: 1.5;
   color: #ddd;
   background-color: #232329;
-  max-width: 720px;
+  max-width: 40rem;
   margin: 0 auto;
   padding: 1rem;
   box-sizing: border-box;
 }
 p, h1, h2, h3, h4, h5, h6, ul, ol, li, table, blockquote {
-  max-width: 720px;
   font-size: 17px;
 }
 a, a:visited {
@@ -22,7 +21,7 @@ h1 {
 h2 {
   margin: 2rem 0;
 }
-p, pre, ul, ol, table, blockquote {
+p, pre, nav, ul, ol, table, blockquote {
   margin: 1rem 0;
 }
 pre {
@@ -44,11 +43,8 @@ ul {
 li {
   margin: 0 0 0.75rem 0;
 }
-.menu {
-  list-style: none;
-  padding: 0;
-}
-.menu li a {
+nav a {
+  display: block;
   text-decoration: none;
 }
 
