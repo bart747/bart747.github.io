@@ -82,11 +82,12 @@ func createPage(article article) {
 
 	err = tmpl.Execute(file, pageData{article.title, article.content})
 	check(err)
-	fmt.Println("created:", article.title)
+	fmt.Println("·", fileName, " → ", article.title)
 }
 
 func build() {
 	mdFiles := getMarkdownFiles()
+	fmt.Println("just created:")
 	for i := range mdFiles {
 		createPage(parseMarkdownFile(mdFiles[i]))
 	}
