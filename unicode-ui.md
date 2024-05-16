@@ -1,15 +1,18 @@
-# Unicode Symbols for UI – a Handy Glossary
+# Unicode Symbols for UI – A Handy List
 
-Unicode is a text encoding standard with an abundant collection of symbols and characters.
-It works practically everywhere – text files, terminal, web pages, and so on.
-Beside obvious stuff like alphabets, you get advanced math symbols, emojis, arrows,
-box-drawing shapes, etc.
+Unicode is a text encoding standard with a large collection of symbols and characters.
+It works practically everywhere – text files, the terminal, web pages, and so on.
+Besides obvious stuff like math symbols, you get emojis, arrows,
+box-drawing shapes, and more.
 
-Since it's a text encoding system, you can treat it just like any text.
-Basically, you can change it's color, size and placement, also interactively.
-You will get really light and simple, verbose if needed, GUI.
+You can manipulate Unicode symbols like normal text.
+You can change their color, size, and placement, even interactively.
+This lets you build GUIs that are light and easy to edit.
 
-## Scroll and Pick UI Oriented Glossary:
+This list is just a sample.
+Or maybe it's enough for what you need.
+
+## UI Symbols:
 
 ### Miscellaneous-Frequent
 
@@ -79,7 +82,7 @@ You will get really light and simple, verbose if needed, GUI.
 ♡&emsp;
 ♥
 
-### File Systems
+### File systems related
 
 └&emsp;
 ├&emsp;
@@ -147,7 +150,8 @@ It's kinda just text!
 ⇱&emsp;
 ⇲
 
-These are merely basic, frequently needed symbols.
+
 For more fanciness, check out the official [Unicode charts](https://www.unicode.org/charts/#symbols).
 
+    2024-05-16
 
