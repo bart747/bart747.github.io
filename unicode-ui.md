@@ -24,9 +24,14 @@ Or maybe it's enough for what you need.
 🗝&emsp;
 🗠
 
+⏴&emsp;
+⏵&emsp;
+⏶&emsp;
+⏷
+
 🏠&emsp;
 🔧&emsp;
-🔍&emsp;
+🔍
 
 ### Check Marks
 
@@ -72,10 +77,6 @@ Or maybe it's enough for what you need.
 
 ### Media Control
 
-⏴&emsp;
-⏵&emsp;
-⏶&emsp;
-⏷&emsp;
 ⯈&emsp;
 ⏸&emsp;
 ⏹&emsp;
