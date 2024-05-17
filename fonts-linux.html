@@ -13,7 +13,7 @@
       ⌂
     </a>
   </nav>
-  <h1>Font Settings in Linux Distros Suck – Write Your Own <em>font.conf</em></h1>
+  <h1 id="font-settings-in-linux-distros-suck--write-your-own-fontconf">Font Settings in Linux Distros Suck – Write Your Own <em>font.conf</em></h1>
 <ul>
 <li>You can write your own font configuration file —
 <code>fonts.conf</code> — and change default settings.</li>
@@ -23,7 +23,7 @@ which probably means <code>$HOME/.config/fontconfig/</code>.</li>
 <li>Common places for storing fonts in Linux systems are
 <code>$HOME/.local/share/fonts</code> and <code>/usr/local/share/fonts</code>.</li>
 </ul>
-<h2>Fonts on Linux and the Web</h2>
+<h2 id="fonts-on-linux-and-the-web">Fonts on Linux and the Web</h2>
 <p>When you're visiting a website with <em>font-face</em> configured as
 <em>serif</em> or <em>sans-serif</em>, or more specifically, <em>Helvetica, Arial</em>,
 you can see one of the Linux world's not-so-good sides.
@@ -46,7 +46,7 @@ A typical Linux system will most likely select its default <em>sans-serif</em>
 in those cases.
 It will work OK, but might not be what you want aesthetically.</p>
 <p>But it is Linux, so you can change that.</p>
-<h2>Picking a Typeface</h2>
+<h2 id="picking-a-typeface">Picking a Typeface</h2>
 <p>There are <strong>good, free, and open-source</strong> typefaces that
 blend better in the web context than many default choices.</p>
 <p>It's good to pick the ones that look clean and familiar.
@@ -75,7 +75,7 @@ legibility and predictable behavior, then style.</p>
 The problem is that it looks “original”,
 so it shouldn't serve as a default sans-serif
 that will be used in a browser.</p>
-<h2>Configuration File</h2>
+<h2 id="configuration-file">Configuration File</h2>
 <p>Here's an exemplary <em>font.conf</em> file content.
 It uses <a href="https://www.freedesktop.org/wiki/Software/fontconfig/">Fontconfig</a>,
 a library for system-wide font configuration.</p>
@@ -127,14 +127,14 @@ a library for system-wide font configuration.</p>
 </code></pre>
 <p>A file like this should be placed at
 <code>$XDG_CONFIG_HOME/fontconfig/</code>.</p>
-<h2>Docs</h2>
+<h2 id="docs">Docs</h2>
 <p>Need more info?</p>
 <ul>
 <li><a href="https://www.freedesktop.org/software/fontconfig/fontconfig-user.html">Official documentation</a>.</li>
 <li><a href="https://wiki.archlinux.org/title/font_configuration">ArchLinux docs</a>
 have good tips too.</li>
 </ul>
-<h2>Potential Problem</h2>
+<h2 id="potential-problem">Potential Problem</h2>
 <p>This piece of code will cause replacement of <em>Times New Roman</em>
 for <em>Merriweather</em>:</p>
 <pre><code>&lt;match target=&quot;pattern&quot;&gt;
@@ -155,7 +155,7 @@ for <em>Merriweather</em>:</p>
 &lt;/alias&gt;
 </code></pre>
 <p>It will work only if there's no <em>Times New Roman</em> in your system.</p>
-<h2>Quick sum-up</h2>
+<h2 id="quick-sum-up">Quick sum-up</h2>
 <ul>
 <li>Store your fonts at <code>$HOME/.local/share/fonts</code> or <code>/usr/local/share/fonts</code></li>
 <li>Configuration stuff write into <code>$XDG_CONFIG_HOME/fontconfig/fonts.conf</code>

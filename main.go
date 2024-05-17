@@ -4,6 +4,8 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/yuin/goldmark"
+	"github.com/yuin/goldmark/parser"
+	"github.com/yuin/goldmark/renderer/html"
 	"log"
 	"os"
 	"regexp"
@@ -47,8 +49,18 @@ func parseMarkdownFile(fileName string) article {
 	var buf bytes.Buffer
 	file, err := os.ReadFile("./" + fileName)
 	check(err)
-	if err := goldmark.Convert(file, &buf); err != nil {
-		panic(err)
+
+	parser := goldmark.New(
+		goldmark.WithParserOptions(
+			parser.WithAutoHeadingID(),
+		),
+		goldmark.WithRendererOptions(
+			html.WithUnsafe(),
+		),
+	)
+
+	if err := parser.Convert(file, &buf); err != nil {
+		check(err)
 	}
 
 	content := buf.String()
