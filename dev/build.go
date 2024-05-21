@@ -40,9 +40,9 @@ func getMarkdownFiles() []string {
 }
 
 type article struct {
-	title   string
-	name    string
-	content string
+	title    string
+	fileName string
+	content  string
 }
 
 func parseMarkdownFile(fileName string) article {
@@ -81,7 +81,7 @@ func createPage(article article) {
 	check(err)
 
 	pattern := regexp.MustCompile(`\.md`)
-	fileName := pattern.ReplaceAllString(article.name, `.html`)
+	fileName := pattern.ReplaceAllString(article.fileName, `.html`)
 
 	file, err := os.Create(fileName)
 	check(err)

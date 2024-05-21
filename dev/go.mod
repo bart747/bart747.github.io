@@ -1,4 +1,4 @@
-module dev/mdone
+module github.com/bart747/bart747.github.io/dev
 
 go 1.22.3
 

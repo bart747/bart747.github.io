@@ -1,7 +1,5 @@
 # Test MD Page
 
-    2022-10-01
-
 A paragraph. One, two.
 Sasoif oiasjfa foiajs oiajsfaf.
 Hsdmaopsmf ais skdasf owasf asoiaj fsf.
