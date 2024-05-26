@@ -18,11 +18,7 @@ Or maybe it's enough for what you need.
 ### Navigation
 
 ⌂&emsp;
-🖈&emsp;
-🗙&emsp;
-⚙&emsp;
-🗝&emsp;
-🗠
+⚙
 
 ⏴&emsp;
 ⏵&emsp;
@@ -31,7 +27,8 @@ Or maybe it's enough for what you need.
 
 🏠&emsp;
 🔧&emsp;
-🔍
+🔍&emsp;
+✉️
 
 ### Check Marks
 
@@ -39,54 +36,46 @@ Or maybe it's enough for what you need.
 ☑&emsp;
 ☒
 
-☹ &emsp;
-☺
-
 ■&emsp;
 □
 
 ★&emsp;
 ☆
 
-♡&emsp;
-♥
-
-🖒&emsp;
-🖓
+🤍&emsp;
+❤️
 
 ### Text Editing
 
-❦&emsp;
+✻&emsp;
 ❞&emsp;
-🖉&emsp;
-🖎
+✎&emsp;
+✍️
 
 ### Email and Messaging
 
-🖂&emsp;
-🖄&emsp;
-🖅&emsp;
-🕭&emsp;
+📨&emsp;
+✉️&emsp;
+💬
+
 
 📦&emsp;
 📥&emsp;
-💬&emsp;
-📎&emsp;
+📎
+
 🔔&emsp;
 🔕&emsp;
 
 ### Media Control
 
-⯈&emsp;
-⏸&emsp;
-⏹&emsp;
-⏺&emsp;
-⏭&emsp;
-⏮
+🔊&emsp;
+🔉&emsp;
+🔈&emsp;
+🔇
 
-🕨&emsp;
-🕩&emsp;
-🕪
+▶️&emsp;
+⏸️&emsp;
+⏭️
 
 ### File Systems
 
@@ -95,49 +84,37 @@ Or maybe it's enough for what you need.
 │&emsp;
 ─
 
-
-🖿 &emsp;
-🗀 &emsp;
-🗁 &emsp;
-🗂&emsp;
-🗑
-
-🗅&emsp;
-🗈&emsp;
-🗊&emsp;
-🗋&emsp;
-🗍&emsp;
-🗎&emsp;
-🗏&emsp;
-🗐&emsp;
-
-🖺&emsp;
-🖻&emsp;
-🖼
+🗄️&emsp;
+🗃️
 
 📁&emsp;
-📂&emsp;
+📂
+
 📄&emsp;
+🖼️&emsp;
+🗒️
 
 
 example:
 
-    🗀 root
-    ├─ 🗀 dir1
-    │  └─ 🖻 image.jpg
-    ├─ 🗀 dir1
-    │  └─ 🖺 plan.doc
-    └─ 🗎 note.md
+    🗄️ root
+    ├─ 📂 dir1
+    │  └─ 🖼️ image.jpg
+    ├─ 📂 dir1
+    │  └─ 📄 plan.doc
+    └─ 📄 note.md
 
 It's kinda just text!
 
 ### Hardware
 
-🖶&emsp;
-🖧&emsp;
-🖳&emsp; 
-🖥&emsp;
-🖴
+💻&emsp;
+🛜&emsp;
+🖨️&emsp;
+📱&emsp;
+📲&emsp;
+🔋&emsp;
+🔌
 
 ### Privacy
 
@@ -173,7 +150,7 @@ It's kinda just text!
 
 <center>***</center>
 
-For more fanciness, check out the official [Unicode charts](https://www.unicode.org/charts/#symbols).
+For more fanciness, check out the official [Unicode charts](https://www.unicode.org/charts/#symbols) or the [Wikipedia's list](https://en.wikipedia.org/wiki/List_of_Unicode_characters)
 
     2024-05-16
 
