@@ -12,13 +12,30 @@
   <h1>Code ∴ Explanations</h1>
   <h2>Articles:</h2>
   <nav>
-    <a href="./unicode-ui.html">➝ Unicode Symbols for UI – A Handy List</a>
-    <a href="./fonts-linux.html">➝ Font Settings in Linux Distros Suck – Write Your Own font.conf</a>
-    <a href="./resilient-ui.html">➝ 5 Notes on How to Design a Resilient UI</a>
-    <a href="./complexity.html">➝ We're so Bad at Judging Complexity, yet We Like to Predict</a>
+    <a href="./unicode-ui.html" class="prefLink">➝ Unicode Symbols for UI – A Handy List</a>
+    <a href="./fonts-linux.html" class="prefLink">➝ Font Settings in Linux Distros Suck – Write Your Own font.conf</a>
+    <a href="./resilient-ui.html" class="prefLink">➝ 5 Notes on How to Design a Resilient UI</a>
+    <a href="./complexity.html" class="prefLink">➝ We're so Bad at Judging Complexity, yet We Like to Predict</a>
   </nav>
   <footer>
   Bartosz Wieczorek, 2024.
   </footer>
+  <script>
+    window.addEventListener("load", () => {
+      const links = document.querySelectorAll('.prefLink');
+
+      links.forEach(link => {
+        link.addEventListener('mouseover', () => {
+            const url = link.getAttribute('href');
+            if (!document.querySelector(`link[rel="prefetch"][href="${url}"]`)) {
+                const prefLink = document.createElement('link');
+                prefLink.rel = 'prefetch';
+                prefLink.href = url;
+                document.head.appendChild(prefLink);
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>
