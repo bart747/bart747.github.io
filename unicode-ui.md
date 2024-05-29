@@ -18,12 +18,10 @@ Or maybe it's enough for what you need.
 ### Navigation
 
 ⌂&emsp;
-⚙
-
-⏴&emsp;
-⏵&emsp;
-⏶&emsp;
-⏷
+⚙&emsp;
+❌&emsp;
+❬&emsp;
+❭
 
 🏠&emsp;
 🔧&emsp;
