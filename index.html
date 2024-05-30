@@ -23,19 +23,18 @@
   <script>
     window.addEventListener("load", () => {
       const links = document.querySelectorAll('.prefLink');
-
       links.forEach(link => {
         link.addEventListener('mouseover', () => {
-            const url = link.getAttribute('href');
-            if (!document.querySelector(`link[rel="prefetch"][href="${url}"]`)) {
-                const prefLink = document.createElement('link');
-                prefLink.rel = 'prefetch';
-                prefLink.href = url;
-                document.head.appendChild(prefLink);
-            }
+          const url = link.getAttribute('href');
+          if (!document.querySelector(`link[rel="prefetch"][href="${url}"]`)) {
+            const prefLink = document.createElement('link');
+            prefLink.rel = 'prefetch';
+            prefLink.href = url;
+            document.head.appendChild(prefLink);
+          }
         });
+      });
     });
-});
-</script>
+  </script>
 </body>
 </html>
