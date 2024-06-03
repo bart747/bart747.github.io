@@ -98,7 +98,7 @@ example:
     🗄️ root
     ├─ 📂 dir1
     │  └─ 🖼️ image.jpg
-    ├─ 📂 dir1
+    ├─ 📂 dir2
     │  └─ 📄 plan.doc
     └─ 📄 note.md
 
