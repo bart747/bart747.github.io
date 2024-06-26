@@ -94,17 +94,40 @@ func createPage(article article) {
 
 	err = tmpl.Execute(file, pageData{article.title, article.content})
 	check(err)
-	fmt.Println("·", fileName, " → ", article.title)
+	fmt.Println("·", fileName, " : ", article.title)
 }
 
 func build() {
 	mdFiles := getMarkdownFiles()
-	fmt.Println("just created:")
 	for i := range mdFiles {
 		createPage(parseMarkdownFile(mdFiles[i]))
 	}
 }
 
+func createSitemap() {
+	entries, err := os.ReadDir("./")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	file, err := os.Create("sitemap.txt")
+	check(err)
+
+	for _, e := range entries {
+		match, err := regexp.MatchString(`\w\.html`, e.Name())
+		nmatch, err := regexp.MatchString(`Template.html`, e.Name())
+		check(err)
+		if match == true && nmatch == false {
+			defer file.Close()
+			file.WriteString(e.Name() + "\n")
+			check(err)
+		}
+	}
+	file.Sync()
+	fmt.Println("·", file.Name())
+}
+
 func main() {
 	build()
+	createSitemap()
 }
