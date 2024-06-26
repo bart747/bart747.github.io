@@ -119,7 +119,7 @@ func createSitemap() {
 		check(err)
 		if match == true && nmatch == false {
 			defer file.Close()
-			file.WriteString(e.Name() + "\n")
+			file.WriteString("https://bart747.github.io/" + e.Name() + "\n")
 			check(err)
 		}
 	}

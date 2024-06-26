@@ -1,5 +1,5 @@
-complexity.html
-fonts-linux.html
-index.html
-resilient-ui.html
-unicode-ui.html
+https://bart747.github.io/complexity.html
+https://bart747.github.io/fonts-linux.html
+https://bart747.github.io/index.html
+https://bart747.github.io/resilient-ui.html
+https://bart747.github.io/unicode-ui.html
