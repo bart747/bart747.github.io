@@ -112,6 +112,7 @@ func createSitemap() {
 
 	file, err := os.Create("sitemap.txt")
 	check(err)
+	defer file.Close()
 
 	for _, e := range entries {
 		match, err := regexp.MatchString(`\w\.html`, e.Name())
@@ -119,7 +120,6 @@ func createSitemap() {
 		nmatch2, err := regexp.MatchString(`index.html`, e.Name())
 		check(err)
 		if match == true && nmatch == false && nmatch2 == false {
-			defer file.Close()
 			file.WriteString("https://bart747.github.io/" + e.Name() + "\n")
 			check(err)
 		}
