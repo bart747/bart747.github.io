@@ -19,6 +19,8 @@ func check(e error) {
 	}
 }
 
+const domain string = "https://bart747.github.io"
+
 func getMarkdownFiles() []string {
 	entries, err := os.ReadDir("./")
 	if err != nil {
@@ -89,10 +91,11 @@ func createPage(article article) {
 
 	type pageData struct {
 		Title   string
+		Link    string
 		Content string
 	}
 
-	err = tmpl.Execute(file, pageData{article.title, article.content})
+	err = tmpl.Execute(file, pageData{article.title, domain + "/" + fileName, article.content})
 	check(err)
 	fmt.Println("·", fileName, " : ", article.title)
 }
