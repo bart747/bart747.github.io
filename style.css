@@ -1,8 +1,13 @@
+
+:root {
+  --txt-color: #ddd;
+}
+
 body {
   font-family: Roboto, sans-serif;
   font-size: 17px;
   line-height: 1.5;
-  color: #ddd;
+  color: var(--txt-color);
   background-color: #232329;
   max-width: 40rem;
   margin: 0 auto;
@@ -13,8 +18,9 @@ p, h1, h2, h3, h4, h5, h6, ul, ol, li, table, blockquote {
   font-size: 17px;
 }
 a, a:visited {
-  color: white;
+  color: var(--txt-color);
 }
+
 h1 {
   margin: 3rem 0;
 }

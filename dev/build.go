@@ -13,16 +13,26 @@ import (
 	"text/template"
 )
 
-func check(e error) {
-	if e != nil {
-		panic(e)
+var siteData = struct {
+	domain       string
+	pagesDir     string
+	pageTemplate string
+	sitemap      string
+}{
+	"https://bart747.github.io",
+	"../",
+	"../Template.html",
+	"../sitemap.txt",
+}
+
+func check(err error) {
+	if err != nil {
+		panic(err)
 	}
 }
 
-const domain string = "https://bart747.github.io"
-
 func getMarkdownFiles() []string {
-	entries, err := os.ReadDir("./")
+	entries, err := os.ReadDir(siteData.pagesDir)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -49,7 +59,7 @@ type article struct {
 
 func parseMarkdownFile(fileName string) article {
 	var buf bytes.Buffer
-	file, err := os.ReadFile("./" + fileName)
+	file, err := os.ReadFile(siteData.pagesDir + fileName)
 	check(err)
 
 	parser := goldmark.New(
@@ -74,7 +84,7 @@ func parseMarkdownFile(fileName string) article {
 }
 
 func createPage(article article) {
-	htmlTmpl, err := os.ReadFile("./Template.html")
+	htmlTmpl, err := os.ReadFile(siteData.pageTemplate)
 	if err != nil {
 		log.Fatal(err, " | The template file is necessary.")
 	}
@@ -85,7 +95,7 @@ func createPage(article article) {
 	pattern := regexp.MustCompile(`\.md`)
 	fileName := pattern.ReplaceAllString(article.fileName, `.html`)
 
-	file, err := os.Create(fileName)
+	file, err := os.Create(siteData.pagesDir + fileName)
 	check(err)
 	defer file.Close()
 
@@ -95,7 +105,7 @@ func createPage(article article) {
 		Content string
 	}
 
-	err = tmpl.Execute(file, pageData{article.title, domain + "/" + fileName, article.content})
+	err = tmpl.Execute(file, pageData{article.title, siteData.domain + "/" + fileName, article.content})
 	check(err)
 	fmt.Println("·", fileName, " : ", article.title)
 }
@@ -108,12 +118,12 @@ func build() {
 }
 
 func createSitemap() {
-	entries, err := os.ReadDir("./")
+	entries, err := os.ReadDir(siteData.pagesDir)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	file, err := os.Create("sitemap.txt")
+	file, err := os.Create(siteData.sitemap)
 	check(err)
 	defer file.Close()
 
@@ -128,10 +138,11 @@ func createSitemap() {
 		}
 	}
 	file.Sync()
-	fmt.Println("·", file.Name())
+	fmt.Println("·", "sitemap")
 }
 
 func main() {
+	fmt.Println("Created following pages:")
 	build()
 	createSitemap()
 }
