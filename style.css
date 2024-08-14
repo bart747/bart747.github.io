@@ -1,14 +1,16 @@
 
 :root {
   --txt-color: #ddd;
+  --bg-color: #232329;
+  --link-color: #6c8;
+  --code-color: #db7;
 }
-
 body {
   font-family: Roboto, sans-serif;
   font-size: 17px;
   line-height: 1.5;
   color: var(--txt-color);
-  background-color: #232329;
+  background-color: var(--bg-color);
   max-width: 40rem;
   margin: 0 auto;
   padding: 1rem;
@@ -18,9 +20,9 @@ p, h1, h2, h3, h4, h5, h6, ul, ol, li, table, blockquote {
   font-size: 17px;
 }
 a, a:visited {
-  color: var(--txt-color);
+  color: var(--link-color);
+  text-decoration: none;
 }
-
 h1 {
   margin: 3rem 0;
 }
@@ -38,20 +40,19 @@ pre {
   overflow: auto;
 }
 code {
+  color: var(--code-color);
   font-family: monospace;
   font-size: 14px;
-  color: #db7;
 }
 footer {
   margin: 4rem 0 3rem;
   font-size: 14px;
 }
 ul {
+  margin: 1rem 0;
   padding: 0 0 0 1.5rem;
 }
-li {
-  margin: 0 0 0.75rem 0;
-}
+
 nav a {
   display: block;
   text-decoration: none;
