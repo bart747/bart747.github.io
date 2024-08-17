@@ -75,7 +75,28 @@ func parseMarkdownFile(fileName string) article {
 		check(err)
 	}
 
-	content := buf.String()
+	highlight := func(s string) string {
+		result := s
+		p := &result
+		matches := map[string]string{
+			`\(`:       `<span class="color-dim">(</span>`,
+			`\)`:       `<span class="color-dim">)</span>`,
+			`\{`:       `<span class="color-dim">{</span>`,
+			`\}`:       `<span class="color-dim">}</span>`,
+			`return`:   `<span class="color-bright">return</span>`,
+			`func`:     `<span class="color-bright">func</span>`,
+			`function`: `<span class="color-bright">function</span>`,
+		}
+
+		for k, v := range matches {
+			*p = regexp.MustCompile(k).ReplaceAllString(result, v)
+		}
+		return result
+	}
+
+	patternCode := regexp.MustCompile(`<pre><code>[\s\S]*<\/code><\/pre>`)
+	content := patternCode.ReplaceAllStringFunc(buf.String(), highlight)
+
 	lines := strings.Split(string(file), "\n")
 	pattern := regexp.MustCompile(`# `)
 	title := pattern.ReplaceAllString(lines[0], "")
