@@ -79,17 +79,17 @@ func parseMarkdownFile(fileName string) article {
 		result := s
 		p := &result
 		matches := map[string]string{
-			`\(`:       `<span class="color-dim">(</span>`,
-			`\)`:       `<span class="color-dim">)</span>`,
-			`\{`:       `<span class="color-dim">{</span>`,
-			`\}`:       `<span class="color-dim">}</span>`,
-			`return`:   `<span class="color-bright">return</span>`,
-			`func`:     `<span class="color-bright">func</span>`,
-			`function`: `<span class="color-bright">function</span>`,
+			`(`:        `color-dim`,
+			`)`:        `color-dim`,
+			`{`:        `color-dim`,
+			`}`:        `color-dim`,
+			`return`:   `color-bright`,
+			`func`:     `color-bright`,
+			`function`: `color-bright`,
 		}
 
 		for k, v := range matches {
-			*p = regexp.MustCompile(k).ReplaceAllString(result, v)
+			*p = strings.ReplaceAll(result, k, `<span class="`+v+`">`+k+`</span>`)
 		}
 		return result
 	}
