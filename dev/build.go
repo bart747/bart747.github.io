@@ -3,14 +3,15 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"github.com/yuin/goldmark"
-	"github.com/yuin/goldmark/parser"
-	"github.com/yuin/goldmark/renderer/html"
 	"log"
 	"os"
 	"regexp"
 	"strings"
 	"text/template"
+
+	"github.com/yuin/goldmark"
+	"github.com/yuin/goldmark/parser"
+	"github.com/yuin/goldmark/renderer/html"
 )
 
 var siteData = struct {
@@ -40,10 +41,11 @@ func getMarkdownFiles() []string {
 	var fileCollection []string
 
 	for _, e := range entries {
-		match, err := regexp.MatchString(`\w\.md`, e.Name())
+		re, err := regexp.Compile(`\w\.md`)
+		match := re.MatchString(e.Name())
 		check(err)
 
-		if match == true {
+		if match {
 			fileCollection = append(fileCollection, e.Name())
 		}
 	}
@@ -76,8 +78,6 @@ func parseMarkdownFile(fileName string) article {
 	}
 
 	highlight := func(s string) string {
-		result := s
-		p := &result
 		matches := map[string]string{
 			`(`:        `color-dim`,
 			`)`:        `color-dim`,
@@ -89,9 +89,10 @@ func parseMarkdownFile(fileName string) article {
 		}
 
 		for k, v := range matches {
-			*p = strings.ReplaceAll(result, k, `<span class="`+v+`">`+k+`</span>`)
+			s = regexp.MustCompile(`\b`+regexp.QuoteMeta(k)+`\b`).ReplaceAllString(s, `<span class="`+v+`">`+k+`</span>`)
 		}
-		return result
+
+		return s
 	}
 
 	patternCode := regexp.MustCompile(`<pre><code>[\s\S]*<\/code><\/pre>`)
@@ -149,11 +150,13 @@ func createSitemap() {
 	defer file.Close()
 
 	for _, e := range entries {
-		match, err := regexp.MatchString(`\w\.html`, e.Name())
-		nmatch, err := regexp.MatchString(`Template.html`, e.Name())
-		nmatch2, err := regexp.MatchString(`index.html`, e.Name())
+		match, err := regexp.Compile(`\w\.html`)
 		check(err)
-		if match == true && nmatch == false && nmatch2 == false {
+		nmatch, err := regexp.Compile(`Template.html`)
+		check(err)
+		nmatch2, err := regexp.Compile(`index.html`)
+		check(err)
+		if match.MatchString(e.Name()) && !nmatch.MatchString(e.Name()) && !nmatch2.MatchString(e.Name()) {
 			file.WriteString("https://bart747.github.io/" + e.Name() + "\n")
 			check(err)
 		}
