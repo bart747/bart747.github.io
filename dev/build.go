@@ -42,8 +42,8 @@ func getMarkdownFiles() []string {
 
 	for _, e := range entries {
 		re, err := regexp.Compile(`\w\.md`)
-		match := re.MatchString(e.Name())
 		check(err)
+		match := re.MatchString(e.Name())
 
 		if match {
 			fileCollection = append(fileCollection, e.Name())
@@ -150,7 +150,7 @@ func createSitemap() {
 	defer file.Close()
 
 	for _, e := range entries {
-		match, err := regexp.Compile(`\w\.html`)
+		match, err := regexp.MatchString(`\w\.html`)
 		check(err)
 		nmatch, err := regexp.Compile(`Template.html`)
 		check(err)
