@@ -150,7 +150,7 @@ func createSitemap() {
 	defer file.Close()
 
 	for _, e := range entries {
-		match, err := regexp.MatchString(`\w\.html`)
+		match, err := regexp.Compile(`\w\.html`,)
 		check(err)
 		nmatch, err := regexp.Compile(`Template.html`)
 		check(err)
