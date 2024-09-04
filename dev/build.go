@@ -89,7 +89,7 @@ func parseMarkdownFile(fileName string) article {
 		}
 
 		for k, v := range matches {
-			s = regexp.MustCompile(`\b`+regexp.QuoteMeta(k)+`\b`).ReplaceAllString(s, `<span class="`+v+`">`+k+`</span>`)
+			s = regexp.MustCompile(regexp.QuoteMeta(k)).ReplaceAllString(s, `<span class="`+v+`">`+k+`</span>`)
 		}
 
 		return s
@@ -150,7 +150,7 @@ func createSitemap() {
 	defer file.Close()
 
 	for _, e := range entries {
-		match, err := regexp.Compile(`\w\.html`,)
+		match, err := regexp.Compile(`\w\.html`)
 		check(err)
 		nmatch, err := regexp.Compile(`Template.html`)
 		check(err)
