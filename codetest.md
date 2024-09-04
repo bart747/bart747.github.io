@@ -47,4 +47,36 @@ func getMarkdownFiles() []string {
 
 	return fileCollection
 }
+
+asdaf && aslfjjahf || adga
+
+sads >= aslfjjahf
+asf < asf
+
+func createSitemap() {
+	entries, err := os.ReadDir(siteData.pagesDir)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	file, err := os.Create(siteData.sitemap)
+	check(err)
+	defer file.Close()
+
+	for _, e := range entries {
+		match, err := regexp.Compile(`\w\.html`)
+		check(err)
+		nmatch, err := regexp.Compile(`Template.html`)
+		check(err)
+		nmatch2, err := regexp.Compile(`index.html`)
+		check(err)
+		if match.MatchString(e.Name()) && !nmatch.MatchString(e.Name()) || !nmatch2.MatchString(e.Name()) {
+			file.WriteString("https://bart747.github.io/" + e.Name() + "\n")
+			check(err)
+		}
+	}
+	file.Sync()
+	fmt.Println("·", "sitemap")
+}
+
 ```
