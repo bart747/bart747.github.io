@@ -79,12 +79,10 @@ func parseMarkdownFile(fileName string) article {
 
 	highlight := func(s string) string {
 		matches := map[string]string{
-			`(\()|(\))`:            `color-dim`,
-			`(\{)|(\})`:            `color-dim`,
-			`(return )`:            `color-bright`,
-			`(func )|(function )`:  `color-bright`,
-			`(var )|( := )|(def )`: `color-bright`,
-			`(const )|(let )`:      `color-bright`,
+			`(\()|(\))`:           `color-dim`,
+			`(\{)|(\})`:           `color-dim`,
+			`(return )`:           `color-bright`,
+			`(func )|(function )`: `color-bright`,
 		}
 
 		for k, v := range matches {
