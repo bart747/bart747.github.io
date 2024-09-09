@@ -79,4 +79,21 @@ func createSitemap() {
 	fmt.Println("·", "sitemap")
 }
 
+window.addEventListener("load", () => {
+  const links = document.querySelectorAll('.prefLink');
+  function createPrefLink(link) {
+    const url = link.getAttribute('href');
+    if (!document.querySelector(`link[rel="prefetch"][href="${url}"]`)) {
+      const prefLink = document.createElement('link');
+      prefLink.rel = 'prefetch';
+      prefLink.href = url;
+      document.head.appendChild(prefLink);
+    }
+  }
+  links.forEach(link => {
+    link.addEventListener('mouseover', () => createPrefLink(link));
+    link.addEventListener('touchstart', () => createPrefLink(link));
+  });
+});
+
 ```

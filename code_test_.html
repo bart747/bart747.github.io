@@ -17,19 +17,19 @@
     </a>
   </nav>
   <h1 id="code-test">Code test</h1>
-<pre><code><span class="color-bright">func</span> createPage<span class="color-dim">(</span>article article<span class="color-dim">)</span> <span class="color-dim">{</span>
-	htmlTmpl, err := os.ReadFile<span class="color-dim">(</span>siteData.pageTemplate<span class="color-dim">)</span>
+<pre><code><span class="color-bright">func </span>createPage<span class="color-dim">(</span>article article<span class="color-dim">)</span> <span class="color-dim">{</span>
+	htmlTmpl, err<span class="color-bright"> := </span>os.ReadFile<span class="color-dim">(</span>siteData.pageTemplate<span class="color-dim">)</span>
 	if err != nil <span class="color-dim">{</span>
 		log.Fatal<span class="color-dim">(</span>err, &quot; | The template file is necessary.&quot;<span class="color-dim">)</span>
 	<span class="color-dim">}</span>
 
-	tmpl, err := template.New<span class="color-dim">(</span>&quot;webpage&quot;<span class="color-dim">)</span>.Parse<span class="color-dim">(</span>string<span class="color-dim">(</span>htmlTmpl<span class="color-dim">)</span><span class="color-dim">)</span>
+	tmpl, err<span class="color-bright"> := </span>template.New<span class="color-dim">(</span>&quot;webpage&quot;<span class="color-dim">)</span>.Parse<span class="color-dim">(</span>string<span class="color-dim">(</span>htmlTmpl<span class="color-dim">)</span><span class="color-dim">)</span>
 	check<span class="color-dim">(</span>err<span class="color-dim">)</span>
 
-	pattern := regexp.MustCompile<span class="color-dim">(</span>`\.md`<span class="color-dim">)</span>
-	fileName := pattern.ReplaceAllString<span class="color-dim">(</span>article.fileName, `.html`<span class="color-dim">)</span>
+	pattern<span class="color-bright"> := </span>regexp.MustCompile<span class="color-dim">(</span>`\.md`<span class="color-dim">)</span>
+	fileName<span class="color-bright"> := </span>pattern.ReplaceAllString<span class="color-dim">(</span>article.fileName, `.html`<span class="color-dim">)</span>
 
-	file, err := os.Create<span class="color-dim">(</span>siteData.pagesDir + fileName<span class="color-dim">)</span>
+	file, err<span class="color-bright"> := </span>os.Create<span class="color-dim">(</span>siteData.pagesDir + fileName<span class="color-dim">)</span>
 	check<span class="color-dim">(</span>err<span class="color-dim">)</span>
 	defer file.Close<span class="color-dim">(</span><span class="color-dim">)</span>
 
@@ -44,16 +44,16 @@
 	fmt.Println<span class="color-dim">(</span>&quot;·&quot;, fileName, &quot; : &quot;, article.title<span class="color-dim">)</span>
 <span class="color-dim">}</span>
 
-<span class="color-bright">func</span> getMarkdownFiles<span class="color-dim">(</span><span class="color-dim">)</span> []string <span class="color-dim">{</span>
-	entries, err := os.ReadDir<span class="color-dim">(</span>siteData.pagesDir<span class="color-dim">)</span>
+<span class="color-bright">func </span>getMarkdownFiles<span class="color-dim">(</span><span class="color-dim">)</span> []string <span class="color-dim">{</span>
+	entries, err<span class="color-bright"> := </span>os.ReadDir<span class="color-dim">(</span>siteData.pagesDir<span class="color-dim">)</span>
 	if err != nil <span class="color-dim">{</span>
 		log.Fatal<span class="color-dim">(</span>err<span class="color-dim">)</span>
 	<span class="color-dim">}</span>
 
-	var fileCollection []string
+	<span class="color-bright">var </span>fileCollection []string
 
-	for _, e := range entries <span class="color-dim">{</span>
-		match, err := regexp.MatchString<span class="color-dim">(</span>`\w\.md`, e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span>
+	for _, e<span class="color-bright"> := </span>range entries <span class="color-dim">{</span>
+		match, err<span class="color-bright"> := </span>regexp.MatchString<span class="color-dim">(</span>`\w\.md`, e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span>
 		check<span class="color-dim">(</span>err<span class="color-dim">)</span>
 
 		if match == true <span class="color-dim">{</span>
@@ -61,7 +61,7 @@
 		<span class="color-dim">}</span>
 	<span class="color-dim">}</span>
 
-	<span class="color-bright">return</span> fileCollection
+	<span class="color-bright">return </span>fileCollection
 <span class="color-dim">}</span>
 
 asdaf &amp;&amp; aslfjjahf || adga
@@ -69,22 +69,22 @@ asdaf &amp;&amp; aslfjjahf || adga
 sads &gt;= aslfjjahf
 asf &lt; asf
 
-<span class="color-bright">func</span> createSitemap<span class="color-dim">(</span><span class="color-dim">)</span> <span class="color-dim">{</span>
-	entries, err := os.ReadDir<span class="color-dim">(</span>siteData.pagesDir<span class="color-dim">)</span>
+<span class="color-bright">func </span>createSitemap<span class="color-dim">(</span><span class="color-dim">)</span> <span class="color-dim">{</span>
+	entries, err<span class="color-bright"> := </span>os.ReadDir<span class="color-dim">(</span>siteData.pagesDir<span class="color-dim">)</span>
 	if err != nil <span class="color-dim">{</span>
 		log.Fatal<span class="color-dim">(</span>err<span class="color-dim">)</span>
 	<span class="color-dim">}</span>
 
-	file, err := os.Create<span class="color-dim">(</span>siteData.sitemap<span class="color-dim">)</span>
+	file, err<span class="color-bright"> := </span>os.Create<span class="color-dim">(</span>siteData.sitemap<span class="color-dim">)</span>
 	check<span class="color-dim">(</span>err<span class="color-dim">)</span>
 	defer file.Close<span class="color-dim">(</span><span class="color-dim">)</span>
 
-	for _, e := range entries <span class="color-dim">{</span>
-		match, err := regexp.Compile<span class="color-dim">(</span>`\w\.html`<span class="color-dim">)</span>
+	for _, e<span class="color-bright"> := </span>range entries <span class="color-dim">{</span>
+		match, err<span class="color-bright"> := </span>regexp.Compile<span class="color-dim">(</span>`\w\.html`<span class="color-dim">)</span>
 		check<span class="color-dim">(</span>err<span class="color-dim">)</span>
-		nmatch, err := regexp.Compile<span class="color-dim">(</span>`Template.html`<span class="color-dim">)</span>
+		nmatch, err<span class="color-bright"> := </span>regexp.Compile<span class="color-dim">(</span>`Template.html`<span class="color-dim">)</span>
 		check<span class="color-dim">(</span>err<span class="color-dim">)</span>
-		nmatch2, err := regexp.Compile<span class="color-dim">(</span>`index.html`<span class="color-dim">)</span>
+		nmatch2, err<span class="color-bright"> := </span>regexp.Compile<span class="color-dim">(</span>`index.html`<span class="color-dim">)</span>
 		check<span class="color-dim">(</span>err<span class="color-dim">)</span>
 		if match.MatchString<span class="color-dim">(</span>e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span> &amp;&amp; !nmatch.MatchString<span class="color-dim">(</span>e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span> || !nmatch2.MatchString<span class="color-dim">(</span>e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span> <span class="color-dim">{</span>
 			file.WriteString<span class="color-dim">(</span>&quot;https://bart747.github.io/&quot; + e.Name<span class="color-dim">(</span><span class="color-dim">)</span> + &quot;\n&quot;<span class="color-dim">)</span>
@@ -94,6 +94,23 @@ asf &lt; asf
 	file.Sync<span class="color-dim">(</span><span class="color-dim">)</span>
 	fmt.Println<span class="color-dim">(</span>&quot;·&quot;, &quot;sitemap&quot;<span class="color-dim">)</span>
 <span class="color-dim">}</span>
+
+window.addEventListener<span class="color-dim">(</span>&quot;load&quot;, <span class="color-dim">(</span><span class="color-dim">)</span> =&gt; <span class="color-dim">{</span>
+  <span class="color-bright">const </span>links = document.querySelectorAll<span class="color-dim">(</span>'.prefLink'<span class="color-dim">)</span>;
+  <span class="color-bright">function </span>createPrefLink<span class="color-dim">(</span>link<span class="color-dim">)</span> <span class="color-dim">{</span>
+    <span class="color-bright">const </span>url = link.getAttribute<span class="color-dim">(</span>'href'<span class="color-dim">)</span>;
+    if <span class="color-dim">(</span>!document.querySelector<span class="color-dim">(</span>`link[rel=&quot;prefetch&quot;][href=&quot;$<span class="color-dim">{</span>url<span class="color-dim">}</span>&quot;]`<span class="color-dim">)</span><span class="color-dim">)</span> <span class="color-dim">{</span>
+      <span class="color-bright">const </span>prefLink = document.createElement<span class="color-dim">(</span>'link'<span class="color-dim">)</span>;
+      prefLink.rel = 'prefetch';
+      prefLink.href = url;
+      document.head.appendChild<span class="color-dim">(</span>prefLink<span class="color-dim">)</span>;
+    <span class="color-dim">}</span>
+  <span class="color-dim">}</span>
+  links.forEach<span class="color-dim">(</span>link =&gt; <span class="color-dim">{</span>
+    link.addEventListener<span class="color-dim">(</span>'mouseover', <span class="color-dim">(</span><span class="color-dim">)</span> =&gt; createPrefLink<span class="color-dim">(</span>link<span class="color-dim">)</span><span class="color-dim">)</span>;
+    link.addEventListener<span class="color-dim">(</span>'touchstart', <span class="color-dim">(</span><span class="color-dim">)</span> =&gt; createPrefLink<span class="color-dim">(</span>link<span class="color-dim">)</span><span class="color-dim">)</span>;
+  <span class="color-dim">}</span><span class="color-dim">)</span>;
+<span class="color-dim">}</span><span class="color-dim">)</span>;
 
 </code></pre>
 
