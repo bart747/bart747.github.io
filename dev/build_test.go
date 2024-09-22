@@ -7,7 +7,7 @@ import (
 )
 
 func TestPageCreation(t *testing.T) {
-	file, err := os.Create("testFile.md")
+	file, err := os.Create("../testFile.md")
 	check(err)
 	defer file.Close()
 	file.WriteString("# Test Headline")
@@ -15,15 +15,15 @@ func TestPageCreation(t *testing.T) {
 	file.Sync()
 
 	createPage(parseMarkdownFile("testFile.md"))
-	page, err := os.ReadFile("testFile.html")
+	page, err := os.ReadFile("../testFile.html")
 	check(err)
 
 	matched, err := regexp.Match(`<!DOCTYPE html>`, page)
 	check(err)
 
-	err = os.Remove("testFile.md")
+	err = os.Remove("../testFile.md")
 	check(err)
-	err = os.Remove("testFile.html")
+	err = os.Remove("../testFile.html")
 	check(err)
 
 	if !matched || err != nil {
@@ -32,14 +32,14 @@ func TestPageCreation(t *testing.T) {
 }
 
 func TestFileCollecting(t *testing.T) {
-	file, err := os.Create("testFile.md")
+	file, err := os.Create("../testFile.md") // in case no files
 	check(err)
 	defer file.Close()
 	files := getMarkdownFiles()
 
 	isNonEmpty := len(files) > 0
 
-	err = os.Remove("testFile.md")
+	err = os.Remove("../testFile.md")
 	check(err)
 
 	if !isNonEmpty || err != nil {
