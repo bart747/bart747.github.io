@@ -25,7 +25,7 @@
   Bartosz Wieczorek, 2024.
   </footer>
   <script>
-    window.addEventListener("load", () => {
+    globalThis.addEventListener("load", () => {
       const links = document.querySelectorAll('.prefLink');
       function createPrefLink(link) {
         const url = link.getAttribute('href');
