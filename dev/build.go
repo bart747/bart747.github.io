@@ -33,20 +33,20 @@ func check(err error) {
 }
 
 func getMarkdownFiles() []string {
-	entries, err := os.ReadDir(siteData.pagesDir)
+	pages, err := os.ReadDir(siteData.pagesDir)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	var fileCollection []string
 
-	for _, e := range entries {
+	for _, p := range pages {
 		re, err := regexp.Compile(`\w\.md`)
 		check(err)
-		match := re.MatchString(e.Name())
+		match := re.MatchString(p.Name())
 
 		if match {
-			fileCollection = append(fileCollection, e.Name())
+			fileCollection = append(fileCollection, p.Name())
 		}
 	}
 
@@ -137,7 +137,7 @@ func build() {
 }
 
 func createSitemap() {
-	entries, err := os.ReadDir(siteData.pagesDir)
+	pages, err := os.ReadDir(siteData.pagesDir)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -153,13 +153,13 @@ func createSitemap() {
 	testpage := regexp.MustCompile(`_test_`)
 
 	file.WriteString("https://bart747.github.io/" + "\n")
-	for _, e := range entries {
-		if match.MatchString(e.Name()) &&
-			!template.MatchString(e.Name()) &&
-			!index.MatchString(e.Name()) &&
-			!page404.MatchString(e.Name()) &&
-			!testpage.MatchString(e.Name()) {
-			file.WriteString("https://bart747.github.io/" + e.Name() + "\n")
+	for _, p := range pages {
+		if match.MatchString(p.Name()) &&
+			!template.MatchString(p.Name()) &&
+			!index.MatchString(p.Name()) &&
+			!page404.MatchString(p.Name()) &&
+			!testpage.MatchString(p.Name()) {
+			file.WriteString("https://bart747.github.io/" + p.Name() + "\n")
 			check(err)
 		}
 	}
