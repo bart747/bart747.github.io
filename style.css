@@ -59,9 +59,9 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-
 nav a {
   display: block;
+  margin-bottom: 0.5rem;
   text-decoration: none;
 }
 .color-dim {
