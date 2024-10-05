@@ -2,10 +2,10 @@
 :root {
   --txt-color: #ddd;
   --bg-color: #232329;
-  --link-color: #6c8;
-  --code-color: #bba;
+  --link-color: #da3;
+  --code-color: #bbb;
   --dim-color: #776;
-  --bright-color: #e77;
+  --bright-color: #ba5;
 }
 body {
   font-family: Roboto, sans-serif;
