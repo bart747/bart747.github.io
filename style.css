@@ -1,11 +1,11 @@
 
 :root {
   --txt-color: #ddd;
-  --bg-color: #232329;
+  --bg-color: #202025;
   --link-color: #da3;
-  --code-color: #bbb;
-  --dim-color: #776;
-  --bright-color: #ba5;
+  --code-color: #ddd;
+  --dim-color: #999;
+  --bright-color: #eb7;
 }
 body {
   font-family: Roboto, sans-serif;
