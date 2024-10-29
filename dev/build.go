@@ -14,18 +14,6 @@ import (
 	"github.com/yuin/goldmark/renderer/html"
 )
 
-var siteData = struct {
-	domain       string
-	pagesDir     string
-	pageTemplate string
-	sitemap      string
-}{
-	"https://bart747.github.io",
-	"../",
-	"../Template.html",
-	"../sitemap.txt",
-}
-
 func check(err error) {
 	if err != nil {
 		panic(err)
@@ -77,23 +65,8 @@ func parseMarkdownFile(fileName string) article {
 		check(err)
 	}
 
-	highlight := func(s string) string {
-		matches := map[string]string{
-			`(\()|(\))`:           `color-dim`,
-			`(\{)|(\})`:           `color-dim`,
-			`(return )`:           `color-bright`,
-			`(func )|(function )`: `color-bright`,
-		}
-
-		for k, v := range matches {
-			s = regexp.MustCompile(k).ReplaceAllString(s, `<span class="`+v+`">$1$2$3</span>`)
-		}
-
-		return s
-	}
-
 	patternCode := regexp.MustCompile(`<pre><code>[\s\S]*<\/code><\/pre>`)
-	content := patternCode.ReplaceAllStringFunc(buf.String(), highlight)
+	content := patternCode.ReplaceAllStringFunc(buf.String(), Highlight)
 
 	lines := strings.Split(string(file), "\n")
 	pattern := regexp.MustCompile(`# `)
@@ -136,39 +109,8 @@ func build() {
 	}
 }
 
-func createSitemap() {
-	pages, err := os.ReadDir(siteData.pagesDir)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	file, err := os.Create(siteData.sitemap)
-	check(err)
-	defer file.Close()
-
-	html := regexp.MustCompile(`\w\.html`)
-	template := regexp.MustCompile(`Template.html`)
-	index := regexp.MustCompile(`index.html`)
-	page404 := regexp.MustCompile(`404.html`)
-	testpage := regexp.MustCompile(`_test_`)
-
-	file.WriteString("https://bart747.github.io/" + "\n")
-	for _, p := range pages {
-		if html.MatchString(p.Name()) &&
-			!template.MatchString(p.Name()) &&
-			!index.MatchString(p.Name()) &&
-			!page404.MatchString(p.Name()) &&
-			!testpage.MatchString(p.Name()) {
-			file.WriteString("https://bart747.github.io/" + p.Name() + "\n")
-			check(err)
-		}
-	}
-	file.Sync()
-	fmt.Println("·", "sitemap")
-}
-
 func main() {
 	fmt.Println("Created following pages:")
 	build()
-	createSitemap()
+	CreateSitemap()
 }
