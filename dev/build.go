@@ -146,7 +146,7 @@ func createSitemap() {
 	check(err)
 	defer file.Close()
 
-	match := regexp.MustCompile(`\w\.html`)
+	html := regexp.MustCompile(`\w\.html`)
 	template := regexp.MustCompile(`Template.html`)
 	index := regexp.MustCompile(`index.html`)
 	page404 := regexp.MustCompile(`404.html`)
@@ -154,7 +154,7 @@ func createSitemap() {
 
 	file.WriteString("https://bart747.github.io/" + "\n")
 	for _, p := range pages {
-		if match.MatchString(p.Name()) &&
+		if html.MatchString(p.Name()) &&
 			!template.MatchString(p.Name()) &&
 			!index.MatchString(p.Name()) &&
 			!page404.MatchString(p.Name()) &&
