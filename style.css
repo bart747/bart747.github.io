@@ -11,7 +11,7 @@
   line-height: 1.5;
 }
 @supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, sans-serif; }
+  :root { font-family: InterVariable, Inter, sans-serif; }
 body {
   color: var(--txt-color);
   background-color: var(--bg-color);
