@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  url("InterVariable.woff") format("woff");
+  url("./fonts/InterVariable.woff2") format("woff");
 }
 :root {
   --txt-color: #ccc9c3;
