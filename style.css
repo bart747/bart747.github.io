@@ -1,4 +1,7 @@
-
+@font-face {
+  font-family: "Inter";
+  url("InterVariable.woff") format("woff");
+}
 :root {
   --txt-color: #ccc9c3;
   --bg-color: #202025;
@@ -6,11 +9,14 @@
   --code-color: #ddd;
   --dim-color: #999;
   --bright-color: #eb7;
-}
-body {
-  font-family: Inter, Roboto, sans-serif;
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
   font-size: 17px;
   line-height: 1.5;
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+body {
   color: var(--txt-color);
   background-color: var(--bg-color);
   max-width: 40rem;
