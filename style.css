@@ -5,13 +5,10 @@
   --code-color: #ddd;
   --dim-color: #999;
   --bright-color: #eb7;
-  font-family: Inter, Noto Sans, Roboto, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Roboto, sans-serif;
   font-size: 17px;
   line-height: 1.5;
 }
-@supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, Inter, Noto Sans, Roboto, sans-serif; }
 body {
   color: var(--txt-color);
   background-color: var(--bg-color);
