@@ -21,7 +21,7 @@ func check(err error) {
 }
 
 func getMarkdownFiles() []string {
-	pages, err := os.ReadDir(siteData.pagesDir)
+	pages, err := os.ReadDir(SiteData.pagesDir)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -49,7 +49,7 @@ type article struct {
 
 func parseMarkdownFile(fileName string) article {
 	var buf bytes.Buffer
-	file, err := os.ReadFile(siteData.pagesDir + fileName)
+	file, err := os.ReadFile(SiteData.pagesDir + fileName)
 	check(err)
 
 	parser := goldmark.New(
@@ -76,7 +76,7 @@ func parseMarkdownFile(fileName string) article {
 }
 
 func createPage(article article) {
-	htmlTmpl, err := os.ReadFile(siteData.pageTemplate)
+	htmlTmpl, err := os.ReadFile(SiteData.pageTemplate)
 	if err != nil {
 		log.Fatal(err, " | The template file is necessary.")
 	}
@@ -87,7 +87,7 @@ func createPage(article article) {
 	pattern := regexp.MustCompile(`\.md`)
 	fileName := pattern.ReplaceAllString(article.fileName, `.html`)
 
-	file, err := os.Create(siteData.pagesDir + fileName)
+	file, err := os.Create(SiteData.pagesDir + fileName)
 	check(err)
 	defer file.Close()
 
@@ -97,7 +97,7 @@ func createPage(article article) {
 		Content string
 	}
 
-	err = tmpl.Execute(file, pageData{article.title, siteData.domain + "/" + fileName, article.content})
+	err = tmpl.Execute(file, pageData{article.title, SiteData.domain + "/" + fileName, article.content})
 	check(err)
 	fmt.Println("·", fileName, " : ", article.title)
 }

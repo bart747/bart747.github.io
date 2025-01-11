@@ -8,12 +8,12 @@ import (
 )
 
 func CreateSitemap() {
-	pages, err := os.ReadDir(siteData.pagesDir)
+	pages, err := os.ReadDir(SiteData.pagesDir)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	file, err := os.Create(siteData.sitemap)
+	file, err := os.Create(SiteData.sitemap)
 	check(err)
 	defer file.Close()
 
@@ -23,14 +23,14 @@ func CreateSitemap() {
 	page404 := regexp.MustCompile(`404.html`)
 	testpage := regexp.MustCompile(`_test_`)
 
-	file.WriteString(siteData.domain + "/" + "\n")
+	file.WriteString(SiteData.domain + "/" + "\n")
 	for _, p := range pages {
 		if html.MatchString(p.Name()) &&
 			!template.MatchString(p.Name()) &&
 			!index.MatchString(p.Name()) &&
 			!page404.MatchString(p.Name()) &&
 			!testpage.MatchString(p.Name()) {
-			file.WriteString(siteData.domain + "/" + p.Name() + "\n")
+			file.WriteString(SiteData.domain + "/" + p.Name() + "\n")
 			check(err)
 		}
 	}

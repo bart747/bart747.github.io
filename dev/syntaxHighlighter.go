@@ -11,7 +11,7 @@ func Highlight(s string) string {
 	}
 
 	for k, v := range matches {
-		s = regexp.MustCompile(k).ReplaceAllString(s, `<span class="`+v+`">$1$2$3</span>`)
+		s = regexp.MustCompile(k).ReplaceAllString(s, `<span class="`+v+`">$0</span>`)
 	}
 
 	return s

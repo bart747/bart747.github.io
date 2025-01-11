@@ -1,6 +1,6 @@
 package main
 
-var siteData = struct {
+var SiteData = struct {
 	domain       string
 	pagesDir     string
 	pageTemplate string
