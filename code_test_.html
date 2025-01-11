@@ -33,7 +33,7 @@
 	check<span class="color-dim">(</span>err<span class="color-dim">)</span>
 	defer file.Close<span class="color-dim">(</span><span class="color-dim">)</span>
 
-	type pageData struct <span class="color-dim">{</span>
+	<span class="color-bright">type </span>pageData struct <span class="color-dim">{</span>
 		Title   string
 		Link    string
 		Content string
@@ -52,7 +52,7 @@
 
 	var fileCollection []string
 
-	for _, e := range entries <span class="color-dim">{</span>
+	<span class="color-bright">for </span>_, e := range entries <span class="color-dim">{</span>
 		match, err := regexp.MatchString<span class="color-dim">(</span>`\w\.md`, e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span>
 		check<span class="color-dim">(</span>err<span class="color-dim">)</span>
 
@@ -79,7 +79,7 @@ asf &lt; asf
 	check<span class="color-dim">(</span>err<span class="color-dim">)</span>
 	defer file.Close<span class="color-dim">(</span><span class="color-dim">)</span>
 
-	for _, e := range entries <span class="color-dim">{</span>
+	<span class="color-bright">for </span>_, e := range entries <span class="color-dim">{</span>
 		match, err := regexp.Compile<span class="color-dim">(</span>`\w\.html`<span class="color-dim">)</span>
 		check<span class="color-dim">(</span>err<span class="color-dim">)</span>
 		nmatch, err := regexp.Compile<span class="color-dim">(</span>`Template.html`<span class="color-dim">)</span>
@@ -93,6 +93,15 @@ asf &lt; asf
 	<span class="color-dim">}</span>
 	file.Sync<span class="color-dim">(</span><span class="color-dim">)</span>
 	fmt.Println<span class="color-dim">(</span>&quot;·&quot;, &quot;sitemap&quot;<span class="color-dim">)</span>
+<span class="color-dim">}</span>
+
+<span class="color-bright">for </span>k, v := range matches <span class="color-dim">{</span>
+	s = regexp.MustCompile<span class="color-dim">(</span>k<span class="color-dim">)</span>.ReplaceAllString<span class="color-dim">(</span>s, `&lt;span class=&quot;`+v+`&quot;&gt;$0&lt;/span&gt;`<span class="color-dim">)</span>
+<span class="color-dim">}</span>
+
+<span class="color-bright">type </span>person struct <span class="color-dim">{</span>
+    name string
+    age  int
 <span class="color-dim">}</span>
 
 window.addEventListener<span class="color-dim">(</span>&quot;load&quot;, <span class="color-dim">(</span><span class="color-dim">)</span> =&gt; <span class="color-dim">{</span>
@@ -111,6 +120,28 @@ window.addEventListener<span class="color-dim">(</span>&quot;load&quot;, <span c
     link.addEventListener<span class="color-dim">(</span>'touchstart', <span class="color-dim">(</span><span class="color-dim">)</span> =&gt; createPrefLink<span class="color-dim">(</span>link<span class="color-dim">)</span><span class="color-dim">)</span>;
   <span class="color-dim">}</span><span class="color-dim">)</span>;
 <span class="color-dim">}</span><span class="color-dim">)</span>;
+
+<span class="color-bright">def </span>my_function<span class="color-dim">(</span><span class="color-dim">)</span>:
+  print<span class="color-dim">(</span>&quot;Hello from a function&quot;<span class="color-dim">)</span>
+
+interface SquareConfig <span class="color-dim">{</span>
+  color?: string;
+  width?: number;
+<span class="color-dim">}</span>
+ 
+<span class="color-bright">function </span>createSquare<span class="color-dim">(</span>config: SquareConfig<span class="color-dim">)</span>: <span class="color-dim">{</span> color: string; area: number <span class="color-dim">}</span> <span class="color-dim">{</span>
+  let newSquare = <span class="color-dim">{</span> color: &quot;white&quot;, area: 100 <span class="color-dim">}</span>;
+  if <span class="color-dim">(</span>config.color<span class="color-dim">)</span> <span class="color-dim">{</span>
+    newSquare.color = config.color;
+  <span class="color-dim">}</span>
+  if <span class="color-dim">(</span>config.width<span class="color-dim">)</span> <span class="color-dim">{</span>
+    newSquare.area = config.width * config.width;
+  <span class="color-dim">}</span>
+  <span class="color-bright">return </span>newSquare;
+<span class="color-dim">}</span>
+ 
+let mySquare = createSquare<span class="color-dim">(</span><span class="color-dim">{</span> color: &quot;black&quot; <span class="color-dim">}</span><span class="color-dim">)</span>;
+
 
 </code></pre>
 

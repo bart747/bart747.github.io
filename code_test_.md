@@ -79,6 +79,15 @@ func createSitemap() {
 	fmt.Println("·", "sitemap")
 }
 
+for k, v := range matches {
+	s = regexp.MustCompile(k).ReplaceAllString(s, `<span class="`+v+`">$0</span>`)
+}
+
+type person struct {
+    name string
+    age  int
+}
+
 window.addEventListener("load", () => {
   const links = document.querySelectorAll('.prefLink');
   function createPrefLink(link) {
@@ -95,5 +104,27 @@ window.addEventListener("load", () => {
     link.addEventListener('touchstart', () => createPrefLink(link));
   });
 });
+
+def my_function():
+  print("Hello from a function")
+
+interface SquareConfig {
+  color?: string;
+  width?: number;
+}
+ 
+function createSquare(config: SquareConfig): { color: string; area: number } {
+  let newSquare = { color: "white", area: 100 };
+  if (config.color) {
+    newSquare.color = config.color;
+  }
+  if (config.width) {
+    newSquare.area = config.width * config.width;
+  }
+  return newSquare;
+}
+ 
+let mySquare = createSquare({ color: "black" });
+
 
 ```

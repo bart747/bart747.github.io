@@ -84,7 +84,7 @@ It uses <a href="https://www.freedesktop.org/wiki/Software/fontconfig/">Fontconf
 a library for system-wide font configuration.</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;!DOCTYPE fontconfig SYSTEM &quot;urn:fontconfig:fonts.dtd&quot;&gt;
-&lt;!-- $XDG_CONFIG_HOME/fontconfig/fonts.conf for per-user font configuration --&gt;
+&lt;!-- $XDG_CONFIG_HOME/fontconfig/fonts.conf <span class="color-bright">for </span>per-user font configuration --&gt;
 &lt;fontconfig&gt;
 
 &lt;!-- basic aliases --&gt;
@@ -139,7 +139,7 @@ have good tips too.</li>
 </ul>
 <h2 id="potential-problem">Potential Problem</h2>
 <p>This piece of code will cause replacement of <em>Times New Roman</em>
-for <em>Merriweather</em>:</p>
+<span class="color-bright">for </span><em>Merriweather</em>:</p>
 <pre><code>&lt;match target=&quot;pattern&quot;&gt;
   &lt;test qual=&quot;any&quot; name=&quot;family&quot;&gt;
     &lt;string&gt;Times New Roman&lt;/string&gt;
