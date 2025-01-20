@@ -21,6 +21,7 @@ function handleIntersect(entries, observer) {
   })
 }
 
+
 const observer = new IntersectionObserver(handleIntersect, {
   root: null, // Observes the viewport
   rootMargin: '0px',

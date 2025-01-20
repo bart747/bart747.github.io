@@ -2,7 +2,7 @@
 
 - You can write your own font configuration file —
   `fonts.conf` — and change default settings.
-- You can also use it to specify what fonts will be rendered on websites.
+- You can also use it to specify what fonts will be rendered on websites (as replacements for names specified in a site's CSS).
 - Store `fonts.conf` at `$XDG_CONFIG_HOME/fontconfig/`,
   which probably means `$HOME/.config/fontconfig/`.
 - Common places for storing fonts in Linux systems are
