@@ -65,7 +65,7 @@ func parseMarkdownFile(fileName string) article {
 		check(err)
 	}
 
-	patternCode := regexp.MustCompile(`<pre><code>[\s\S]*<\/code><\/pre>`)
+	patternCode := regexp.MustCompile(`<pre><code>[\s\S]+?<\/code><\/pre>`)
 	content := patternCode.ReplaceAllStringFunc(buf.String(), Highlight)
 
 	lines := strings.Split(string(file), "\n")
