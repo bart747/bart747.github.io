@@ -3,13 +3,13 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"html/template"
 	"log"
 	"net/url"
 	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
+	"text/template"
 
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/parser"
