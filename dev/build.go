@@ -3,11 +3,13 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"html/template"
 	"log"
+	"net/url"
 	"os"
+	"path/filepath"
 	"regexp"
 	"strings"
-	"text/template"
 
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/parser"
@@ -47,9 +49,9 @@ type article struct {
 	content  string
 }
 
-func parseMarkdownFile(fileName string) article {
+func parseMarkdownFile(fileName string) (article, error) {
 	var buf bytes.Buffer
-	file, err := os.ReadFile(SiteData.pagesDir + fileName)
+	file, err := os.ReadFile(filepath.Join(SiteData.pagesDir, fileName))
 	check(err)
 
 	parser := goldmark.New(
@@ -72,10 +74,10 @@ func parseMarkdownFile(fileName string) article {
 	pattern := regexp.MustCompile(`# `)
 	title := pattern.ReplaceAllString(lines[0], "")
 
-	return article{title, fileName, content}
+	return article{title, fileName, content}, nil
 }
 
-func createPage(article article) {
+func createPage(article article) error {
 	htmlTmpl, err := os.ReadFile(SiteData.pageTemplate)
 	if err != nil {
 		log.Fatal(err, " | The template file is necessary.")
@@ -87,7 +89,7 @@ func createPage(article article) {
 	pattern := regexp.MustCompile(`\.md`)
 	fileName := pattern.ReplaceAllString(article.fileName, `.html`)
 
-	file, err := os.Create(SiteData.pagesDir + fileName)
+	file, err := os.Create(filepath.Join(SiteData.pagesDir, fileName))
 	check(err)
 	defer file.Close()
 
@@ -97,15 +99,24 @@ func createPage(article article) {
 		Content string
 	}
 
-	err = tmpl.Execute(file, pageData{article.title, SiteData.domain + "/" + fileName, article.content})
+	baseURL, _ := url.Parse(SiteData.domain)
+	fullURL := baseURL.JoinPath(fileName)
+	link := fullURL.String()
+
+	err = tmpl.Execute(file, pageData{article.title, link, article.content})
 	check(err)
 	fmt.Println("·", fileName, " : ", article.title)
+
+	return nil
 }
 
 func build() {
 	mdFiles := getMarkdownFiles()
 	for i := range mdFiles {
-		createPage(parseMarkdownFile(mdFiles[i]))
+		parsedMD, err := parseMarkdownFile(mdFiles[i])
+		check(err)
+		err = createPage(parsedMD)
+		check(err)
 	}
 }
 

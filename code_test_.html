@@ -15,134 +15,134 @@
       ⌂
     </a>
   </nav>
-  <h1 id="code-test">Code test</h1>
-<pre><code><span class="color-bright">func </span>createPage<span class="color-dim">(</span>article article<span class="color-dim">)</span> <span class="color-dim">{</span>
-	htmlTmpl, err := os.ReadFile<span class="color-dim">(</span>siteData.pageTemplate<span class="color-dim">)</span>
-	if err != nil <span class="color-dim">{</span>
-		log.Fatal<span class="color-dim">(</span>err, &quot; | The template file is necessary.&quot;<span class="color-dim">)</span>
-	<span class="color-dim">}</span>
+  &lt;h1 id=&#34;code-test&#34;&gt;Code test&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span class=&#34;color-bright&#34;&gt;func &lt;/span&gt;createPage&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;article article&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+	htmlTmpl, err := os.ReadFile&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;siteData.pageTemplate&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	if err != nil &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+		log.Fatal&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err, &amp;quot; | The template file is necessary.&amp;quot;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
 
-	tmpl, err := template.New<span class="color-dim">(</span>&quot;webpage&quot;<span class="color-dim">)</span>.Parse<span class="color-dim">(</span>string<span class="color-dim">(</span>htmlTmpl<span class="color-dim">)</span><span class="color-dim">)</span>
-	check<span class="color-dim">(</span>err<span class="color-dim">)</span>
+	tmpl, err := template.New&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&amp;quot;webpage&amp;quot;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;.Parse&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;string&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;htmlTmpl&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	check&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
 
-	pattern := regexp.MustCompile<span class="color-dim">(</span>`\.md`<span class="color-dim">)</span>
-	fileName := pattern.ReplaceAllString<span class="color-dim">(</span>article.fileName, `.html`<span class="color-dim">)</span>
+	pattern := regexp.MustCompile&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;`\.md`&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	fileName := pattern.ReplaceAllString&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;article.fileName, `.html`&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
 
-	file, err := os.Create<span class="color-dim">(</span>siteData.pagesDir + fileName<span class="color-dim">)</span>
-	check<span class="color-dim">(</span>err<span class="color-dim">)</span>
-	defer file.Close<span class="color-dim">(</span><span class="color-dim">)</span>
+	file, err := os.Create&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;siteData.pagesDir &#43; fileName&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	check&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	defer file.Close&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
 
-	<span class="color-bright">type </span>pageData struct <span class="color-dim">{</span>
+	&lt;span class=&#34;color-bright&#34;&gt;type &lt;/span&gt;pageData struct &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
 		Title   string
 		Link    string
 		Content string
-	<span class="color-dim">}</span>
+	&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
 
-	err = tmpl.Execute<span class="color-dim">(</span>file, pageData<span class="color-dim">{</span>article.title, siteData.domain + &quot;/&quot; + fileName, article.content<span class="color-dim">}</span><span class="color-dim">)</span>
-	check<span class="color-dim">(</span>err<span class="color-dim">)</span>
-	fmt.Println<span class="color-dim">(</span>&quot;·&quot;, fileName, &quot; : &quot;, article.title<span class="color-dim">)</span>
-<span class="color-dim">}</span>
+	err = tmpl.Execute&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;file, pageData&lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;article.title, siteData.domain &#43; &amp;quot;/&amp;quot; &#43; fileName, article.content&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	check&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	fmt.Println&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&amp;quot;·&amp;quot;, fileName, &amp;quot; : &amp;quot;, article.title&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
 
-<span class="color-bright">func </span>getMarkdownFiles<span class="color-dim">(</span><span class="color-dim">)</span> []string <span class="color-dim">{</span>
-	entries, err := os.ReadDir<span class="color-dim">(</span>siteData.pagesDir<span class="color-dim">)</span>
-	if err != nil <span class="color-dim">{</span>
-		log.Fatal<span class="color-dim">(</span>err<span class="color-dim">)</span>
-	<span class="color-dim">}</span>
+&lt;span class=&#34;color-bright&#34;&gt;func &lt;/span&gt;getMarkdownFiles&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; []string &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+	entries, err := os.ReadDir&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;siteData.pagesDir&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	if err != nil &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+		log.Fatal&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
 
 	var fileCollection []string
 
-	<span class="color-bright">for </span>_, e := range entries <span class="color-dim">{</span>
-		match, err := regexp.MatchString<span class="color-dim">(</span>`\w\.md`, e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span>
-		check<span class="color-dim">(</span>err<span class="color-dim">)</span>
+	&lt;span class=&#34;color-bright&#34;&gt;for &lt;/span&gt;_, e := range entries &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+		match, err := regexp.MatchString&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;`\w\.md`, e.Name&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+		check&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
 
-		if match == true <span class="color-dim">{</span>
-			fileCollection = append<span class="color-dim">(</span>fileCollection, e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span>
-		<span class="color-dim">}</span>
-	<span class="color-dim">}</span>
+		if match == true &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+			fileCollection = append&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;fileCollection, e.Name&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+		&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
 
-	<span class="color-bright">return </span>fileCollection
-<span class="color-dim">}</span>
+	&lt;span class=&#34;color-bright&#34;&gt;return &lt;/span&gt;fileCollection
+&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
 
-asdaf &amp;&amp; aslfjjahf || adga
+asdaf &amp;amp;&amp;amp; aslfjjahf || adga
 
-sads &gt;= aslfjjahf
-asf &lt; asf
+sads &amp;gt;= aslfjjahf
+asf &amp;lt; asf
 
-<span class="color-bright">func </span>createSitemap<span class="color-dim">(</span><span class="color-dim">)</span> <span class="color-dim">{</span>
-	entries, err := os.ReadDir<span class="color-dim">(</span>siteData.pagesDir<span class="color-dim">)</span>
-	if err != nil <span class="color-dim">{</span>
-		log.Fatal<span class="color-dim">(</span>err<span class="color-dim">)</span>
-	<span class="color-dim">}</span>
+&lt;span class=&#34;color-bright&#34;&gt;func &lt;/span&gt;createSitemap&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+	entries, err := os.ReadDir&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;siteData.pagesDir&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	if err != nil &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+		log.Fatal&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
 
-	file, err := os.Create<span class="color-dim">(</span>siteData.sitemap<span class="color-dim">)</span>
-	check<span class="color-dim">(</span>err<span class="color-dim">)</span>
-	defer file.Close<span class="color-dim">(</span><span class="color-dim">)</span>
+	file, err := os.Create&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;siteData.sitemap&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	check&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	defer file.Close&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
 
-	<span class="color-bright">for </span>_, e := range entries <span class="color-dim">{</span>
-		match, err := regexp.Compile<span class="color-dim">(</span>`\w\.html`<span class="color-dim">)</span>
-		check<span class="color-dim">(</span>err<span class="color-dim">)</span>
-		nmatch, err := regexp.Compile<span class="color-dim">(</span>`Template.html`<span class="color-dim">)</span>
-		check<span class="color-dim">(</span>err<span class="color-dim">)</span>
-		nmatch2, err := regexp.Compile<span class="color-dim">(</span>`index.html`<span class="color-dim">)</span>
-		check<span class="color-dim">(</span>err<span class="color-dim">)</span>
-		if match.MatchString<span class="color-dim">(</span>e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span> &amp;&amp; !nmatch.MatchString<span class="color-dim">(</span>e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span> || !nmatch2.MatchString<span class="color-dim">(</span>e.Name<span class="color-dim">(</span><span class="color-dim">)</span><span class="color-dim">)</span> <span class="color-dim">{</span>
-			file.WriteString<span class="color-dim">(</span>&quot;https://bart747.github.io/&quot; + e.Name<span class="color-dim">(</span><span class="color-dim">)</span> + &quot;\n&quot;<span class="color-dim">)</span>
-			check<span class="color-dim">(</span>err<span class="color-dim">)</span>
-		<span class="color-dim">}</span>
-	<span class="color-dim">}</span>
-	file.Sync<span class="color-dim">(</span><span class="color-dim">)</span>
-	fmt.Println<span class="color-dim">(</span>&quot;·&quot;, &quot;sitemap&quot;<span class="color-dim">)</span>
-<span class="color-dim">}</span>
+	&lt;span class=&#34;color-bright&#34;&gt;for &lt;/span&gt;_, e := range entries &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+		match, err := regexp.Compile&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;`\w\.html`&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+		check&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+		nmatch, err := regexp.Compile&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;`Template.html`&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+		check&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+		nmatch2, err := regexp.Compile&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;`index.html`&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+		check&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+		if match.MatchString&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;e.Name&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; &amp;amp;&amp;amp; !nmatch.MatchString&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;e.Name&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; || !nmatch2.MatchString&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;e.Name&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+			file.WriteString&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&amp;quot;https://bart747.github.io/&amp;quot; &#43; e.Name&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; &#43; &amp;quot;\n&amp;quot;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+			check&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+		&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
+	file.Sync&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+	fmt.Println&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&amp;quot;·&amp;quot;, &amp;quot;sitemap&amp;quot;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
 
-<span class="color-bright">for </span>k, v := range matches <span class="color-dim">{</span>
-	s = regexp.MustCompile<span class="color-dim">(</span>k<span class="color-dim">)</span>.ReplaceAllString<span class="color-dim">(</span>s, `&lt;span class=&quot;`+v+`&quot;&gt;$0&lt;/span&gt;`<span class="color-dim">)</span>
-<span class="color-dim">}</span>
+&lt;span class=&#34;color-bright&#34;&gt;for &lt;/span&gt;k, v := range matches &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+	s = regexp.MustCompile&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;k&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;.ReplaceAllString&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;s, `&amp;lt;span class=&amp;quot;`&#43;v&#43;`&amp;quot;&amp;gt;$0&amp;lt;/span&amp;gt;`&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
 
-<span class="color-bright">type </span>person struct <span class="color-dim">{</span>
+&lt;span class=&#34;color-bright&#34;&gt;type &lt;/span&gt;person struct &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
     name string
     age  int
-<span class="color-dim">}</span>
+&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
 
-window.addEventListener<span class="color-dim">(</span>&quot;load&quot;, <span class="color-dim">(</span><span class="color-dim">)</span> =&gt; <span class="color-dim">{</span>
-  const links = document.querySelectorAll<span class="color-dim">(</span>'.prefLink'<span class="color-dim">)</span>;
-  <span class="color-bright">function </span>createPrefLink<span class="color-dim">(</span>link<span class="color-dim">)</span> <span class="color-dim">{</span>
-    const url = link.getAttribute<span class="color-dim">(</span>'href'<span class="color-dim">)</span>;
-    if <span class="color-dim">(</span>!document.querySelector<span class="color-dim">(</span>`link[rel=&quot;prefetch&quot;][href=&quot;$<span class="color-dim">{</span>url<span class="color-dim">}</span>&quot;]`<span class="color-dim">)</span><span class="color-dim">)</span> <span class="color-dim">{</span>
-      const prefLink = document.createElement<span class="color-dim">(</span>'link'<span class="color-dim">)</span>;
-      prefLink.rel = 'prefetch';
+window.addEventListener&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&amp;quot;load&amp;quot;, &lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; =&amp;gt; &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+  const links = document.querySelectorAll&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&#39;.prefLink&#39;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;;
+  &lt;span class=&#34;color-bright&#34;&gt;function &lt;/span&gt;createPrefLink&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;link&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+    const url = link.getAttribute&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&#39;href&#39;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;;
+    if &lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;!document.querySelector&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;`link[rel=&amp;quot;prefetch&amp;quot;][href=&amp;quot;$&lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;url&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;&amp;quot;]`&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+      const prefLink = document.createElement&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&#39;link&#39;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;;
+      prefLink.rel = &#39;prefetch&#39;;
       prefLink.href = url;
-      document.head.appendChild<span class="color-dim">(</span>prefLink<span class="color-dim">)</span>;
-    <span class="color-dim">}</span>
-  <span class="color-dim">}</span>
-  links.forEach<span class="color-dim">(</span>link =&gt; <span class="color-dim">{</span>
-    link.addEventListener<span class="color-dim">(</span>'mouseover', <span class="color-dim">(</span><span class="color-dim">)</span> =&gt; createPrefLink<span class="color-dim">(</span>link<span class="color-dim">)</span><span class="color-dim">)</span>;
-    link.addEventListener<span class="color-dim">(</span>'touchstart', <span class="color-dim">(</span><span class="color-dim">)</span> =&gt; createPrefLink<span class="color-dim">(</span>link<span class="color-dim">)</span><span class="color-dim">)</span>;
-  <span class="color-dim">}</span><span class="color-dim">)</span>;
-<span class="color-dim">}</span><span class="color-dim">)</span>;
+      document.head.appendChild&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;prefLink&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;;
+    &lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
+  links.forEach&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;link =&amp;gt; &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+    link.addEventListener&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&#39;mouseover&#39;, &lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; =&amp;gt; createPrefLink&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;link&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;;
+    link.addEventListener&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&#39;touchstart&#39;, &lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; =&amp;gt; createPrefLink&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;link&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;;
+  &lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;;
+&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;;
 
-<span class="color-bright">def </span>my_function<span class="color-dim">(</span><span class="color-dim">)</span>:
-  print<span class="color-dim">(</span>&quot;Hello from a function&quot;<span class="color-dim">)</span>
+&lt;span class=&#34;color-bright&#34;&gt;def &lt;/span&gt;my_function&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;:
+  print&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&amp;quot;Hello from a function&amp;quot;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;
 
-interface SquareConfig <span class="color-dim">{</span>
+interface SquareConfig &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
   color?: string;
   width?: number;
-<span class="color-dim">}</span>
+&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
  
-<span class="color-bright">function </span>createSquare<span class="color-dim">(</span>config: SquareConfig<span class="color-dim">)</span>: <span class="color-dim">{</span> color: string; area: number <span class="color-dim">}</span> <span class="color-dim">{</span>
-  let newSquare = <span class="color-dim">{</span> color: &quot;white&quot;, area: 100 <span class="color-dim">}</span>;
-  if <span class="color-dim">(</span>config.color<span class="color-dim">)</span> <span class="color-dim">{</span>
+&lt;span class=&#34;color-bright&#34;&gt;function &lt;/span&gt;createSquare&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;config: SquareConfig&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;: &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt; color: string; area: number &lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
+  let newSquare = &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt; color: &amp;quot;white&amp;quot;, area: 100 &lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;;
+  if &lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;config.color&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
     newSquare.color = config.color;
-  <span class="color-dim">}</span>
-  if <span class="color-dim">(</span>config.width<span class="color-dim">)</span> <span class="color-dim">{</span>
+  &lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
+  if &lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;config.width&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt;
     newSquare.area = config.width * config.width;
-  <span class="color-dim">}</span>
-  <span class="color-bright">return </span>newSquare;
-<span class="color-dim">}</span>
+  &lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;color-bright&#34;&gt;return &lt;/span&gt;newSquare;
+&lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;
  
-let mySquare = createSquare<span class="color-dim">(</span><span class="color-dim">{</span> color: &quot;black&quot; <span class="color-dim">}</span><span class="color-dim">)</span>;
+let mySquare = createSquare&lt;span class=&#34;color-dim&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;{&lt;/span&gt; color: &amp;quot;black&amp;quot; &lt;span class=&#34;color-dim&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;color-dim&#34;&gt;)&lt;/span&gt;;
 
 
-</code></pre>
+&lt;/code&gt;&lt;/pre&gt;
 
   <footer>
   Bartosz Wieczorek, 2024.

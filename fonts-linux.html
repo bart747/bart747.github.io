@@ -15,156 +15,156 @@
       ⌂
     </a>
   </nav>
-  <h1 id="font-settings-in-linux-distros-suck--write-your-own-fontconf">Font Settings in Linux Distros Suck – Write Your Own <em>font.conf</em></h1>
-<ul>
-<li>You can write your own font configuration file —
-<code>fonts.conf</code> — and change default settings.</li>
-<li>You can also use it to specify what fonts will be rendered on websites (as replacements for names specified in a site's CSS).</li>
-<li>Store <code>fonts.conf</code> at <code>$XDG_CONFIG_HOME/fontconfig/</code>,
-which probably means <code>$HOME/.config/fontconfig/</code>.</li>
-<li>Common places for storing fonts in Linux systems are
-<code>$HOME/.local/share/fonts</code> and <code>/usr/local/share/fonts</code>.</li>
-</ul>
-<h2 id="fonts-on-linux-and-the-web">Fonts on Linux and the Web</h2>
-<p>When you're visiting a website with <em>font-face</em> configured as
-<em>serif</em> or <em>sans-serif</em>, or more specifically, <em>Helvetica, Arial</em>,
-you can see one of the Linux world's not-so-good sides.
+  &lt;h1 id=&#34;font-settings-in-linux-distros-suck--write-your-own-fontconf&#34;&gt;Font Settings in Linux Distros Suck – Write Your Own &lt;em&gt;font.conf&lt;/em&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;You can write your own font configuration file —
+&lt;code&gt;fonts.conf&lt;/code&gt; — and change default settings.&lt;/li&gt;
+&lt;li&gt;You can also use it to specify what fonts will be rendered on websites (as replacements for names specified in a site&#39;s CSS).&lt;/li&gt;
+&lt;li&gt;Store &lt;code&gt;fonts.conf&lt;/code&gt; at &lt;code&gt;$XDG_CONFIG_HOME/fontconfig/&lt;/code&gt;,
+which probably means &lt;code&gt;$HOME/.config/fontconfig/&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Common places for storing fonts in Linux systems are
+&lt;code&gt;$HOME/.local/share/fonts&lt;/code&gt; and &lt;code&gt;/usr/local/share/fonts&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fonts-on-linux-and-the-web&#34;&gt;Fonts on Linux and the Web&lt;/h2&gt;
+&lt;p&gt;When you&#39;re visiting a website with &lt;em&gt;font-face&lt;/em&gt; configured as
+&lt;em&gt;serif&lt;/em&gt; or &lt;em&gt;sans-serif&lt;/em&gt;, or more specifically, &lt;em&gt;Helvetica, Arial&lt;/em&gt;,
+you can see one of the Linux world&#39;s not-so-good sides.
 Your visual experience is likely worst than those who actually can
-see <em>Helvetica</em> or even <em>Arial</em>.
-You probably got something like <em>Liberation Sans</em>, <em>DejaVu Sans</em>, or <em>Ubuntu</em>,
-which often don't look good on a page made with something else in mind.</p>
-<p>To give you a better example, I picked some common settings from the Web:</p>
-<ul>
-<li><code>Arial, sans-serif</code>
-— used at google.com.</li>
-<li><code>-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif</code>
-— at GitHub.</li>
-<li><code>-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Liberation Sans&quot;, sans-serif</code>
-— at StackOverflow.</li>
-</ul>
-<p>Pretty safe bets, but I don't think <em>GitHub</em> or <em>StackOverflow</em>
+see &lt;em&gt;Helvetica&lt;/em&gt; or even &lt;em&gt;Arial&lt;/em&gt;.
+You probably got something like &lt;em&gt;Liberation Sans&lt;/em&gt;, &lt;em&gt;DejaVu Sans&lt;/em&gt;, or &lt;em&gt;Ubuntu&lt;/em&gt;,
+which often don&#39;t look good on a page made with something else in mind.&lt;/p&gt;
+&lt;p&gt;To give you a better example, I picked some common settings from the Web:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Arial, sans-serif&lt;/code&gt;
+— used at google.com.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif&lt;/code&gt;
+— at GitHub.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Liberation Sans&amp;quot;, sans-serif&lt;/code&gt;
+— at StackOverflow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pretty safe bets, but I don&#39;t think &lt;em&gt;GitHub&lt;/em&gt; or &lt;em&gt;StackOverflow&lt;/em&gt;
 fonts are all same quality and look.
-A typical Linux system will most likely select its default <em>sans-serif</em>
+A typical Linux system will most likely select its default &lt;em&gt;sans-serif&lt;/em&gt;
 in those cases.
-It will work OK, but might not be what you want aesthetically.</p>
-<p>But it is Linux, so you can change that.</p>
-<h2 id="picking-a-typeface">Picking a Typeface</h2>
-<p>There are <strong>good, free, and open-source</strong> typefaces that
-blend better in the web context than many default choices.</p>
-<p>It's good to pick the ones that look clean and familiar.
+It will work OK, but might not be what you want aesthetically.&lt;/p&gt;
+&lt;p&gt;But it is Linux, so you can change that.&lt;/p&gt;
+&lt;h2 id=&#34;picking-a-typeface&#34;&gt;Picking a Typeface&lt;/h2&gt;
+&lt;p&gt;There are &lt;strong&gt;good, free, and open-source&lt;/strong&gt; typefaces that
+blend better in the web context than many default choices.&lt;/p&gt;
+&lt;p&gt;It&#39;s good to pick the ones that look clean and familiar.
 The main goals for your default serif and sans-serif are
-legibility and predictable behavior, then style.</p>
-<p>Test them in a real context — a navigation bar is a different beast than body text.</p>
-<p>Put your downloaded fonts into one of those places:</p>
-<ul>
-<li><code>$HOME/.local/share/fonts</code></li>
-<li><code>/usr/local/share/fonts</code></li>
-</ul>
-<p>Here are my favorites:</p>
-<p>Sans-serif:</p>
-<ul>
-<li><a href="https://fonts.google.com/specimen/Roboto">Roboto</a>
-(used often at Google's sites)</li>
-<li><a href="https://rsms.me/inter/">Inter</a></li>
-<li><a href="https://github.com/IBM/plex">IBM Plex Sans</a></li>
-</ul>
-<p>Serif:</p>
-<ul>
-<li><a href="https://fonts.google.com/specimen/Merriweather">Merriweather</a></li>
-<li><a href="https://github.com/IBM/plex">IBM Plex Serif</a></li>
-</ul>
-<p>BTW, <em>Ubuntu</em> (obviously common pre-installed typeface) is a good UI font.
+legibility and predictable behavior, then style.&lt;/p&gt;
+&lt;p&gt;Test them in a real context — a navigation bar is a different beast than body text.&lt;/p&gt;
+&lt;p&gt;Put your downloaded fonts into one of those places:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$HOME/.local/share/fonts&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/usr/local/share/fonts&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here are my favorites:&lt;/p&gt;
+&lt;p&gt;Sans-serif:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://fonts.google.com/specimen/Roboto&#34;&gt;Roboto&lt;/a&gt;
+(used often at Google&#39;s sites)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rsms.me/inter/&#34;&gt;Inter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/IBM/plex&#34;&gt;IBM Plex Sans&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Serif:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://fonts.google.com/specimen/Merriweather&#34;&gt;Merriweather&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/IBM/plex&#34;&gt;IBM Plex Serif&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BTW, &lt;em&gt;Ubuntu&lt;/em&gt; (obviously common pre-installed typeface) is a good UI font.
 The problem is that it looks “original”,
-so it shouldn't serve as a default sans-serif
-that will be used in a browser.</p>
-<h2 id="configuration-file">Configuration File</h2>
-<p>Here's an exemplary <em>font.conf</em> file content.
-It uses <a href="https://www.freedesktop.org/wiki/Software/fontconfig/">Fontconfig</a>,
-a library for system-wide font configuration.</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;!DOCTYPE fontconfig SYSTEM &quot;urn:fontconfig:fonts.dtd&quot;&gt;
-&lt;!-- $XDG_CONFIG_HOME/fontconfig/fonts.conf <span class="color-bright">for </span>per-user font configuration --&gt;
-&lt;fontconfig&gt;
+so it shouldn&#39;t serve as a default sans-serif
+that will be used in a browser.&lt;/p&gt;
+&lt;h2 id=&#34;configuration-file&#34;&gt;Configuration File&lt;/h2&gt;
+&lt;p&gt;Here&#39;s an exemplary &lt;em&gt;font.conf&lt;/em&gt; file content.
+It uses &lt;a href=&#34;https://www.freedesktop.org/wiki/Software/fontconfig/&#34;&gt;Fontconfig&lt;/a&gt;,
+a library for system-wide font configuration.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;
+&amp;lt;!DOCTYPE fontconfig SYSTEM &amp;quot;urn:fontconfig:fonts.dtd&amp;quot;&amp;gt;
+&amp;lt;!-- $XDG_CONFIG_HOME/fontconfig/fonts.conf &lt;span class=&#34;color-bright&#34;&gt;for &lt;/span&gt;per-user font configuration --&amp;gt;
+&amp;lt;fontconfig&amp;gt;
 
-&lt;!-- basic aliases --&gt;
-&lt;alias&gt;
-  &lt;family&gt;sans-serif&lt;/family&gt;
-  &lt;prefer&gt;&lt;family&gt;Roboto&lt;/family&gt;&lt;/prefer&gt;
-&lt;/alias&gt;
-&lt;alias&gt;
-  &lt;family&gt;serif&lt;/family&gt;
-  &lt;prefer&gt;&lt;family&gt;IBM Plex Serif&lt;/family&gt;&lt;/prefer&gt;
-&lt;/alias&gt;
-&lt;alias&gt;
-  &lt;family&gt;monospace&lt;/family&gt;
-  &lt;prefer&gt;&lt;family&gt;IBM Plex Mono&lt;/family&gt;&lt;/prefer&gt;
-&lt;/alias&gt;
+&amp;lt;!-- basic aliases --&amp;gt;
+&amp;lt;alias&amp;gt;
+  &amp;lt;family&amp;gt;sans-serif&amp;lt;/family&amp;gt;
+  &amp;lt;prefer&amp;gt;&amp;lt;family&amp;gt;Roboto&amp;lt;/family&amp;gt;&amp;lt;/prefer&amp;gt;
+&amp;lt;/alias&amp;gt;
+&amp;lt;alias&amp;gt;
+  &amp;lt;family&amp;gt;serif&amp;lt;/family&amp;gt;
+  &amp;lt;prefer&amp;gt;&amp;lt;family&amp;gt;IBM Plex Serif&amp;lt;/family&amp;gt;&amp;lt;/prefer&amp;gt;
+&amp;lt;/alias&amp;gt;
+&amp;lt;alias&amp;gt;
+  &amp;lt;family&amp;gt;monospace&amp;lt;/family&amp;gt;
+  &amp;lt;prefer&amp;gt;&amp;lt;family&amp;gt;IBM Plex Mono&amp;lt;/family&amp;gt;&amp;lt;/prefer&amp;gt;
+&amp;lt;/alias&amp;gt;
 
-&lt;!-- If you don't want something, use something else instead --&gt;
-&lt;match target=&quot;pattern&quot;&gt;
-  &lt;test qual=&quot;any&quot; name=&quot;family&quot;&gt;
-    &lt;string&gt;Arial&lt;/string&gt;
-  &lt;/test&gt;
-  &lt;edit name=&quot;family&quot; mode=&quot;assign&quot; binding=&quot;same&quot;&gt;
-    &lt;string&gt;Roboto&lt;/string&gt;
-  &lt;/edit&gt;
-&lt;/match&gt;
-&lt;match target=&quot;pattern&quot;&gt;
-  &lt;test qual=&quot;any&quot; name=&quot;family&quot;&gt;
-    &lt;string&gt;Georgia&lt;/string&gt;
-  &lt;/test&gt;
-  &lt;edit name=&quot;family&quot; mode=&quot;assign&quot; binding=&quot;same&quot;&gt;
-    &lt;string&gt;IBM Plex Serif&lt;/string&gt;
-  &lt;/edit&gt;
-&lt;/match&gt;
-&lt;match target=&quot;pattern&quot;&gt;
-  &lt;test qual=&quot;any&quot; name=&quot;family&quot;&gt;
-    &lt;string&gt;Times New Roman&lt;/string&gt;
-  &lt;/test&gt;
-  &lt;edit name=&quot;family&quot; mode=&quot;assign&quot; binding=&quot;same&quot;&gt;
-    &lt;string&gt;IBM Plex Serif&lt;/string&gt;
-  &lt;/edit&gt;
-&lt;/match&gt;
-&lt;/fontconfig&gt;
-</code></pre>
-<p>A file like this should be placed at
-<code>$XDG_CONFIG_HOME/fontconfig/</code>.</p>
-<h2 id="docs">Docs</h2>
-<p>Need more info?</p>
-<ul>
-<li><a href="https://www.freedesktop.org/software/fontconfig/fontconfig-user.html">Official documentation</a>.</li>
-<li><a href="https://wiki.archlinux.org/title/font_configuration">ArchLinux docs</a>
-have good tips too.</li>
-</ul>
-<h2 id="potential-problem">Potential Problem</h2>
-<p>This piece of code will cause replacement of <em>Times New Roman</em>
-for <em>Merriweather</em>:</p>
-<pre><code>&lt;match target=&quot;pattern&quot;&gt;
-  &lt;test qual=&quot;any&quot; name=&quot;family&quot;&gt;
-    &lt;string&gt;Times New Roman&lt;/string&gt;
-  &lt;/test&gt;
-  &lt;edit name=&quot;family&quot; mode=&quot;assign&quot; binding=&quot;same&quot;&gt;
-    &lt;string&gt;Merriweather&lt;/string&gt;
-  &lt;/edit&gt;
-&lt;/match&gt;
-</code></pre>
-<p>This one, not necessarily:</p>
-<pre><code>&lt;alias&gt;
-  &lt;family&gt;Times New Roman&lt;/family&gt;
-  &lt;prefer&gt;
-    &lt;family&gt;Merriweather&lt;/family&gt;
-  &lt;/prefer&gt;
-&lt;/alias&gt;
-</code></pre>
-<p>It will work only if there's no <em>Times New Roman</em> in your system.</p>
-<h2 id="quick-sum-up">Quick sum-up</h2>
-<ul>
-<li>Store your fonts at <code>$HOME/.local/share/fonts</code> or <code>/usr/local/share/fonts</code></li>
-<li>Configuration stuff write into <code>$XDG_CONFIG_HOME/fontconfig/fonts.conf</code>
-file. (<code>$XDG_CONFIG_HOME</code> most likely means <code>$HOME/.config/</code>.)</li>
-<li>Use fonts that look clean and standard — you need <strong>predictable behavior</strong>.</li>
-</ul>
-<p><code>2021-12-18</code></p>
+&amp;lt;!-- If you don&#39;t want something, use something else instead --&amp;gt;
+&amp;lt;match target=&amp;quot;pattern&amp;quot;&amp;gt;
+  &amp;lt;test qual=&amp;quot;any&amp;quot; name=&amp;quot;family&amp;quot;&amp;gt;
+    &amp;lt;string&amp;gt;Arial&amp;lt;/string&amp;gt;
+  &amp;lt;/test&amp;gt;
+  &amp;lt;edit name=&amp;quot;family&amp;quot; mode=&amp;quot;assign&amp;quot; binding=&amp;quot;same&amp;quot;&amp;gt;
+    &amp;lt;string&amp;gt;Roboto&amp;lt;/string&amp;gt;
+  &amp;lt;/edit&amp;gt;
+&amp;lt;/match&amp;gt;
+&amp;lt;match target=&amp;quot;pattern&amp;quot;&amp;gt;
+  &amp;lt;test qual=&amp;quot;any&amp;quot; name=&amp;quot;family&amp;quot;&amp;gt;
+    &amp;lt;string&amp;gt;Georgia&amp;lt;/string&amp;gt;
+  &amp;lt;/test&amp;gt;
+  &amp;lt;edit name=&amp;quot;family&amp;quot; mode=&amp;quot;assign&amp;quot; binding=&amp;quot;same&amp;quot;&amp;gt;
+    &amp;lt;string&amp;gt;IBM Plex Serif&amp;lt;/string&amp;gt;
+  &amp;lt;/edit&amp;gt;
+&amp;lt;/match&amp;gt;
+&amp;lt;match target=&amp;quot;pattern&amp;quot;&amp;gt;
+  &amp;lt;test qual=&amp;quot;any&amp;quot; name=&amp;quot;family&amp;quot;&amp;gt;
+    &amp;lt;string&amp;gt;Times New Roman&amp;lt;/string&amp;gt;
+  &amp;lt;/test&amp;gt;
+  &amp;lt;edit name=&amp;quot;family&amp;quot; mode=&amp;quot;assign&amp;quot; binding=&amp;quot;same&amp;quot;&amp;gt;
+    &amp;lt;string&amp;gt;IBM Plex Serif&amp;lt;/string&amp;gt;
+  &amp;lt;/edit&amp;gt;
+&amp;lt;/match&amp;gt;
+&amp;lt;/fontconfig&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A file like this should be placed at
+&lt;code&gt;$XDG_CONFIG_HOME/fontconfig/&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;docs&#34;&gt;Docs&lt;/h2&gt;
+&lt;p&gt;Need more info?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.freedesktop.org/software/fontconfig/fontconfig-user.html&#34;&gt;Official documentation&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/font_configuration&#34;&gt;ArchLinux docs&lt;/a&gt;
+have good tips too.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;potential-problem&#34;&gt;Potential Problem&lt;/h2&gt;
+&lt;p&gt;This piece of code will cause replacement of &lt;em&gt;Times New Roman&lt;/em&gt;
+for &lt;em&gt;Merriweather&lt;/em&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;match target=&amp;quot;pattern&amp;quot;&amp;gt;
+  &amp;lt;test qual=&amp;quot;any&amp;quot; name=&amp;quot;family&amp;quot;&amp;gt;
+    &amp;lt;string&amp;gt;Times New Roman&amp;lt;/string&amp;gt;
+  &amp;lt;/test&amp;gt;
+  &amp;lt;edit name=&amp;quot;family&amp;quot; mode=&amp;quot;assign&amp;quot; binding=&amp;quot;same&amp;quot;&amp;gt;
+    &amp;lt;string&amp;gt;Merriweather&amp;lt;/string&amp;gt;
+  &amp;lt;/edit&amp;gt;
+&amp;lt;/match&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This one, not necessarily:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;alias&amp;gt;
+  &amp;lt;family&amp;gt;Times New Roman&amp;lt;/family&amp;gt;
+  &amp;lt;prefer&amp;gt;
+    &amp;lt;family&amp;gt;Merriweather&amp;lt;/family&amp;gt;
+  &amp;lt;/prefer&amp;gt;
+&amp;lt;/alias&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It will work only if there&#39;s no &lt;em&gt;Times New Roman&lt;/em&gt; in your system.&lt;/p&gt;
+&lt;h2 id=&#34;quick-sum-up&#34;&gt;Quick sum-up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Store your fonts at &lt;code&gt;$HOME/.local/share/fonts&lt;/code&gt; or &lt;code&gt;/usr/local/share/fonts&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Configuration stuff write into &lt;code&gt;$XDG_CONFIG_HOME/fontconfig/fonts.conf&lt;/code&gt;
+file. (&lt;code&gt;$XDG_CONFIG_HOME&lt;/code&gt; most likely means &lt;code&gt;$HOME/.config/&lt;/code&gt;.)&lt;/li&gt;
+&lt;li&gt;Use fonts that look clean and standard — you need &lt;strong&gt;predictable behavior&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;2021-12-18&lt;/code&gt;&lt;/p&gt;
 
   <footer>
   Bartosz Wieczorek, 2024.

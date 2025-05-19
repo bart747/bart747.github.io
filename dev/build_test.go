@@ -14,7 +14,10 @@ func TestPageCreation(t *testing.T) {
 	check(err)
 	file.Sync()
 
-	createPage(parseMarkdownFile("testFile.md"))
+	parsedMD, err := parseMarkdownFile("testFile.md")
+	check(err)
+	err = createPage(parsedMD)
+	check(err)
 	page, err := os.ReadFile("../testFile.html")
 	check(err)
 
