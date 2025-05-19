@@ -7,6 +7,13 @@ import (
 )
 
 func TestPageCreation(t *testing.T) {
+
+	check := func(err error) {
+		if err != nil {
+			t.Fatal(err)
+		}
+	}
+
 	file, err := os.Create("../testFile.md")
 	check(err)
 	defer file.Close()
@@ -35,6 +42,12 @@ func TestPageCreation(t *testing.T) {
 }
 
 func TestFileCollecting(t *testing.T) {
+	check := func(err error) {
+		if err != nil {
+			t.Fatal(err)
+		}
+	}
+
 	file, err := os.Create("../testFile.md") // in case no files
 	check(err)
 	defer file.Close()
