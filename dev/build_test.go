@@ -33,12 +33,20 @@ func TestPageCreation(t *testing.T) {
 	page, err := os.ReadFile("testDir/testFile.html")
 	check(err)
 
-	matched, err := regexp.Match(`<!DOCTYPE html>`, page)
+	matchedDoctype, err := regexp.Match(`<!DOCTYPE html>`, page)
 	check(err)
 
-	if !matched || err != nil {
-		t.Fatalf(`createPage didn't create a valid page.`)
+	matchedText, err := regexp.Match(`Test Headline`, page)
+	check(err)
+
+	if !matchedDoctype || err != nil {
+		t.Fatalf(`createPage didn't create a valid page. Wrong DOCTYPE.`)
 	}
+
+	if !matchedText || err != nil {
+		t.Fatalf(`createPage didn't create a valid page. Wrong inner content.`)
+	}
+
 }
 
 func TestFileCollecting(t *testing.T) {
