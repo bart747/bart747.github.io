@@ -14,26 +14,26 @@ func TestPageCreation(t *testing.T) {
 		}
 	}
 
-	file, err := os.Create("../testFile.md")
+	err := os.Mkdir("testDir", 0755)
+	check(err)
+	defer os.RemoveAll("testDir")
+
+	file, err := os.Create("testDir/testFile.md")
 	check(err)
 	defer file.Close()
+
 	file.WriteString("# Test Headline")
 	check(err)
 	file.Sync()
 
-	parsedMD, err := parseMarkdownFile("testFile.md")
+	parsedMD, err := parseMarkdownFile("testFile.md", "testDir")
 	check(err)
-	err = createPage(parsedMD)
+	err = createPage(parsedMD, SiteData.pageTemplate, "testDir")
 	check(err)
-	page, err := os.ReadFile("../testFile.html")
+	page, err := os.ReadFile("testDir/testFile.html")
 	check(err)
 
 	matched, err := regexp.Match(`<!DOCTYPE html>`, page)
-	check(err)
-
-	err = os.Remove("../testFile.md")
-	check(err)
-	err = os.Remove("../testFile.html")
 	check(err)
 
 	if !matched || err != nil {
@@ -48,14 +48,17 @@ func TestFileCollecting(t *testing.T) {
 		}
 	}
 
-	file, err := os.Create("../testFile.md") // in case no files
+	err := os.Mkdir("testDir", 0755)
+	check(err)
+	defer os.RemoveAll("testDir")
+
+	file, err := os.Create("testDir/testFile.md") // in case no files
 	check(err)
 	defer file.Close()
-	files := getMarkdownFiles()
+	files := getMarkdownFiles("testDir")
 
 	isNonEmpty := len(files) > 0
 
-	err = os.Remove("../testFile.md")
 	check(err)
 
 	if !isNonEmpty || err != nil {

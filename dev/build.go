@@ -22,8 +22,8 @@ func check(err error) {
 	}
 }
 
-func getMarkdownFiles() []string {
-	pages, err := os.ReadDir(SiteData.pagesDir)
+func getMarkdownFiles(directory string) []string {
+	pages, err := os.ReadDir(directory)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -49,9 +49,9 @@ type article struct {
 	content  string
 }
 
-func parseMarkdownFile(fileName string) (article, error) {
+func parseMarkdownFile(fileName string, fileDir string) (article, error) {
 	var buf bytes.Buffer
-	file, err := os.ReadFile(filepath.Join(SiteData.pagesDir, fileName))
+	file, err := os.ReadFile(filepath.Join(fileDir, fileName))
 	check(err)
 
 	parser := goldmark.New(
@@ -77,8 +77,8 @@ func parseMarkdownFile(fileName string) (article, error) {
 	return article{title, fileName, content}, nil
 }
 
-func createPage(article article) error {
-	htmlTmpl, err := os.ReadFile(SiteData.pageTemplate)
+func createPage(article article, templateDir string, pagesDir string) error {
+	htmlTmpl, err := os.ReadFile(templateDir)
 	if err != nil {
 		log.Fatal(err, " | The template file is necessary.")
 	}
@@ -89,7 +89,7 @@ func createPage(article article) error {
 	pattern := regexp.MustCompile(`\.md`)
 	fileName := pattern.ReplaceAllString(article.fileName, `.html`)
 
-	file, err := os.Create(filepath.Join(SiteData.pagesDir, fileName))
+	file, err := os.Create(filepath.Join(pagesDir, fileName))
 	check(err)
 	defer file.Close()
 
@@ -111,11 +111,14 @@ func createPage(article article) error {
 }
 
 func build() {
-	mdFiles := getMarkdownFiles()
+	mdFiles := getMarkdownFiles(SiteData.pagesDir)
 	for i := range mdFiles {
-		parsedMD, err := parseMarkdownFile(mdFiles[i])
+		parsedMD, err := parseMarkdownFile(mdFiles[i], SiteData.pagesDir)
 		check(err)
-		err = createPage(parsedMD)
+		err = createPage(
+			parsedMD,
+			SiteData.pageTemplate,
+			SiteData.pagesDir)
 		check(err)
 	}
 }
