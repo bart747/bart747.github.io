@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"errors"
 	"fmt"
 	"log"
 	"net/url"
@@ -72,7 +73,19 @@ func parseMarkdownFile(fileName string, fileDir string) (article, error) {
 
 	lines := strings.Split(string(file), "\n")
 	pattern := regexp.MustCompile(`# `)
-	title := pattern.ReplaceAllString(lines[0], "")
+
+	findTitle := func(lines []string) (string, error) {
+		for i := range lines {
+			if strings.Contains(lines[i], "# ") {
+				title := pattern.ReplaceAllString(lines[i], "")
+				return title, nil
+			}
+		}
+		return "", errors.New(fileName + " does not have a title. Titles are required.")
+	}
+
+	title, err := findTitle(lines)
+	check(err)
 
 	return article{title, fileName, content}, nil
 }
