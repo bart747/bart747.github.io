@@ -81,7 +81,7 @@ func parseMarkdownFile(fileName string, fileDir string) (article, error) {
 				return title, nil
 			}
 		}
-		return "", errors.New(fileName + " does not have a title. Titles are required.")
+		return "", errors.New(fileName + " does not have a title (a headline with '#'). Titles are required.")
 	}
 
 	title, err := findTitle(lines)
