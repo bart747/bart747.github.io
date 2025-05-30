@@ -76,7 +76,7 @@ Here's an exemplary *font.conf* file content.
 It uses [Fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/),
 a library for system-wide font configuration.
 
-```
+<pre><code>
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
 <!-- $XDG_CONFIG_HOME/fontconfig/fonts.conf for per-user font configuration -->
@@ -122,7 +122,7 @@ a library for system-wide font configuration.
   </edit>
 </match>
 </fontconfig>
-```
+</code></pre>
 
 A file like this should be placed at
 `$XDG_CONFIG_HOME/fontconfig/`.
@@ -140,7 +140,7 @@ Need more info?
 This piece of code will cause replacement of *Times New Roman*
 for *Merriweather*:
 
-```
+<pre><code>
 <match target="pattern">
   <test qual="any" name="family">
     <string>Times New Roman</string>
@@ -149,18 +149,18 @@ for *Merriweather*:
     <string>Merriweather</string>
   </edit>
 </match>
-```
+</code></pre>
 
 This one, not necessarily:
 
-```
+<pre><code>
 <alias>
   <family>Times New Roman</family>
   <prefer>
     <family>Merriweather</family>
   </prefer>
 </alias>
-```
+</code></pre>
 
 It will work only if there's no *Times New Roman* in your system.
 

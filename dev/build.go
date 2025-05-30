@@ -4,6 +4,14 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	"github.com/alecthomas/chroma/v2"
+	formatHTML "github.com/alecthomas/chroma/v2/formatters/html"
+	"github.com/alecthomas/chroma/v2/lexers"
+	//	"github.com/alecthomas/chroma/v2/quick"
+	"github.com/alecthomas/chroma/v2/styles"
+	"github.com/yuin/goldmark"
+	//	"github.com/yuin/goldmark/parser"
+	"github.com/yuin/goldmark/renderer/html"
 	"log"
 	"net/url"
 	"os"
@@ -11,10 +19,6 @@ import (
 	"regexp"
 	"strings"
 	"text/template"
-
-	"github.com/yuin/goldmark"
-	"github.com/yuin/goldmark/parser"
-	"github.com/yuin/goldmark/renderer/html"
 )
 
 func check(err error) {
@@ -51,25 +55,47 @@ type article struct {
 }
 
 func parseMarkdownFile(fileName string, fileDir string) (article, error) {
-	var buf bytes.Buffer
 	file, err := os.ReadFile(filepath.Join(fileDir, fileName))
 	check(err)
 
-	parser := goldmark.New(
-		goldmark.WithParserOptions(
-			parser.WithAutoHeadingID(),
-		),
+	if strings.Contains(string(file), "```") {
+		fmt.Println("The markdown file contains ```, which might result in improper handling of code snippets. Consider [<pre><code>].")
+	}
+
+	markdown := goldmark.New(
 		goldmark.WithRendererOptions(
 			html.WithUnsafe(),
 		),
 	)
 
-	if err := parser.Convert(file, &buf); err != nil {
+	var buf bytes.Buffer
+	if err := markdown.Convert(file, &buf); err != nil {
 		check(err)
+	}
+	hl := func(src string) string {
+		src = regexp.MustCompile(`<pre><code>|</code></pre>`).ReplaceAllString(src, "")
+
+		lexer := lexers.Get("C")
+		if lexer == nil {
+			lexer = lexers.Fallback
+		}
+
+		lexer = chroma.Coalesce(lexer)
+
+		formatter := formatHTML.New(formatHTML.WithLineNumbers(true), formatHTML.WithClasses(true))
+
+		var w bytes.Buffer
+		check(err)
+		iterator, err := lexer.Tokenise(nil, src)
+		check(err)
+		errf := formatter.Format(&w, styles.Fallback, iterator)
+		check(errf)
+
+		return w.String()
 	}
 
 	patternCode := regexp.MustCompile(`\n<pre><code>[\s\S]+?<\/code><\/pre>\n`)
-	content := patternCode.ReplaceAllStringFunc(buf.String(), Highlight)
+	content := patternCode.ReplaceAllStringFunc(buf.String(), hl)
 
 	lines := strings.Split(string(file), "\n")
 	patternHeadline := regexp.MustCompile(`# `)

@@ -2,7 +2,7 @@
   --txt-color: #ccc9c3;
   --bg-color: #202025;
   --link-color: #d75;
-  --dim-color: #999;
+  --dim-color: #888;
   --bright-color: #eb7;
   font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Inter", sans-serif;
   font-size: 17px;
@@ -44,6 +44,14 @@ code {
   font-family: monospace;
   font-size: 14px;
 }
+.chroma .ln {
+  color: var(--dim-color);
+  padding-right: 0.5rem;
+}
+.chroma .p {
+  color: var(--dim-color);
+}
+
 footer {
   margin: 4rem 0 3rem;
   font-size: 14px;
