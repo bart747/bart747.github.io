@@ -68,7 +68,7 @@ func parseMarkdownFile(fileName string, fileDir string) (article, error) {
 		check(err)
 	}
 
-	patternCode := regexp.MustCompile(`<pre><code>[\s\S]+?<\/code><\/pre>`)
+	patternCode := regexp.MustCompile(`\n<pre><code>[\s\S]+?<\/code><\/pre>\n`)
 	content := patternCode.ReplaceAllStringFunc(buf.String(), Highlight)
 
 	lines := strings.Split(string(file), "\n")
@@ -76,7 +76,7 @@ func parseMarkdownFile(fileName string, fileDir string) (article, error) {
 
 	findTitle := func(lines []string) (string, error) {
 		for i := range lines {
-			if strings.Contains(lines[i], "# ") {
+			if strings.Contains(lines[i], patternHeadline.String()) {
 				title := patternHeadline.ReplaceAllString(lines[i], "")
 				return title, nil
 			}
