@@ -73,7 +73,7 @@ func parseMarkdownFile(fileName string, fileDir string) (article, error) {
 		check(err)
 	}
 	hl := func(src string) string {
-		src = regexp.MustCompile(`<pre><code>|</code></pre>`).ReplaceAllString(src, "")
+		src = regexp.MustCompile(`\n<pre><code>\n|\n</code></pre>`).ReplaceAllString(src, "")
 
 		lexer := lexers.Get("C")
 		if lexer == nil {
