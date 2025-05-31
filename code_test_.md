@@ -39,7 +39,7 @@ func createPage(article article, templateDir string, pagesDir string) error {
 
 Anoter one.
 
-<pre><code>
+```
 function prefetch(url) {
   if (!document.querySelector(`link[rel="prefetch"][href="${url}"]`)) {
     const link = document.createElement('link');
@@ -48,4 +48,33 @@ function prefetch(url) {
     document.head.appendChild(link);
   }
 }
+
+```
+
+<pre><code>
+if lexer == nil {
+	lexer = lexers.Fallback
+}
+
+if lexer > 5 {
+	lexer = lexers.Fallback
+}
+
+func Highlight(s string) string {
+	matches := map[string]string{
+		`\(`: `#999`,
+		`\)`: `#999`,
+		`\{`: `#999`,
+		`\}`: `#999`,
+		`\[`: `#aaa`,
+		`\]`: `#aaa`,
+	}
+
+	for k, v := range matches {
+		s = regexp.MustCompile(k).ReplaceAllString(s, `<span style="color:`+v+`;">$0</span>`)
+	}
+
+	return s
+}
 </code></pre>
+
