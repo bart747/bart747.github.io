@@ -17,77 +17,77 @@
   </nav>
   <h1>Code test</h1>
 <p>Some code snippets.</p>
-<pre><code>
-func createPage<span style="color:#888;">(</span>article article, templateDir string, pagesDir string<span style="color:#888;">)</span> error <span style="color:#888;">{</span>
-	htmlTmpl, err := os.ReadFile<span style="color:#888;">(</span>templateDir<span style="color:#888;">)</span>
-	if err != nil <span style="color:#888;">{</span>
-		log.Fatal<span style="color:#888;">(</span>err, " | The template file is necessary."<span style="color:#888;">)</span>
-	<span style="color:#888;">}</span>
-
-	tmpl, err := template.New<span style="color:#888;">(</span>"webpage"<span style="color:#888;">)</span>.Parse<span style="color:#888;">(</span>string<span style="color:#888;">(</span>htmlTmpl<span style="color:#888;">)</span><span style="color:#888;">)</span>
-	check<span style="color:#888;">(</span>err<span style="color:#888;">)</span>
-
-	pattern := regexp.MustCompile<span style="color:#888;">(</span>`\.md`<span style="color:#888;">)</span>
-	fileName := pattern.ReplaceAllString<span style="color:#888;">(</span>article.fileName, `.html`<span style="color:#888;">)</span>
-
-	file, err := os.Create<span style="color:#888;">(</span>filepath.Join<span style="color:#888;">(</span>pagesDir, fileName<span style="color:#888;">)</span><span style="color:#888;">)</span>
-	check<span style="color:#888;">(</span>err<span style="color:#888;">)</span>
-	defer file.Close<span style="color:#888;">(</span><span style="color:#888;">)</span>
-
-	type pageData struct <span style="color:#888;">{</span>
-		Title   string
-		Link    string
-		Content string
-	<span style="color:#888;">}</span>
-
-	baseURL, _ := url.Parse<span style="color:#888;">(</span>SiteData.domain<span style="color:#888;">)</span>
-	fullURL := baseURL.JoinPath<span style="color:#888;">(</span>fileName<span style="color:#888;">)</span>
-	link := fullURL.String<span style="color:#888;">(</span><span style="color:#888;">)</span>
-
-	err = tmpl.Execute<span style="color:#888;">(</span>file, pageData<span style="color:#888;">{</span>article.title, link, article.content<span style="color:#888;">}</span><span style="color:#888;">)</span>
-	check<span style="color:#888;">(</span>err<span style="color:#888;">)</span>
-	fmt.Println<span style="color:#888;">(</span>"·", fileName, " : ", article.title<span style="color:#888;">)</span>
-
-	return nil
-<span style="color:#888;">}</span>
-</code></pre>
+<pre tabindex="0" class="chroma"><code><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kd">func</span> <span class="nf">createPage</span><span class="p">(</span><span class="nx">article</span> <span class="nx">article</span><span class="p">,</span> <span class="nx">templateDir</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">pagesDir</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">	<span class="nx">htmlTmpl</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">ReadFile</span><span class="p">(</span><span class="nx">templateDir</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">		<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="s">&#34; | The template file is necessary.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">	<span class="nx">tmpl</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">template</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="s">&#34;webpage&#34;</span><span class="p">).</span><span class="nf">Parse</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">htmlTmpl</span><span class="p">))</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">	<span class="nf">check</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
+</span></span><span class="line"><span class="ln">10</span><span class="cl">	<span class="nx">pattern</span> <span class="o">:=</span> <span class="nx">regexp</span><span class="p">.</span><span class="nf">MustCompile</span><span class="p">(</span><span class="s">`\.md`</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">	<span class="nx">fileName</span> <span class="o">:=</span> <span class="nx">pattern</span><span class="p">.</span><span class="nf">ReplaceAllString</span><span class="p">(</span><span class="nx">article</span><span class="p">.</span><span class="nx">fileName</span><span class="p">,</span> <span class="s">`.html`</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">
+</span></span><span class="line"><span class="ln">13</span><span class="cl">	<span class="nx">file</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="nx">filepath</span><span class="p">.</span><span class="nf">Join</span><span class="p">(</span><span class="nx">pagesDir</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">))</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">	<span class="nf">check</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">	<span class="k">defer</span> <span class="nx">file</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">
+</span></span><span class="line"><span class="ln">17</span><span class="cl">	<span class="kd">type</span> <span class="nx">pageData</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">		<span class="nx">Title</span>   <span class="kt">string</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">		<span class="nx">Link</span>    <span class="kt">string</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">		<span class="nx">Content</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">
+</span></span><span class="line"><span class="ln">23</span><span class="cl">	<span class="nx">baseURL</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">url</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="nx">SiteData</span><span class="p">.</span><span class="nx">domain</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">	<span class="nx">fullURL</span> <span class="o">:=</span> <span class="nx">baseURL</span><span class="p">.</span><span class="nf">JoinPath</span><span class="p">(</span><span class="nx">fileName</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl">	<span class="nx">link</span> <span class="o">:=</span> <span class="nx">fullURL</span><span class="p">.</span><span class="nf">String</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl">
+</span></span><span class="line"><span class="ln">27</span><span class="cl">	<span class="nx">err</span> <span class="p">=</span> <span class="nx">tmpl</span><span class="p">.</span><span class="nf">Execute</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="nx">pageData</span><span class="p">{</span><span class="nx">article</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span> <span class="nx">link</span><span class="p">,</span> <span class="nx">article</span><span class="p">.</span><span class="nx">content</span><span class="p">})</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl">	<span class="nf">check</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;·&#34;</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">,</span> <span class="s">&#34; : &#34;</span><span class="p">,</span> <span class="nx">article</span><span class="p">.</span><span class="nx">title</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">
+</span></span><span class="line"><span class="ln">31</span><span class="cl">	<span class="k">return</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre>
 <p>Anoter one.</p>
-<pre><code>function prefetch<span style="color:#888;">(</span>url<span style="color:#888;">)</span> <span style="color:#888;">{</span>
-  if <span style="color:#888;">(</span>!document.querySelector<span style="color:#888;">(</span>`link<span style="color:#888;">[</span>rel=&quot;prefetch&quot;<span style="color:#888;">]</span><span style="color:#888;">[</span>href=&quot;$<span style="color:#888;">{</span>url<span style="color:#888;">}</span>&quot;<span style="color:#888;">]</span>`<span style="color:#888;">)</span><span style="color:#888;">)</span> <span style="color:#888;">{</span>
-    const link = document.createElement<span style="color:#888;">(</span>'link'<span style="color:#888;">)</span>;
-    link.rel = 'prefetch';
-    link.href = url;
-    document.head.appendChild<span style="color:#888;">(</span>link<span style="color:#888;">)</span>;
-  <span style="color:#888;">}</span>
-<span style="color:#888;">}</span>
-
-</code></pre>
-<pre><code>
-if lexer == nil <span style="color:#888;">{</span>
-	lexer = lexers.Fallback
-<span style="color:#888;">}</span>
-
-if lexer > 5 <span style="color:#888;">{</span>
-	lexer = lexers.Fallback
-<span style="color:#888;">}</span>
-
-func Highlight<span style="color:#888;">(</span>s string<span style="color:#888;">)</span> string <span style="color:#888;">{</span>
-	matches := map<span style="color:#888;">[</span>string<span style="color:#888;">]</span>string<span style="color:#888;">{</span>
-		`\<span style="color:#888;">(</span>`: `#999`,
-		`\<span style="color:#888;">)</span>`: `#999`,
-		`\<span style="color:#888;">{</span>`: `#999`,
-		`\<span style="color:#888;">}</span>`: `#999`,
-		`\<span style="color:#888;">[</span>`: `#aaa`,
-		`\<span style="color:#888;">]</span>`: `#aaa`,
-	<span style="color:#888;">}</span>
-
-	for k, v := range matches <span style="color:#888;">{</span>
-		s = regexp.MustCompile<span style="color:#888;">(</span>k<span style="color:#888;">)</span>.ReplaceAllString<span style="color:#888;">(</span>s, `<span style="color:`+v+`;">$0</span>`<span style="color:#888;">)</span>
-	<span style="color:#888;">}</span>
-
-	return s
-<span style="color:#888;">}</span>
-</code></pre>
+<pre tabindex="0" class="chroma"><code><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kd">function</span> <span class="nx">prefetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="sb">`link[rel=&#34;prefetch&#34;][href=&#34;</span><span class="si">${</span><span class="nx">url</span><span class="si">}</span><span class="sb">&#34;]`</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="kr">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="nx">link</span><span class="p">.</span><span class="nx">rel</span> <span class="o">=</span> <span class="s1">&#39;prefetch&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="nx">link</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">link</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;&lt;div&gt;abc&lt;/div&gt;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">
+</span></span></code></pre>
+<pre tabindex="0" class="chroma"><code><span class="line"><span class="ln"> 1</span><span class="cl"><span class="k">if</span> <span class="nx">lexer</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">	<span class="nx">lexer</span> <span class="p">=</span> <span class="nx">lexers</span><span class="p">.</span><span class="nx">Fallback</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="k">if</span> <span class="nx">lexer</span> <span class="p">&gt;</span> <span class="mi">5</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">	<span class="nx">lexer</span> <span class="p">=</span> <span class="nx">lexers</span><span class="p">.</span><span class="nx">Fallback</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="kd">func</span> <span class="nf">Highlight</span><span class="p">(</span><span class="nx">s</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">	<span class="nx">matches</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">		<span class="s">`\(`</span><span class="p">:</span> <span class="s">`#999`</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">		<span class="s">`\)`</span><span class="p">:</span> <span class="s">`#999`</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">		<span class="s">`\{`</span><span class="p">:</span> <span class="s">`#999`</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">		<span class="s">`\}`</span><span class="p">:</span> <span class="s">`#999`</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">		<span class="s">`\[`</span><span class="p">:</span> <span class="s">`#aaa`</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">		<span class="s">`\]`</span><span class="p">:</span> <span class="s">`#aaa`</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">
+</span></span><span class="line"><span class="ln">19</span><span class="cl">	<span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">matches</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">		<span class="nx">s</span> <span class="p">=</span> <span class="nx">regexp</span><span class="p">.</span><span class="nf">MustCompile</span><span class="p">(</span><span class="nx">k</span><span class="p">).</span><span class="nf">ReplaceAllString</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span> <span class="s">`&lt;span style=&#34;color:`</span><span class="o">+</span><span class="nx">v</span><span class="o">+</span><span class="s">`;&#34;&gt;$0&lt;/span&gt;`</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">
+</span></span><span class="line"><span class="ln">23</span><span class="cl">	<span class="k">return</span> <span class="nx">s</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre>
 
   <footer>
   Bartosz Wieczorek, 2024.

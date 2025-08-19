@@ -4,15 +4,16 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/yuin/goldmark"
-	"github.com/yuin/goldmark/renderer/html"
+	"html/template"
 	"log"
 	"net/url"
 	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
-	"text/template"
+
+	"github.com/yuin/goldmark"
+	"github.com/yuin/goldmark/renderer/html"
 )
 
 func check(err error) {
@@ -52,6 +53,9 @@ func parseMarkdownFile(fileName string, fileDir string) (article, error) {
 	file, err := os.ReadFile(filepath.Join(fileDir, fileName))
 	check(err)
 
+	patternCode := regexp.MustCompile(`<pre><code>[\s\S]+?<\/code><\/pre>`)
+	contentHighlighted := patternCode.ReplaceAllStringFunc(string(file), Highlight)
+
 	markdown := goldmark.New(
 		goldmark.WithRendererOptions(
 			html.WithUnsafe(),
@@ -59,12 +63,10 @@ func parseMarkdownFile(fileName string, fileDir string) (article, error) {
 	)
 
 	var buf bytes.Buffer
-	if err := markdown.Convert(file, &buf); err != nil {
+	if err := markdown.Convert([]byte(contentHighlighted), &buf); err != nil {
 		check(err)
 	}
-
-	patternCode := regexp.MustCompile(`<pre><code>[\s\S]+?<\/code><\/pre>`)
-	content := patternCode.ReplaceAllStringFunc(buf.String(), Highlight)
+	contentFinal := buf.String()
 
 	lines := strings.Split(string(file), "\n")
 	patternHeadline := regexp.MustCompile(`# `)
@@ -82,7 +84,7 @@ func parseMarkdownFile(fileName string, fileDir string) (article, error) {
 	title, err := findTitle(lines)
 	check(err)
 
-	return article{title, fileName, content}, nil
+	return article{title, fileName, contentFinal}, nil
 }
 
 func createPage(article article, templateDir string, pagesDir string) error {
@@ -104,14 +106,14 @@ func createPage(article article, templateDir string, pagesDir string) error {
 	type pageData struct {
 		Title   string
 		Link    string
-		Content string
+		Content template.HTML
 	}
 
 	baseURL, _ := url.Parse(SiteData.domain)
 	fullURL := baseURL.JoinPath(fileName)
 	link := fullURL.String()
 
-	err = tmpl.Execute(file, pageData{article.title, link, article.content})
+	err = tmpl.Execute(file, pageData{article.title, link, template.HTML(article.content)})
 	check(err)
 	fmt.Println("·", fileName, " : ", article.title)
 

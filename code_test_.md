@@ -3,6 +3,7 @@
 Some code snippets.
 
 <pre><code>
+Go
 func createPage(article article, templateDir string, pagesDir string) error {
 	htmlTmpl, err := os.ReadFile(templateDir)
 	if err != nil {
@@ -39,7 +40,8 @@ func createPage(article article, templateDir string, pagesDir string) error {
 
 Anoter one.
 
-```
+<pre><code>
+JavaScript
 function prefetch(url) {
   if (!document.querySelector(`link[rel="prefetch"][href="${url}"]`)) {
     const link = document.createElement('link');
@@ -49,9 +51,12 @@ function prefetch(url) {
   }
 }
 
-```
+console.log("<div>abc</div>")
+
+</code></pre>
 
 <pre><code>
+Go
 if lexer == nil {
 	lexer = lexers.Fallback
 }

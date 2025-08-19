@@ -51,7 +51,12 @@ code {
 .chroma .p {
   color: var(--dim-color);
 }
-
+.chroma .kd {
+  color: var(--bright-color);
+}
+.chroma .k {
+  color: var(--bright-color);
+}
 footer {
   margin: 4rem 0 3rem;
   font-size: 14px;
