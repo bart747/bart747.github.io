@@ -36,6 +36,23 @@ func createPage(article article, templateDir string, pagesDir string) error {
 
 	return nil
 }
+
+/*
+// Simple approach
+func Highlight(s string) string {
+	matches := []string{`\(`, `\)`, `\{`, `\}`, `\[`, `\]`}
+
+	for _, v := range matches {
+		pattern := regexp.MustCompile(v)
+		s = pattern.ReplaceAllString(s, `<span style="color:#888;">$0</span>`)
+	}
+
+	return s
+}
+*/
+
+// This is more complex and fancy version that uses Chroma.
+
 </code></pre>
 
 Anoter one.
@@ -81,5 +98,47 @@ func Highlight(s string) string {
 
 	return s
 }
+
+s := true
+a := 3
+b := 4.4
+fmt.Println(a == b)  // false
+fmt.Println(a != b)  // true
+fmt.Println(a < b)   // true
+fmt.Println(a > b)   // false
+fmt.Println(a >= b)  // false
+fmt.Println(a <= b)  // true
 </code></pre>
 
+<pre><code>
+TypeScript
+type DescribableFunction = {
+  description: string;
+  (someArg: number): boolean;
+};
+function doSomething(fn: DescribableFunction) {
+  console.log(fn.description + " returned " + fn(6));
+}
+ 
+function myFunc(someArg: number) {
+  return someArg > 3;
+}
+myFunc.description = "default description";
+ 
+doSomething(myFunc);
+
+function makeDate(timestamp: number): Date;
+function makeDate(m: number, d: number, y: number): Date;
+function makeDate(mOrTimestamp: number, d?: number, y?: number): Date {
+  if (d !== undefined && y !== undefined) {
+    return new Date(y, mOrTimestamp, d);
+  } else {
+    return new Date(mOrTimestamp);
+  }
+}
+const d1 = makeDate(12345678);
+const d2 = makeDate(5, 5, 5);
+const d3 = makeDate(1, 3);
+
+const a = 1.01
+</code></pre>

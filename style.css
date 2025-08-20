@@ -2,8 +2,10 @@
   --txt-color: #ccc9c3;
   --bg-color: #202025;
   --link-color: #d75;
-  --dim-color: #888;
-  --bright-color: #eb7;
+  --dim-color: #999;
+  --accent-color: #eb7;
+  --secondary-color: #d72;
+  --tetrary-color: #a9c;
   font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Inter", sans-serif;
   font-size: 17px;
   line-height: 1.5;
@@ -12,7 +14,7 @@
   color: var(--dim-color);
 }
 .color-bright {
-  color: var(--bright-color);
+  color: var(--accent-color);
 }
 
 body {
@@ -58,14 +60,23 @@ code {
   color: var(--dim-color);
   padding-right: 0.5rem;
 }
-.chroma .p {
-  color: var(--dim-color);
-}
 .chroma .kd {
-  color: var(--bright-color);
+  color: var(--accent-color);
 }
 .chroma .k {
-  color: var(--bright-color);
+  color: var(--accent-color);
+}
+.chroma .kc {
+  color: var(--secondary-color);
+}
+.chroma .s, .chroma .s1, .chroma .s2 {
+  color: var(--tetrary-color);
+}
+.chroma .mi, .chroma .mf {
+  color: #7ac;
+}
+.chroma .cm, .chroma .c1 {
+  color: var(--dim-color);
 }
 
 footer {
