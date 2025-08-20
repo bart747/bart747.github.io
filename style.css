@@ -8,6 +8,13 @@
   font-size: 17px;
   line-height: 1.5;
 }
+.color-dim {
+  color: var(--dim-color);
+}
+.color-bright {
+  color: var(--bright-color);
+}
+
 body {
   color: var(--txt-color);
   background-color: var(--bg-color);
@@ -16,6 +23,7 @@ body {
   padding: 1rem;
   box-sizing: border-box;
 }
+
 p, h1, h2, h3, h4, h5, h6, ul, ol, li, table, blockquote {
   font-size: 17px;
 }
@@ -35,6 +43,7 @@ h3 {
 p, pre, nav, ul, ol, table, blockquote {
   margin: 1rem 0;
 }
+
 pre {
   line-height: 1.2;
   overflow: auto;
@@ -44,6 +53,7 @@ code {
   font-family: monospace;
   font-size: 14px;
 }
+
 .chroma .ln {
   color: var(--dim-color);
   padding-right: 0.5rem;
@@ -57,10 +67,12 @@ code {
 .chroma .k {
   color: var(--bright-color);
 }
+
 footer {
   margin: 4rem 0 3rem;
   font-size: 14px;
 }
+
 ul {
   margin: 1rem 0;
   padding: 0 0 0 1.5rem;
@@ -75,9 +87,4 @@ nav a {
   margin-bottom: 0.5rem;
   text-decoration: none;
 }
-.color-dim {
-  color: var(--dim-color);
-}
-.color-bright {
-  color: var(--bright-color);
-}
+
